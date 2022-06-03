@@ -201,6 +201,7 @@ html {
   text-align: center;
   padding: 0 15px;
   transition: opacity 200ms ease;
+  cursor: pointer;
 }
 
 .cart-link:hover {
@@ -211,6 +212,10 @@ html {
   margin-right: 3px;
   font-size: 2.2rem;
   color: #b08ead;
+}
+
+#control-modal {
+  display: none;
 }
 
 .nav-list {
@@ -1003,4 +1008,103 @@ html {
 
 .go-up:hover {
   background-color: #b99bb6;
+}
+
+/* Modal */
+/* .modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: fadeIn linear 0.1s;
+  display: flex;
+} */
+
+.modal {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: fadeLeftToRight 0.3s linear forwards;
+  display: none;
+  transition: top 0.4s, opacity 0.4s;
+}
+
+.modal-overley {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.modal-cart {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 480px;
+  background-color: #fff;
+  animation: fadeRightToLeft 0.3s linear forwards;
+}
+
+@keyframes fadeLeftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(calc(100% + 20px));
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#control-modal:checked ~ .modal {
+  display: block;
+}
+
+#control-modal:not(:checked) ~ .modal-cart {
+  animation: fadeLeftToRight 0.3s linear forwards;
+}
+
+.cart-title-box {
+  padding: 16px 24px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.cart-title {
+  font-family: "Cormorant Garamond", sans-serif;
+  color: #5f4d5d;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: bold;
+}
+
+.cart-close {
+  display: inline-block;
+  color: #5f4d5d;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  cursor: pointer;
+}
+
+.cart-content-box {
+  font-family: "Cormorant Garamond", sans-serif;
+  color: #5f4d5d;
+  font-size: 2.4rem;
+  height: 100%;
 }

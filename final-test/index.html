@@ -75,10 +75,27 @@
         </nav>
 
         <div class="cart">
-          <a href="#" class="cart-link">
+          <input type="checkbox" id="control-modal" />
+          <label for="control-modal" class="cart-link">
             <!-- <i class="fa-solid fa-cart-arrow-down"></i> -->
             <i class="bi bi-cart3"></i>
-          </a>
+          </label>
+
+          <!-- Modal -->
+          <div class="modal">
+            <label for="control-modal" class="modal-overley"> </label>
+            <div class="modal-cart">
+              <div class="cart-title-box d-flex j-between a-center">
+                <h2 class="cart-title">Your Cart</h2>
+                <label for="control-modal" class="cart-close">
+                  <i class="fa-solid fa-xmark"></i>
+                </label>
+              </div>
+              <div class="cart-content-box d-flex a-center j-center">
+                <div class="">No items found.</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
