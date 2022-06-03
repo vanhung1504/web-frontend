@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(43, 43, 43);
+}
+
+.snow-effect {
+  color: #fff;
+  font-size: 15px;
+}
+
+@keyframes snow-shake {
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(60px);
+  }
+  40% {
+    transform: translateX(30px);
+  }
+  60% {
+    transform: translateX(80px);
+  }
+  80% {
+    transform: translateX(40px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes snow-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+.snow-effect {
+  position: fixed;
+  top: -10%;
+  z-index: 9999;
+  user-select: none;
+  cursor: default;
+  animation-name: snow-fall, snow-shake;
+  animation-duration: 12s, 5s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-play-state: running, running;
+}
+
+.snow-effect:nth-of-type(1) {
+  left: 3%;
+  animation-delay: 1s, 0s;
+}
+
+.snow-effect:nth-of-type(2) {
+  left: 7.5%;
+  animation-delay: 1s, 1s;
+}
+
+.snow-effect:nth-of-type(3) {
+  left: 14%;
+  animation-delay: 6s, 0.5s;
+}
+
+.snow-effect:nth-of-type(4) {
+  left: 20.5%;
+  animation-delay: 11s, 2s;
+}
+
+.snow-effect:nth-of-type(5) {
+  left: 27%;
+  animation-delay: 3s, 0.7s;
+}
+
+.snow-effect:nth-of-type(6) {
+  left: 33.5%;
+  animation-delay: 6s, 3s;
+}
+
+.snow-effect:nth-of-type(7) {
+  left: 40%;
+  animation-delay: 4s, 4.5s;
+}
+
+.snow-effect:nth-of-type(8) {
+  left: 46.5%;
+  animation-delay: 0s, 2.5s;
+}
+
+.snow-effect:nth-of-type(9) {
+  left: 53%;
+  animation-delay: 10s, 0s;
+}
+
+.snow-effect:nth-of-type(10) {
+  left: 59.5%;
+  animation-delay: 5s, 3.5s;
+}
+
+.snow-effect:nth-of-type(11) {
+  left: 66%;
+  animation-delay: 7s, 2s;
+}
+
+.snow-effect:nth-of-type(12) {
+  left: 72.5%;
+  animation-delay: 2s, 3.5s;
+}
+
+.snow-effect:nth-of-type(13) {
+  left: 80.5%;
+  animation-delay: 8s, 4s;
+}
+
+.snow-effect:nth-of-type(14) {
+  left: 88.5%;
+  animation-delay: 9s, 1.5s;
+}
+
+.snow-effect:nth-of-type(15) {
+  left: 96%;
+  animation-delay: 2s, 1.5s;
+}

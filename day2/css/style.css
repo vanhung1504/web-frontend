@@ -1,0 +1,39 @@
+.text-red {
+  color: red;
+}
+
+.text-green {
+  color: green;
+}
+
+.text-size-l {
+  font-size: 50px;
+}
+
+.text-size-m {
+  font-size: 40px;
+}
+
+.text-size-s {
+  font-size: 30px;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-regular {
+  font-weight: 500;
+}
+
+.text-thin {
+  font-weight: 300;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}

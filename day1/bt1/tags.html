@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML | Tags</title>
+    <link
+      rel="shortcut icon"
+      href="https://iconarchive.com/download/i79655/martz90/hex/html-5.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div>
+      <nav>
+        <ul style="list-style-type: none;">
+          <li>
+            <a href="./index.html">Trang chủ</a>
+          </li>
+          <li>
+            <a href="./tags.html">HTML Tags</a>
+          </li>
+          <li>
+            <a href="./about.html">Giới thiệu</a>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <h1>Các thẻ HTML cơ bản được sử dụng trong thiết kế website</h1>
+        <button>Previous</button>
+        <button>Next</button>
+        <hr />
+        <ol>
+          <li>
+            <h2>Thẻ HTML là gì?</h2>
+            <p>
+              HTML là ngôn ngữ đánh dấu siêu văn bản được sử dụng trong xây dựng
+              website. Tất cả những nội dung như văn bản, hình ảnh hoặc video mà
+              bạn nhìn thấy khi truy cập vào một trang web bất kỳ đều được xây
+              dựng bằng loại ngôn ngữ này. Ngoài ra, HTML có thể dễ dàng kết hợp
+              với các ngôn ngữ lập trình backend như PHP hoặc Node.js để tạo nên
+              những website động. Cấu thành nên trang HTML chính là các thẻ
+              HTML.
+            </p>
+            <p>
+              Thẻ HTML là công cụ xác định thuộc tính và bố cục của các thành
+              phần trên trang web. Một thẻ HTML (hay còn gọi là phần tử HTML)
+              được xác định bởi thẻ mở, nội dung bên trong và thẻ đóng. Tuy
+              nhiên, một số loại thẻ HTML không có phần nội dung (ví dụ như
+              &lt;br&gt;, &lt;embed&gt; hoặc &lt;img&gt;). Chúng được gọi là các
+              thẻ rỗng và cũng không cần thẻ đóng.
+            </p>
+            <p>
+              Các thẻ HTML có thể lồng vào nhau (một thẻ có thể chứa thẻ khác).
+              Chúng xuất hiện trong tất cả các tài liệu HTML.
+            </p>
+          </li>
+          <li>
+            <h2>Các thẻ HTML cơ bản</h2>
+            <ul>
+              <li>
+                <b>&lt;!DOCTYPE&gt;</b>
+                <p>
+                  Đây là thẻ có nhiệm vụ khai báo cho trình duyệt web biết rằng
+                  tài liệu đang hiển thị là HTML. Mọi tài liệu HTML đều phải bắt
+                  đầu với &lt;!DOCTYPE&gt;.
+                </p>
+                <p>
+                  Với phiên bản HTML5, bạn dùng khai báo &lt;!DOCTYPE html&gt;
+                  Khai báo &lt;!DOCTYPE&gt; không phân biệt chữ thường và chữ
+                  hoa.
+                </p>
+              </li>
+              <li>
+                <b>&lt;html&gt;</b>
+                <p>
+                  Thẻ này tượng trưng cho thư mục gốc của một tài liệu HTML,
+                  đóng vai trò là khu vực chứa tất cả các phần tử HTML khác (trừ
+                  &lt;!DOCTYPE&gt;). Nó luôn phải có thuộc tính lang để khai báo
+                  ngôn ngữ cho một phần hoặc cả trang web, giúp công cụ tìm kiếm
+                  và trình duyệt dễ dàng đọc và hiển thị được thông tin trong
+                  trang.
+                </p>
+              </li>
+              <li>
+                <b>&lt;head&gt;</b>
+                <p>
+                  Nằm giữa &lt;html&gt; và &lt;body&gt;, thẻ &lt;head&gt; làm
+                  nhiệm vụ chứa các siêu dữ liệu. Đây là những dữ liệu về tài
+                  liệu HTML, dùng để xác định tiêu đề, ký tự và các thông tin
+                  meta khác.
+                </p>
+                <p>
+                  Một số thẻ có thể lồng vào thẻ &lt;head&gt; như:
+                  &lt;title&gt;, &lt;style&gt;, &lt;base&gt;, &lt;link&gt;,
+                  &lt;meta&gt;, &lt;script&gt; và &lt;noscript&gt;.
+                </p>
+              </li>
+              <li>
+                <b>&lt;title&gt;</b>
+                <p>
+                  Thẻ này chỉ ra tiêu đề của trang HTML, xuất hiện dưới dạng văn
+                  bản và được hiển thị ở thanh tiêu đề của trình duyệt hoặc ở
+                  tab của trang. Đồng thời, nó cũng xác định tiêu đề cho trang
+                  khi trang được thêm vào mục yêu thích.
+                </p>
+                <p>
+                  Đây là một phần tử bắt buộc phải có trong mọi tài liệu HTML.
+                </p>
+              </li>
+              <li>
+                <b>&lt;body&gt;</b>
+                <p>
+                  Đây là thẻ xác định phần nội dung của tài liệu. Nó là vùng
+                  chứa cho tất cả các nội dung có thể nhìn thấy được như tiêu
+                  đề, đoạn văn, hình ảnh, siêu liên kết, bảng biểu, danh mục,…
+                </p>
+                <p>
+                  Mỗi tài liệu HTML chỉ có duy nhất 1 thẻ &lt;body&gt;.
+                </p>
+              </li>
+              <li>
+                <b>&lt;h1&gt; – &lt;h6&gt;</b>
+                <p>
+                  Danh sách thẻ từ &lt;h1&gt; đến &lt;h6&gt; được sử dụng để chỉ
+                  rõ các tiêu đề trong tài liệu HTML. Mức độ quan trọng của tiêu
+                  đề giảm dần từ &lt;h1&gt; xuống &lt;h6&gt;. Mỗi trang chỉ dùng
+                  1 &lt;h1&gt;.
+                </p>
+              </li>
+              <li>
+                <b>&lt;p&gt;</b>
+                <p>
+                  Thẻ dùng để xác định một đoạn văn. Các trình duyệt sẽ tự động
+                  thêm một dòng trống trước và sau mỗi thẻ &lt;p&gt;.
+                </p>
+              </li>
+              <li>
+                <b>&lt;br&gt;</b>
+                <p>
+                  Bạn sẽ cần đến thẻ này để tạo một dấu ngắt dòng giữa văn bản,
+                  ví dụ như một bài thơ. Đây là một thẻ rỗng, không có thẻ đóng.
+                  Khi dùng thẻ này thì bạn không phải nhập thủ công khoảng cách
+                  giữa các đoạn văn nữa.
+                </p>
+              </li>
+              <li>
+                <b>&lt;hr&gt;</b>
+                <p>
+                  Thẻ &lt;hr&gt; dùng để chuyển chủ đề, tách riêng các nội dung
+                  trong trang HTML.
+                </p>
+              </li>
+              <li>
+                <b>&lt;!– –&gt;</b>
+                <p>
+                  Đây là thẻ bình luận được sử dụng để thêm các bình luận trong
+                  mã nguồn. Bình luận không được hiển thị trong trình duyệt. Thẻ
+                  này sẽ hữu ích khi bạn muốn sửa mã nguồn sau này.
+                </p>
+                <p>
+                  &lt;!– –&gt; sẽ giúp bạn ẩn các tập lệnh từ các trình duyệt
+                  không được hỗ trợ.
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>

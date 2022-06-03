@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Utilities class */
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-left: -4px;
+  margin-right: -4px;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.col {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.col-1 {
+  flex-basis: calc(1 * 100% / 12);
+}
+
+.col-2 {
+  flex-basis: calc(2 * 100% / 12);
+}
+
+.col-3 {
+  flex-basis: calc(3 * 100% / 12);
+}
+
+.col-4 {
+  flex-basis: calc(4 * 100% / 12);
+}
+
+.col-5 {
+  flex-basis: calc(5 * 100% / 12);
+}
+
+.col-6 {
+  flex-basis: calc(6 * 100% / 12);
+}
+
+.col-7 {
+  flex-basis: calc(7 * 100% / 12);
+}
+
+.col-8 {
+  flex-basis: calc(8 * 100% / 12);
+}
+
+.col-9 {
+  flex-basis: calc(9 * 100% / 12);
+}
+
+.col-10 {
+  flex-basis: calc(10 * 100% / 12);
+}
+
+.col-11 {
+  flex-basis: calc(11 * 100% / 12);
+}
+
+.col-12 {
+  flex-basis: 100%;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.f-column {
+  flex-direction: column;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.j-end {
+  justify-content: flex-end;
+}
+
+.j-between {
+  justify-content: space-between;
+}
+
+.a-start {
+  align-items: flex-start;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.a-end {
+  align-items: flex-end;
+}
+
+.a-baseline {
+  align-items: baseline;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.f-grow-1 {
+  flex-grow: 1;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+/* Detail class */
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: url("https://ishadeed.com/assets/fb-login/fb-new-login.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+}
+
+.overley {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.form-group {
+  width: 432px;
+  margin: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px 5px #e5e5e6;
+  -moz-box-shadow: 0 0 10px 5px #e5e5e6;
+  box-shadow: 0 0 10px 5px #e5e5e6;
+  /* box-shadow: 0 2px 10px #e5e5e6, -2px 2px 10px #e5e5e6, 2px 2px 10px #e5e5e6; */
+}
+
+.form-header {
+  position: relative;
+}
+
+.form-header::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  right: -15px;
+  bottom: 0;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+
+.form-header > i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 24px;
+}
+
+.form-title {
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0;
+}
+
+.form-slogan {
+  margin: 6px 0 15px 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: #606770;
+}
+
+.input-css {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 4px;
+  background: #f5f6f7;
+  border: 1px solid #ccd0d5;
+  outline: none;
+}
+
+.select-css {
+  width: 100%;
+  padding: 0 10px;
+  height: 36px;
+  line-height: 20px;
+  font-size: 15px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #ccd0d5;
+  outline: none;
+}
+
+.birthday-label,
+.sex-label {
+  color: #606770;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 20px;
+  margin: 0;
+}
+
+.policy {
+  color: #606770;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 14px;
+  margin: 0;
+}
+
+.sex {
+  border-radius: 4px;
+  border: 1px solid #ccd0d5;
+  padding: 0 10px;
+  color: #1c1e21;
+  font-size: 15px;
+  line-height: 36px;
+}
+
+.policy > a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.policy > a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.form-submit {
+  background: none;
+  background-color: #00a400;
+  border: none;
+  border-radius: 6px;
+  box-shadow: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  height: 36px;
+  width: 194px;
+  overflow: hidden;
+  padding: 0 32px;
+  text-shadow: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.form-submit:hover {
+  background: linear-gradient(#79bc64, #578843);
+}

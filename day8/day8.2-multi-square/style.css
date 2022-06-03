@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.bg-pink {
+  background-color: pink;
+}
+
+.square1,
+.square2,
+.square3,
+.square4 {
+  width: 100px;
+  height: 100px;
+}
+
+.square2,
+.square3,
+.square4 {
+  top: 50px;
+  left: 50px;
+}

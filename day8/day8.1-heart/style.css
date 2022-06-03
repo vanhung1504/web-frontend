@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+  position: relative;
+  animation: heartbeat 1s infinite;
+}
+
+.cicle1 {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  position: absolute;
+
+  border-radius: 50%;
+  top: -50px;
+  border: none;
+}
+
+.cicle2 {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  position: absolute;
+
+  border-radius: 50%;
+  left: -50px;
+  border: none;
+}
+
+.title {
+  transform: rotate(-45deg);
+  z-index: 3;
+  color: white;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: rotate(45deg) scale(0.75);
+  }
+  20% {
+    transform: rotate(45deg) scale(1);
+  }
+  40% {
+    transform: rotate(45deg) scale(0.75);
+  }
+  60% {
+    transform: rotate(45deg) scale(1);
+  }
+  80% {
+    transform: rotate(45deg) scale(0.75);
+  }
+  100% {
+    transform: rotate(45deg) scale(0.75);
+  }
+}

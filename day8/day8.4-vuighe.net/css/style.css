@@ -1,0 +1,403 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.grid {
+  width: 100%;
+  display: block;
+}
+
+.container {
+  width: 1312px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-left: -4px;
+  margin-right: -4px;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.col {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.col-1 {
+  flex-basis: calc(1 * 100% / 12);
+}
+
+.col-2 {
+  flex-basis: calc(2 * 100% / 12);
+}
+
+.col-3 {
+  flex-basis: calc(3 * 100% / 12);
+}
+
+.col-4 {
+  flex-basis: calc(4 * 100% / 12);
+}
+
+.col-5 {
+  flex-basis: calc(5 * 100% / 12);
+}
+
+.col-6 {
+  flex-basis: calc(6 * 100% / 12);
+}
+
+.col-7 {
+  flex-basis: calc(7 * 100% / 12);
+}
+
+.col-8 {
+  flex-basis: calc(8 * 100% / 12);
+}
+
+.col-9 {
+  flex-basis: calc(9 * 100% / 12);
+}
+
+.col-10 {
+  flex-basis: calc(10 * 100% / 12);
+}
+
+.col-11 {
+  flex-basis: calc(11 * 100% / 12);
+}
+
+.col-12 {
+  flex-basis: 100%;
+}
+
+.offset-1 {
+  margin-left: calc(1 * 100% / 12);
+}
+
+.offset-2 {
+  margin-left: calc(2 * 100% / 12);
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.d-flex-reverse {
+  display: flex;
+  flex-direction: column;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.j-end {
+  justify-content: end;
+}
+
+.j-between {
+  justify-content: space-between;
+}
+
+.j-around {
+  justify-content: space-around;
+}
+
+.a-start {
+  align-items: flex-start;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.a-end {
+  align-items: flex-end;
+}
+
+.a-baseline {
+  align-items: baseline;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.m-top-10 {
+  margin-top: 10px;
+}
+
+.m-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.col-12-5 {
+  flex-basis: calc(100% / 8);
+}
+
+/* Chi tiết */
+
+.header {
+  z-index: 1;
+  height: 60px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-bottom: 1px solid #d2d4d7;
+  background-color: #fff;
+}
+
+.logo {
+  width: auto;
+  height: 50px;
+}
+
+.navbar {
+  align-self: flex-end;
+}
+
+.nav-list {
+  list-style: none;
+  margin-bottom: -5px;
+}
+
+.nav-item {
+  padding-bottom: 12px;
+  height: 100%;
+}
+
+.nav-link {
+  display: block;
+  text-decoration: none;
+  padding: 6px 16px;
+  border: 1px solid #cccccc;
+  border-radius: 20px;
+  color: #929292;
+  font-weight: 500;
+}
+
+.nav-item:hover {
+  border: 1px solid #cccccc;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.nav-item:hover .nav-link {
+  border: none;
+}
+
+.nav-item:hover .menu-sub-box {
+  display: block;
+}
+
+.menu-sub-box {
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  box-shadow: 0 4px 5px #ccc;
+}
+
+.menu-sub {
+  padding: 10px 0;
+}
+
+.menu-sub-item {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-sub-img {
+  height: 100%;
+  transition: transform 0.3s;
+  width: 100%;
+}
+
+.menu-sub-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2px;
+  color: #eeeeee;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-image: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.9)
+  );
+}
+
+.menu-sub-item:hover img {
+  transform: scale(1.2);
+}
+
+.menu-sub-item:hover span {
+  color: #d80f16;
+}
+
+.search-container {
+  width: 320px;
+  border: 1px solid #929292;
+  border-radius: 20px;
+  padding: 4px 6px;
+}
+
+.search-box {
+  border: none;
+  outline: none;
+  flex-grow: 10;
+  margin: 0 8px;
+  height: 20px;
+}
+
+.user-setting > div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eeeeee;
+  margin-left: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.title-section {
+  display: block;
+  text-decoration: none;
+  font-size: 25px;
+  color: #333333;
+  font-weight: 500;
+  margin: 38px 0 0 0;
+}
+
+.newest-chap-item,
+.anime-news-item {
+  text-decoration: none;
+  height: 180px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.newest-chap-item-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  color: #eeeeee;
+}
+
+.newest-chap-item-title {
+  margin-bottom: 4px;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.newest-chap-item-episode {
+  width: 60%;
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.newest-chap-item-views {
+  font-size: 12px;
+}
+
+.newest-chap-item-play {
+  position: absolute;
+  font-size: 36px;
+  text-align: center;
+  height: 70px;
+  width: 70px;
+  left: 10px;
+  top: 10px;
+  line-height: 70px;
+  padding-left: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 100%;
+  box-shadow: 0 0 10px #fff;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.newest-chap-item:hover .newest-chap-item-play {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.newest-chap-item:hover .newest-chap-item-img {
+  transition: transform 0.3s;
+  transform: scale(1.2);
+}
+
+.anime-news-item {
+  height: 90px;
+}
+
+.anime-news-item-title {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #333333;
+}
+
+.anime-news-item:hover .anime-news-item-img > img {
+  opacity: 0.8;
+}
+
+.b-radius {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+}

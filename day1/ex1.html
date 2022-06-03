@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BÀI TẬP 1</title>
+  </head>
+  <body>
+    <h1><b>Tạo form trong Flutter</b></h1>
+    <p>06 tháng 05, 2022 - 160 lượt xem</p>
+    <a href="">Di động</a>
+    <a href="">Fluter</a>
+    <hr />
+    <p>Tác giả Đoàn Ngọc Tú là giảng viên khóa Lộ trình Flutter</p>
+    <span>Thông tin chi tiết khóa học tại:</span>
+    <a href="">https://flutter.techmaster.vn/</a>
+    <h2>Giới thiệu</h2>
+    <p>
+      Rất nhiều ứng dụng thường yêu cầu người dùng nhập liệu. Ví dụ, bạn có thể
+      yêu cầu người dùng đăng nhập với một địa chỉ email và mật khẩu.
+    </p>
+    <p>
+      Để ứng dụng bảo mật và dễ sử dụng, ta cần kiểm tra thông tin mà người dùng
+      cung cấp xem thông tin đó khả dụng hay không. Nếu người dùng điền thông
+      tin vào form nhập liệu đầy đủ và chính xác, lúc đó ta bắt đầu tiến trình
+      xử lý thông tin. Nếu người dùng nhập sai, ta cần hiển thị một thông báo
+      cho người dùng biết họ đang làm sai điều gì.
+    </p>
+    <p>
+      Trong ví dụ ở bài viết này, chúng ta sẽ học được cách để thêm việc kiểm
+      tra tính khả dụng và đúng đắn của 1 form nhập liệu có 1 input text qua
+      những bước sau:
+    </p>
+    <ol>
+      <li>
+        <span>Tạo </span><a href="">Form</a><span> với một </span
+        ><a href="">GlobalKey</a><span>.</span>
+      </li>
+      <li>
+        <span>Thêm </span><a href="">TextFormField</a
+        ><span> với logic kiểm tra tính khả dụng.</span>
+      </li>
+      <li><span>Tạo 1 button để validate và submit form.</span></li>
+    </ol>
+    <h3>1. Tạo 1 Form với GlobalKey</h3>
+    <p>
+      Đầu tiên, tạo một Form. Form widget hoạt động giống như 1 container có tác
+      dụng gom nhóm và validate nhiều form field.
+    </p>
+    <p>
+      Khi tạo một form, cần cung cấp 1 GlobalKey. Key này là duy nhất, nhằm xác
+      định Form, và cho phép validate form trong bước sau.
+    </p>
+    <!-- <pre>
+        <code>
+            import 'package:flutter/material.dart';
+
+            // Define a custom Form widget.
+            class MyCustomForm extends StatefulWidget {
+            const MyCustomForm({Key? key}) : super(key: key);
+
+            @override
+            MyCustomFormState createState() {
+                return MyCustomFormState();
+            }
+            }
+
+            // Define a corresponding State class.
+            // This class holds data related to the form.
+            class MyCustomFormState extends State<MyCustomForm> {
+            // Create a global key that uniquely identifies the Form widget
+            // and allows validation of the form.
+            //
+            // Note: This is a `GlobalKey<FormState>`,
+            // not a GlobalKey<MyCustomFormState>.
+            final _formKey = GlobalKey<FormState>();
+
+            @override
+            Widget build(BuildContext context) {
+                // Build a Form widget using the _formKey created above.
+                return Scaffold(
+                appBar: AppBar(
+                    title: Text('Form'),
+                ),
+                body: Form(
+                    key: _formKey,
+                    child: Column(
+                    children: <Widget>[
+                        // Add TextFormFields and ElevatedButton here.
+                    ],
+                    ),
+                ),
+                );
+            }
+            }
+        </code>
+    </pre> -->
+    <p>Ta có kết quả như ảnh sau:</p>
+    <img
+      src="https://media.techmaster.vn/api/static/bwZ6Np4v/yOIC3Nge"
+      alt="Ảnh mẫu"
+    />
+    <blockquote>
+      <p>
+        Sử dụng GlobalKey là cách được khuyến nghị để truy cập vào 1 form, tuy
+        nhiên nếu bạn có một widget tree phức tạp hơn, bạn có thể sử dụng phương
+        thức Form.of() để truy cập form mà không cần thông qua widget.
+      </p>
+    </blockquote>
+    <h3>2. Thêm 1 TextFormField với logic xác nhận</h3>
+    <p>
+      Mặc dù chúng ta đã có Form, nhưng chưa có cách nào để người dùng nhập dữ
+      liệu. Và ta cần tới TextFormField. TextFormField widget tạo ra một text
+      field dạng material design và có thể hiển thị lỗi khi dữ liệu sai.
+    </p>
+    <p>
+      Xác thực đầu vào bằng cách cung cấp một hàm validator() cho TextFormField.
+      Nếu thông tin đầu vào của người dùng không hợp lệ, hàm validator() sẽ trả
+      về một chuỗi chứa thông báo lỗi. Nếu không có lỗi, validator phải trả về
+      null.
+    </p>
+    <p>
+      Đối với ví dụ này, hãy tạo validator để đảm bảo TextFormField không trống.
+      Nếu nó trống, hãy trả về một thông báo lỗi.
+    </p>
+    <!-- <code>
+        extFormField(
+        // The validator receives the text that the user has entered.
+        validator: (value) {
+            if (value == null || value.isEmpty) {
+            return 'Please enter some text';
+            }
+            return null;
+        },
+        ),
+    </code> -->
+    <br />
+    <br />
+    <img
+      src="https://media.techmaster.vn/api/static/bwZ6Np4v/B-pslvwk"
+      alt="Ảnh mẫu"
+    />
+    <h3>3. Tạo một nút để xác thực và gửi biểu mẫu</h3>
+    <p>
+      Bây giờ bạn đã có một form với trường để nhập liệu, hãy cung cấp một
+      button mà người dùng có thể nhấn để gửi thông tin.
+    </p>
+    <p>
+      Khi người dùng cố gắng gửi biểu mẫu, hãy kiểm tra xem biểu mẫu có hợp lệ
+      không. Nếu đúng, hiển thị thông báo thành công. Nếu không (trường nhập
+      liệu không có nội dung), hãy hiển thị thông báo lỗi.
+    </p>
+    <!-- <code>
+        ElevatedButton(
+        onPressed: () {
+            // Validate returns true if the form is valid, or false otherwise.
+            if (_formKey.currentState!.validate()) {
+            // If the form is valid, display a snackbar. In the real world,
+            // you'd often call a server or save the information in a database.
+            ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('Processing Data')),
+            );
+            }
+        },
+        child: const Text('Submit'),
+        ),
+    </code> -->
+    <br />
+    <br />
+    <img
+      src="https://media.techmaster.vn/api/static/bwZ6Np4v/iLFND3g5"
+      alt="Ảnh mẫu"
+    />
+    <p>Giải thích cách hoạt động</p>
+  </body>
+</html>

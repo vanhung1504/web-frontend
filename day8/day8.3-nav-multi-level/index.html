@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position CSS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      href="https://vegibit.com/wp-content/uploads/2018/09/CSS-Position-Tutorial.png"
+      sizes="192x192"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header d-flex a-center">
+      <nav class="container nav-box">
+        <ul class="nav-list d-flex j-between a-center">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-house-user"></i>
+              <span>HOME</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-user"></i>
+              <span>ABOUT</span>
+            </a>
+          </li>
+
+          <li class="nav-item nav-item-with-sub">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-camera"></i>
+              <span>PORTFOLIO</span>
+              <div class="sub-menu sub-menu-1 absolute">
+                <ul class="sub-menu-list">
+                  <li class="sub-menu-item sub-item-with-sub">
+                    <span>Sub-Menu 1</span>
+                    <div class="sub-menu sub-menu-2 absolute">
+                      <ul class="sub-menu-list">
+                        <li class="sub-menu-item sub-item-with-sub-sub">
+                          <span>Sub Sub-Menu</span>
+                          <div class="sub-menu sub-menu-3 absolute">
+                            <ul class="sub-menu-list">
+                              <li class="sub-menu-item">Sub Sub Sub-Menu 1</li>
+
+                              <li class="sub-menu-item">Sub Sub Sub-Menu 2</li>
+
+                              <li class="sub-menu-item">Sub Sub Sub-Menu 3</li>
+
+                              <li class="sub-menu-item">Sub Sub Sub-Menu 4</li>
+
+                              <li class="sub-menu-item">Sub Sub Sub-Menu 5</li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <li class="sub-menu-item sub-item-with-sub-sub">
+                          <span>Sub Sub-Menu 2</span>
+                          <div class="sub-menu sub-menu-3 absolute">
+                            <ul class="sub-menu-list">
+                              <li class="sub-menu-item">Sub Sub Sub-Menu 1</li>
+
+                              <li class="sub-menu-item">Sub Sub Sub-Menu 2</li>
+
+                              <li class="sub-menu-item">Sub Sub Sub-Menu 3</li>
+
+                              <li class="sub-menu-item">Sub Sub Sub-Menu 4</li>
+
+                              <li class="sub-menu-item">Sub Sub Sub-Menu 5</li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <li class="sub-menu-item">Sub Sub-Menu 3</li>
+
+                        <li class="sub-menu-item">Sub Sub-Menu 4</li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="sub-menu-item sub-item-with-sub">
+                    <span>Sub-Menu 2</span>
+                    <div class="sub-menu sub-menu-2 absolute">
+                      <ul class="sub-menu-list">
+                        <li class="sub-menu-item">Sub Sub-Menu 1</li>
+
+                        <li class="sub-menu-item">Sub Sub-Menu 2</li>
+
+                        <li class="sub-menu-item">Sub Sub-Menu 3</li>
+
+                        <li class="sub-menu-item">Sub Sub-Menu 4</li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="sub-menu-item">
+                    <span>Sub-Menu 3</span>
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-bullhorn"></i>
+              <span>BLOG</span>
+            </a>
+          </li>
+
+          <li class="nav-item nav-item-with-sub">
+            <a href="#" class="nav-link relative">
+              <i class="fa-solid fa-tags"></i>
+              <span>CATEGORIES</span>
+              <div class="sub-menu sub-menu-1 absolute">
+                <ul class="sub-menu-list">
+                  <li class="sub-menu-item sub-item-with-sub">
+                    <span>Sub-Menu 1</span>
+                    <div class="sub-menu sub-menu-2 absolute">
+                      <ul class="sub-menu-list">
+                        <li class="sub-menu-item">Sub Sub-Menu 1</li>
+
+                        <li class="sub-menu-item">Sub Sub-Menu 2</li>
+
+                        <li class="sub-menu-item">Sub Sub-Menu 3</li>
+
+                        <li class="sub-menu-item">Sub Sub-Menu 4</li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="sub-menu-item">
+                    <span>Sub-Menu 2</span>
+                  </li>
+
+                  <li class="sub-menu-item sub-item-with-sub">
+                    <span>Sub-Menu 3</span>
+                    <div class="sub-menu sub-menu-2 absolute">
+                      <ul class="sub-menu-list">
+                        <li class="sub-menu-item">Sub Sub-Menu 1</li>
+
+                        <li class="sub-menu-item">Sub Sub-Menu 2</li>
+
+                        <li class="sub-menu-item">Sub Sub-Menu 3</li>
+
+                        <li class="sub-menu-item">Sub Sub-Menu 4</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-envelope"></i>
+              <span>CONTACT</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-sitemap"></i>
+              <span>SITEMAP</span>
+            </a>
+          </li>
+
+          <li class="nav-item nav-item-with-sub">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <span>DISCLAIMER</span>
+              <div class="sub-menu sub-menu-1 absolute">
+                <ul class="sub-menu-list">
+                  <li class="sub-menu-item sub-item-with-sub-last">
+                    <span>Sub-Menu 1</span>
+                    <div class="sub-menu sub-menu-last absolute">
+                      <ul class="sub-menu-list">
+                        <li class="sub-menu-item">Sub Sub-Menu 1</li>
+
+                        <li class="sub-menu-item">Sub Sub-Menu 2</li>
+
+                        <li class="sub-menu-item">Sub Sub-Menu 3</li>
+
+                        <li class="sub-menu-item">Sub Sub-Menu 4</li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="sub-menu-item">
+                    <span>Sub-Menu 2</span>
+                  </li>
+
+                  <li class="sub-menu-item sub-item-with-sub-last">
+                    <span>Sub-Menu 3</span>
+                    <div class="sub-menu sub-menu-last absolute">
+                      <ul class="sub-menu-list">
+                        <li class="sub-menu-item">Sub Sub-Menu 1</li>
+
+                        <li class="sub-menu-item">Sub Sub-Menu 2</li>
+
+                        <li class="sub-menu-item">Sub Sub-Menu 3</li>
+
+                        <li class="sub-menu-item">Sub Sub-Menu 4</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container main">
+      <div class="heart d-flex j-center a-center">
+        <div class="square">
+          <div class="heart-title">Position</div>
+          <div class="cicle-left"></div>
+          <div class="cicle-right"></div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="multi-square">
+        <div class="square1 bg-red relative">
+          <div class="square2 bg-yellow absolute">
+            <div class="square3 bg-blue absolute">
+              <div class="square4 bg-pink absolute"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+    </main>
+  </body>
+</html>
