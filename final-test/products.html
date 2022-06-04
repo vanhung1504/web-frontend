@@ -57,19 +57,19 @@
         <nav class="nav">
           <ul class="nav-list d-flex j-between a-center">
             <li class="nav-item">
-              <a href="#" class="nav-link active">Home</a>
+              <a href="./#" class="nav-link">Home</a>
             </li>
 
             <li class="nav-item">
-              <a href="#About" class="nav-link">About me</a>
+              <a href="./#About" class="nav-link">About me</a>
             </li>
 
             <li class="nav-item">
-              <a href="./products.html" class="nav-link">Products</a>
+              <a href="#" class="nav-link active">Products</a>
             </li>
 
             <li class="nav-item">
-              <a href="#Contact" class="nav-link">Contact me</a>
+              <a href="./#Contact" class="nav-link">Contact me</a>
             </li>
           </ul>
         </nav>
@@ -97,9 +97,14 @@
               </div>
 
               <div class="cart-content-box d-flex f-column a-center f-grow-1">
-                <div class="d-none cart-content-empty">No items found.</div>
+                <div class="cart-content-empty">
+                  No items found.
+                  <br />
+                  <br />
+                  <strong>[TEST HIỂN THỊ GIỎ HÀNG RỖNG]</strong>
+                </div>
 
-                <div class="cart-item d-flex j-between a-center">
+                <div class="d-none cart-item d-flex j-between a-center">
                   <img
                     src="https://uploads-ssl.webflow.com/5bd8adf923983b6ef049c9fe/5bd9ff932fb42272361d024c_p1-1.jpg"
                     alt="Cart item"
@@ -125,7 +130,7 @@
                   />
                 </div>
 
-                <div class="cart-item d-flex j-between a-center">
+                <div class="d-none cart-item d-flex j-between a-center">
                   <img
                     src="https://uploads-ssl.webflow.com/5bd8adf923983b6ef049c9fe/5bd9fe9d2d4d5f69cabcca75_p2-1.jpg"
                     alt="Cart item"
@@ -152,7 +157,7 @@
                 </div>
               </div>
 
-              <div class="cart-footer-box">
+              <div class="d-none cart-footer-box">
                 <div class="cart-subtotal-box d-flex j-between a-center">
                   <span class="cart-subtotal-label">Subtotal</span>
                   <span class="cart-subtotal-price"> $ 59.97 USD </span>
@@ -166,256 +171,11 @@
     </header>
 
     <main class="main">
-      <section id="Slider">
-        <div class="top-slider"></div>
-        <div class="bottom-slider"></div>
-        <div class="slider-content d-flex a-center">
-          <div class="slider-main-box"></div>
-
-          <div class="slider-info-box d-flex f-column j-center">
-            <span class="slider-info-status"> NEW </span>
-            <h2 class="slider-info-title">Spring Cushion Collection 2019</h2>
-            <div class="slider-info-link-box">
-              <a href="#Products" class="slider-info-link">BUY NOW</a>
-            </div>
-          </div>
-
-          <div class="slider-controls d-flex">
-            <button class="btn-control btn-control-prev">
-              <i class="fa-solid fa-angle-left"></i>
-              <!-- <i class="bi bi-caret-left"></i> -->
-            </button>
-            <button class="btn-control btn-control-next">
-              <i class="fa-solid fa-angle-right"></i>
-              <!-- <i class="bi bi-caret-right"></i> -->
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section id="Summary">
-        <div class="summary-box">
-          <div class="summary-top">
-            <h2 class="summary-title">I'M A CUSHION DESIGNER</h2>
-            <p class="summary-desc">
-              Based in San Francisco, California I design trendy and fashion
-              Cushions, since I have memory I always had a tendency to design
-              and illustration.
-            </p>
-            <a href="#About" class="summary-link"> LEARN MORE </a>
-          </div>
-
-          <div class="summary-links">
-            <div class="row">
-              <div class="col col-4">
-                <div class="summary-item">
-                  <a href="#About" class="summary-item-link">
-                    <img
-                      src="https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd892e61cab6c8d61313a06_1.png"
-                      alt="Images"
-                      class="summary-item-img"
-                    />
-                  </a>
-
-                  <div class="summary-item-info">
-                    <div class="">
-                      <a href="#About" class="summary-item-info-1">About me</a>
-                    </div>
-                    <div class="">
-                      <a href="#About" class="summary-item-info-2"
-                        >Learn more
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col col-4">
-                <div class="summary-item">
-                  <a href="#Before-products" class="summary-item-link">
-                    <img
-                      src="https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd892e6e7345f8606c14439_2-p-500.png"
-                      alt="Images"
-                      class="summary-item-img"
-                    />
-                  </a>
-
-                  <div class="summary-item-info">
-                    <div class="">
-                      <a href="#Before-products" class="summary-item-info-1"
-                        >My products
-                      </a>
-                    </div>
-                    <div class="">
-                      <a href="#Before-products" class="summary-item-info-2"
-                        >Learn more</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col col-4">
-                <div class="summary-item">
-                  <a href="#Contact" class="summary-item-link">
-                    <img
-                      src="https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd892e6b7abc54c782f11a0_3.png"
-                      alt="Images"
-                      class="summary-item-img"
-                    />
-                  </a>
-
-                  <div class="summary-item-info">
-                    <div class="">
-                      <a href="#Contact" class="summary-item-info-1">
-                        Contact me
-                      </a>
-                    </div>
-                    <div class="">
-                      <a href="#Contact" class="summary-item-info-2"
-                        >Learn more
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="About">
-        <div class="about-box">
-          <div class="d-flex j-center f-wrap">
-            <div class="about-main-box"></div>
-
-            <div class="slider-info-box d-flex f-column j-center">
-              <span class="slider-info-status">ABOUT ME</span>
-              <h2 class="slider-info-title">I'm a trendy Cushion Designer</h2>
-              <div class="slider-info-link-box">
-                <a href="#Products" class="slider-info-link">LEARN MORE</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="Images">
-        <div class="images-box">
-          <div class="d-flex">
-            <div class="row">
-              <div class="col-6 d-flex a-center">
-                <div class="img-content d-flex f-column a-start j-center">
-                  <h2 class="img-title">BEGINNINGS</h2>
-                  <p class="img-desc">
-                    Credibly innovate granular internal or organic sources
-                    whereas high standards in web-readiness. Energistically
-                    scale future-proof core competencies vis-a-vis impactful
-                    experiences.
-                  </p>
-                  <p class="img-desc">
-                    Dramatically synthesize integrated schemas. with optimal
-                    networks.
-                  </p>
-                </div>
-              </div>
-
-              <div class="col-6 d-flex j-center a-center">
-                <a class="img-link">
-                  <img
-                    src="https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbafef82dc4bd8245d41_nathan-fertig-249917-unsplash-p-1080.jpeg"
-                    alt="Image"
-                    class="img-img"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="d-flex mt-40">
-            <div class="row">
-              <div class="col-6 d-flex j-center a-center">
-                <a class="img-link">
-                  <img
-                    src="https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbaf49a14257198e81cb_6-p-800.jpeg"
-                    alt="Image"
-                    class="img-img img-square"
-                  />
-                </a>
-              </div>
-
-              <div class="col-6 d-flex a-center">
-                <div class="img-content d-flex f-column a-start j-center">
-                  <h2 class="img-title">CARRER</h2>
-                  <p class="img-desc">
-                    Collaboratively administrate turnkey channels whereas
-                    virtual e-tailers.
-                  </p>
-                  <p class="img-desc">
-                    Objectively seize scalable metrics whereas proactive
-                    e-services seamlessly empower fully researched growth
-                    strategies.
-                  </p>
-                  <p class="img-desc">
-                    And interoperable internal or “organic” sources.
-                  </p>
-                  <a href="#About" class="summary-link"> LEARN MORE </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="d-flex mt-40">
-            <div class="row">
-              <div class="col-6 d-flex a-center">
-                <div class="img-content d-flex f-column a-start j-center">
-                  <h2 class="img-title">PRODUCTS</h2>
-                  <p class="img-desc">
-                    Seamlessly empower fully researched growth strategies and
-                    interoperable internal or “organic” sources.
-                  </p>
-                  <p class="img-desc">
-                    Credibly innovate granular internal or “organic” sources
-                    whereas high standards in web-readiness.
-                  </p>
-                  <p class="img-desc">
-                    Energistically scale future-proof core competence
-                  </p>
-                </div>
-              </div>
-
-              <div class="col-6 d-flex j-center a-center">
-                <a class="img-link">
-                  <img
-                    src="https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbafcf26d38b797ab7a8_julian-hochgesang-795082-unsplash-p-1080.jpeg"
-                    alt="Image"
-                    class="img-img"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="Before-products">
-        <div class="before-products-box">
-          <div class="d-flex j-center f-wrap">
-            <div class="about-main-box"></div>
-
-            <div class="slider-info-box d-flex f-column j-center">
-              <span class="slider-info-status">NEW</span>
-              <h2 class="slider-info-title">Spring Cushion Collection 2019</h2>
-              <div class="slider-info-link-box">
-                <a href="#Products" class="slider-info-link">BUY NOW</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <div id="products-header">
+        <div class="products-header-content">Products</div>
+      </div>
       <div id="Products">
-        <div class="products-box">
+        <div class="products-box products">
           <div class="row f-wrap">
             <div class="col-4">
               <div class="product-item">
@@ -557,149 +317,6 @@
           </div>
         </div>
       </div>
-
-      <section id="Contact">
-        <div class="contact-box">
-          <div class="d-flex j-center a-start">
-            <address class="contact-info">
-              <div class="info-detail-box">
-                <div class="info-detail-title">EMAIL</div>
-                <div class="d-flex">
-                  <a href="#" class="info-detail-link">support@website.com</a>
-                </div>
-              </div>
-
-              <div class="info-detail-box mt-20">
-                <div class="info-detail-title">PHONE</div>
-                <div class="d-flex">
-                  <a href="#" class="info-detail-link">800-123-456</a>
-                </div>
-              </div>
-
-              <div class="info-detail-box mt-20">
-                <div class="info-detail-title">ADDRESS</div>
-                <div class="info-detail-link">
-                  23 Evergreen Street, <br />
-                  San Francisco, California <br />USA
-                </div>
-              </div>
-            </address>
-
-            <form class="form-group">
-              <h2 class="info-detail-title">ADDRESS</h2>
-              <p class="info-detail-link">
-                Drop us your message and I'll get back to you as soon as
-                possible.
-              </p>
-              <div class="row f-wrap j-between">
-                <div class="col-6 mt-20">
-                  <div class="input-box">
-                    <input
-                      type="text"
-                      class="input-content txtName"
-                      maxlength="256"
-                      name="txtName"
-                      placeholder="your name"
-                      id="txtName"
-                      required=""
-                    />
-                  </div>
-                </div>
-
-                <div class="col-6 mt-20">
-                  <div class="input-box">
-                    <input
-                      type="text"
-                      class="input-content txtCompany"
-                      maxlength="256"
-                      name="txtCompany"
-                      placeholder="your company"
-                      id="txtCompany"
-                      required=""
-                    />
-                  </div>
-                </div>
-
-                <div class="col-6 mt-30">
-                  <div class="input-box">
-                    <input
-                      type="text"
-                      class="input-content txtTelephone"
-                      maxlength="256"
-                      name="txtTelephone"
-                      placeholder="your phone"
-                      id="txtTelephone"
-                      required=""
-                    />
-                  </div>
-                </div>
-
-                <div class="col-6 mt-30">
-                  <div class="input-box">
-                    <input
-                      type="email"
-                      class="input-content txtEmail"
-                      maxlength="256"
-                      name="txtEmail"
-                      placeholder="your email"
-                      id="txtEmail"
-                      required=""
-                    />
-                  </div>
-                </div>
-
-                <div class="col-12 mt-30">
-                  <div class="input-box">
-                    <textarea
-                      class="input-content txtMessage"
-                      name="txtMessage"
-                      id="txtMessage"
-                      placeholder="your message"
-                    ></textarea>
-                  </div>
-                </div>
-
-                <input
-                  type="submit"
-                  value="Let's talk"
-                  data-wait="Please wait..."
-                  class="btn-submit mt-30"
-                />
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <section id="Subscribe">
-        <div class="subscribe-box d-flex f-column j-center a-center">
-          <h2 class="sub-title">NEWSLETTER</h2>
-          <p class="sub-slogan">Get promotions & updates!</p>
-          <form class="sub-form mt-20 d-flex">
-            <input
-              type="text"
-              class="sub-input txtSubName"
-              maxlength="256"
-              name="txtSubName"
-              placeholder="Your name"
-              id="txtSubName"
-              required
-            />
-
-            <input
-              type="email"
-              class="sub-input txtSubEmail"
-              maxlength="256"
-              name="txtSubEmail"
-              placeholder="Your email"
-              id="txtSubEmail"
-              required
-            />
-
-            <input type="submit" value="Subscribe" class="txtBtnSubmit" />
-          </form>
-        </div>
-      </section>
     </main>
 
     <footer class="footer">

@@ -131,6 +131,10 @@ html {
   position: absolute;
 }
 
+.d-none {
+  display: none;
+}
+
 .mt-10 {
   margin-top: 10px;
 }
@@ -194,7 +198,7 @@ html {
 }
 
 .cart-link {
-  display: inline-block;
+  /* display: flex; */
   height: 116px;
   line-height: 116px;
   width: 75px;
@@ -214,8 +218,18 @@ html {
   color: #b08ead;
 }
 
-#control-modal {
-  display: none;
+.cart-quantity {
+  height: 18px;
+  min-width: 18px;
+  padding-right: 6px;
+  padding-left: 6px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #d6bbd3;
+  color: #fff;
 }
 
 .nav-list {
@@ -1011,15 +1025,6 @@ html {
 }
 
 /* Modal */
-/* .modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  animation: fadeIn linear 0.1s;
-  display: flex;
-} */
 
 .modal {
   position: fixed;
@@ -1030,7 +1035,6 @@ html {
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.8);
   animation: fadeLeftToRight 0.3s linear forwards;
-  display: none;
   transition: top 0.4s, opacity 0.4s;
 }
 
@@ -1081,7 +1085,7 @@ html {
   animation: fadeLeftToRight 0.3s linear forwards;
 }
 
-.cart-title-box {
+.cart-header-box {
   padding: 16px 24px;
   border-bottom: 1px solid #e6e6e6;
 }
@@ -1103,8 +1107,379 @@ html {
 }
 
 .cart-content-box {
+  padding: 16px 24px;
   font-family: "Cormorant Garamond", sans-serif;
   color: #5f4d5d;
   font-size: 2.4rem;
   height: 100%;
 }
+
+.cart-content-empty {
+  text-align: center;
+}
+
+.cart-item {
+  width: 100%;
+  padding: 12px 0;
+  align-self: flex-start;
+}
+
+.cart-item-img {
+  vertical-align: middle;
+  display: inline-block;
+  width: 60px;
+  max-width: 100%;
+  height: auto;
+}
+
+.cart-item-meta {
+  margin: 0 16px;
+}
+
+.cart-item-title {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Cormorant Garamond", sans-serif;
+  color: #5f4d5d;
+}
+
+.cart-item-price {
+  margin-top: 5px;
+  font-family: Roboto, sans-serif;
+  color: #b0b0b0;
+  font-size: 1.6rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.cart-item-remove {
+  display: inline-block;
+  margin-top: 5px;
+  transition: opacity 200ms ease;
+  font-family: Roboto, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  background-color: transparent;
+  transition: opacity 200ms ease;
+}
+
+.cart-item-remove:hover {
+  opacity: 0.8;
+}
+
+.cart-item-quality {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  display: block;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  padding: 8px;
+  text-align: center;
+  font-size: 1.3rem;
+  outline: none;
+}
+
+.cart-item-quality:focus {
+  border: 1px solid #3898ec;
+}
+
+.cart-footer-box {
+  padding: 16px 24px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.cart-subtotal-box {
+  margin-bottom: 16px;
+}
+
+.cart-subtotal-label {
+  font-family: "Cormorant Garamond", sans-serif;
+  color: #5f4d5d;
+  font-size: 2.4rem;
+}
+
+.cart-subtotal-price {
+  color: #b0b0b0;
+  font-size: 1.6rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.cart-checkout {
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  padding: 9px 15px;
+  text-decoration: none;
+  display: block;
+  appearance: none;
+  text-align: center;
+
+  padding-top: 11px;
+  background-color: #ceb3cb;
+  transition: opacity 200ms ease;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.cart-checkout:hover {
+  opacity: 0.8;
+}
+
+/* Start products html */
+#products-header {
+  width: 100%;
+  padding-top: 95px;
+  padding-bottom: 95px;
+  background-color: #d6bbd3;
+}
+
+.products-header-content {
+  width: 100%;
+  max-width: 1265px;
+  padding-right: 25px;
+  padding-left: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Cormorant Garamond", sans-serif;
+  color: #fff;
+  font-size: 4.5rem;
+}
+
+.products-box.products {
+  max-width: 940px;
+}
+
+.products-box.products .row {
+  margin-left: -25px;
+  margin-right: -25px;
+}
+/* End products html */
+
+/* Start Product-item html */
+
+/* Start slider product item html */
+#Product-item {
+  width: 100%;
+}
+
+.product-item-box {
+  position: relative;
+  width: 100%;
+  max-width: 1215px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 72px 0;
+}
+
+.p-item-bg {
+  background-image: url(https://assets.website-files.com/5bd8adf923983b6ef049c9fe/5bd9ff932fb42272361d024c_p1-1.jpg);
+  transform: translateX(0px);
+  opacity: 1;
+  transition: transform 500ms ease 0s;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.btn-item-prev,
+.btn-item-next {
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 300;
+  cursor: pointer;
+  margin: auto;
+  width: 1em;
+}
+
+.btn-item-prev {
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.btn-item-next {
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.p-item-desc {
+  min-height: 530px;
+  padding: 32px 40px 20px;
+  background-color: #b08ead;
+}
+
+.p-item-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Cormorant Garamond", sans-serif;
+  color: #fff;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 700;
+}
+
+.p-item-price {
+  color: #fff;
+  font-size: 26px;
+  line-height: 27.5px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.p-item-add-cart {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.p-item-quantity-label {
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.p-item-quantity {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  height: 38px;
+  width: 60px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  padding-top: 8px;
+  padding-right: 6px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  width: 55px;
+  color: #5f4d5d;
+  font-size: 14px;
+}
+
+.p-item-submit {
+  color: #fff;
+  cursor: pointer;
+  padding: 9px 15px;
+  text-decoration: none;
+  border: none;
+  width: 100%;
+  height: 50px;
+  background-color: #ceb3cb;
+  transition: opacity 200ms ease;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.p-item-submit:hover {
+  opacity: 0.8;
+}
+
+/* End slider product item html */
+
+/* Start product meta html */
+#P-item-meta {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  background-color: #fff;
+}
+
+.p-item-meta-box,
+.related-products-box {
+  width: 100%;
+  max-width: 1265px;
+  padding-right: 25px;
+  padding-left: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p-item-meta-title {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Cormorant Garamond", sans-serif;
+  color: #5f4d5d;
+}
+
+.p-item-meta-content {
+  margin-bottom: 10px;
+  font-family: "Cormorant Garamond", sans-serif;
+  color: #5f4d5d;
+  font-size: 24px;
+}
+
+.p-item-meta-img {
+  width: 100%;
+  margin-bottom: 40px;
+}
+/* End product meta html */
+
+/* Start realted Product-item html */
+#Related-products {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  background-color: #f3f3f3;
+}
+
+.related-products-title {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Cormorant Garamond", sans-serif;
+  color: #5f4d5d;
+}
+
+.btn-back-to-products-box {
+  margin-top: 50px;
+}
+
+.btn-back-to-products-link {
+  transition: opacity 200ms ease;
+  color: #b99bb6;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  text-align: right;
+}
+
+.btn-back-to-products-link:hover {
+  opacity: 0.8;
+}
+
+/* End realted Product-item html */

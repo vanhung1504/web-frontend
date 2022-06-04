@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mariela - Webflow E-Commerce website template</title>
+
+    <link
+      rel="icon"
+      href="https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bda392d1c89e12f3e30b5ff_32x32.png"
+      sizes="192x192"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-box d-flex j-between a-center">
+        <div class="logo">
+          <a href="#" class="logo-link">
+            <img
+              src="https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8aad816e1ead4175ca869_Logo.png"
+              alt="Logo"
+              class="logo-img"
+            />
+          </a>
+        </div>
+
+        <nav class="nav">
+          <ul class="nav-list d-flex j-between a-center">
+            <li class="nav-item">
+              <a href="./#" class="nav-link">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="./#About" class="nav-link">About me</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="./products.html" class="nav-link">Products</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="./#Contact" class="nav-link">Contact me</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="cart">
+          <input type="checkbox" id="control-modal" class="d-none" />
+          <label
+            for="control-modal"
+            class="cart-link d-flex j-between a-center"
+          >
+            <!-- <i class="fa-solid fa-cart-arrow-down"></i> -->
+            <i class="bi bi-cart3"></i>
+            <span class="cart-quantity">3</span>
+          </label>
+
+          <!-- Modal -->
+          <div class="modal d-none">
+            <label for="control-modal" class="modal-overley"> </label>
+            <div class="modal-cart d-flex f-column j-between">
+              <div class="cart-header-box d-flex j-between a-center">
+                <h2 class="cart-title">Your Cart</h2>
+                <label for="control-modal" class="cart-close">
+                  <i class="fa-solid fa-xmark"></i>
+                </label>
+              </div>
+
+              <div class="cart-content-box d-flex f-column a-center f-grow-1">
+                <div class="d-none cart-content-empty">
+                  No items found.
+                  <br />
+                  <br />
+                  <strong>[TEST HIỂN THỊ GIỎ HÀNG RỖNG]</strong>
+                </div>
+
+                <div class="cart-item d-flex j-between a-center">
+                  <img
+                    src="https://uploads-ssl.webflow.com/5bd8adf923983b6ef049c9fe/5bd9ff932fb42272361d024c_p1-1.jpg"
+                    alt="Cart item"
+                    class="cart-item-img"
+                  />
+
+                  <div
+                    class="cart-item-meta f-grow-1 d-flex f-column j-between"
+                  >
+                    <p class="cart-item-title">Plated Cushion</p>
+                    <p class="cart-item-price">$ 19.99 USD</p>
+
+                    <div class="">
+                      <button class="cart-item-remove">REMOVE</button>
+                    </div>
+                  </div>
+
+                  <input
+                    type="text"
+                    class="cart-item-quality"
+                    name="cart-item-quality"
+                    value="2"
+                  />
+                </div>
+
+                <div class="cart-item d-flex j-between a-center">
+                  <img
+                    src="https://uploads-ssl.webflow.com/5bd8adf923983b6ef049c9fe/5bd9fe9d2d4d5f69cabcca75_p2-1.jpg"
+                    alt="Cart item"
+                    class="cart-item-img"
+                  />
+
+                  <div
+                    class="cart-item-meta f-grow-1 d-flex f-column j-between"
+                  >
+                    <p class="cart-item-title">Silver Cushion</p>
+                    <p class="cart-item-price">$ 19.99 USD</p>
+
+                    <div class="">
+                      <button class="cart-item-remove">REMOVE</button>
+                    </div>
+                  </div>
+
+                  <input
+                    type="text"
+                    class="cart-item-quality"
+                    name="cart-item-quality"
+                    value="1"
+                  />
+                </div>
+              </div>
+
+              <div class="cart-footer-box">
+                <div class="cart-subtotal-box d-flex j-between a-center">
+                  <span class="cart-subtotal-label">Subtotal</span>
+                  <span class="cart-subtotal-price"> $ 59.97 USD </span>
+                </div>
+                <a href="#" class="cart-checkout">Continue to Checkout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="Product-item">
+      <section id="Slider">
+        <div class="top-slider"></div>
+        <div class="bottom-slider"></div>
+        <div class="product-item-box">
+          <div class="row">
+            <div class="col-8">
+              <div class="p-item-bg relative">
+                <div class="btn-item-prev absolute d-flex j-center a-center">
+                  <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="btn-item-next absolute d-flex j-center a-center">
+                  <i class="fa-solid fa-angle-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4">
+              <div class="p-item-desc d-flex f-column">
+                <h1 class="p-item-title">Plated Cushion</h1>
+                <p class="p-item-price">$ 19.99 USD</p>
+                <div class="p-item-add-cart d-flex f-column">
+                  <label for="p-item-quantity" class="p-item-quantity-label">
+                    QUANTITY
+                  </label>
+
+                  <input
+                    type="number"
+                    class="p-item-quantity"
+                    name="p-item-quantity"
+                    id="p-item-quantity"
+                    min="1"
+                    value="1"
+                  />
+                  <input
+                    type="submit"
+                    value="Add To Cart"
+                    class="p-item-submit"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="P-item-meta">
+        <div class="p-item-meta-box">
+          <h2 class="p-item-meta-title">Description</h2>
+          <p class="p-item-meta-content">
+            Credibly innovate granular internal or organic sources whereas high
+            standards in web-readiness. Energistically scale future-proof core
+            competencies vis-a-vis impactful experiences. Dramatically
+            synthesize integrated schemas. with optimal networks.
+          </p>
+          <h2 class="p-item-meta-title">Shipping</h2>
+          <p class="p-item-meta-content">
+            Et harum quidem rerum facilis est et expedita distinctio. Nam libero
+            tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+            quo minus id quod maxime placeat facere possimus, omnis voluptas
+            assumenda est, omnis dolor repellendus. Temporibus autem quibusdam
+            et aut officiis debitis aut rerum necessitatibus saepe eveniet.
+          </p>
+          <h2 class="p-item-meta-title">Images</h2>
+          <img
+            src="https://assets.website-files.com/5bd8adf923983b6ef049c9fe/5bd9ff932fb42272361d024c_p1-1.jpg"
+            alt="Image"
+            class="p-item-meta-img"
+          />
+
+          <img
+            src="https://assets.website-files.com/5bd8adf923983b6ef049c9fe/5bd9ff975a7df30e1a5caa20_p1-2.jpg"
+            alt="Image"
+            class="p-item-meta-img"
+          />
+
+          <img
+            src="https://assets.website-files.com/5bd8adf923983b6ef049c9fe/5bd9ffa2e46cb9bdb81b6c8b_p1-3.jpg"
+            alt="Image"
+            class="p-item-meta-img"
+          />
+        </div>
+      </section>
+
+      <section id="Related-products">
+        <div class="related-products-box">
+          <h2 class="related-products-title">Related Products</h2>
+
+          <div class="row f-wrap">
+            <div class="col-4">
+              <div class="product-item">
+                <a href="./product-item.html" class="product-img-link">
+                  <img
+                    src="https://assets.website-files.com/5bd8adf923983b6ef049c9fe/5bd8e3f6cf26d34b0b7ac10a_p-2-p-500.jpeg"
+                    alt="Image"
+                    class="product-img"
+                  />
+                </a>
+
+                <div
+                  class="product-detail d-flex f-column j-center a-center mt-10"
+                >
+                  <a href="./product-item.html" class="product-title"
+                    >Silver Cushion</a
+                  >
+                  <a href="./product-item.html" class="product-price"
+                    >$ 19.99 USD</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4">
+              <div class="product-item">
+                <a href="./product-item.html" class="product-img-link">
+                  <img
+                    src="https://assets.website-files.com/5bd8adf923983b6ef049c9fe/5bd8e347b51929d41cefee85_p-3-p-500.jpeg"
+                    alt="Image"
+                    class="product-img"
+                  />
+                </a>
+
+                <div
+                  class="product-detail d-flex f-column j-center a-center mt-10"
+                >
+                  <a href="./product-item.html" class="product-title"
+                    >Deep Blue Cushion</a
+                  >
+                  <a href="./product-item.html" class="product-price"
+                    >$ 19.99 USD</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4">
+              <div class="product-item">
+                <a href="./product-item.html" class="product-img-link">
+                  <img
+                    src="https://assets.website-files.com/5bd8adf923983b6ef049c9fe/5bd8e31c49a14202638e8840_p-4-p-500.jpeg"
+                    alt="Image"
+                    class="product-img"
+                  />
+                </a>
+
+                <div
+                  class="product-detail d-flex f-column j-center a-center mt-10"
+                >
+                  <a href="./product-item.html" class="product-title"
+                    >Pink Cushion</a
+                  >
+                  <a href="./product-item.html" class="product-price"
+                    >$ 19.99 USD</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn-back-to-products-box d-flex j-end">
+            <a href="./products.html" class="btn-back-to-products-link"
+              >BACK TO PRODUCTS</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="top-footer">
+        <div class="top-footer-box">
+          <div class="row">
+            <div class="col-4">
+              <div class="top-footer-item d-flex f-column a-center">
+                <div class="top-footer-item-img"></div>
+                <div class="">
+                  <p class="top-footer-item-title-1">Safe shopping</p>
+                </div>
+                <div class="">
+                  <p class="top-footer-item-title-2">Buy with confidence</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4">
+              <div class="top-footer-item d-flex f-column a-center">
+                <div class="top-footer-item-img"></div>
+                <div class="">
+                  <p class="top-footer-item-title-1">Fast shipping</p>
+                </div>
+                <div class="">
+                  <p class="top-footer-item-title-2">Get your product fast</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4">
+              <div class="top-footer-item d-flex f-column a-center">
+                <div class="top-footer-item-img"></div>
+                <div class="">
+                  <p class="top-footer-item-title-1">Satisfaction guarantee</p>
+                </div>
+                <div class="">
+                  <p class="top-footer-item-title-2">Or get your money back</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-footer">
+        <div class="bottom-footer-box">
+          <div class="row j-between a-center">
+            <div class="logo">
+              <a href="#" class="logo-link">
+                <img
+                  src="https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8ee3cd39e269b7bb8c128_Logo-w.png"
+                  alt="Logo"
+                  class="logo-img"
+                />
+              </a>
+            </div>
+
+            <nav class="nav d-flex">
+              <ul class="nav-list d-flex j-between a-center">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Home</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#About" class="nav-link">About me</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#Products" class="nav-link">Products</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#Contact" class="nav-link">Contact me</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="social-box d-flex j-between a-center">
+              <a href="#" target="_blank" class="social-item">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" target="_blank" class="social-item">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" target="_blank" class="social-item">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-notice relative">
+            <div class="footer-notice-box">
+              <div class="footer-notice-text">
+                <a href="#" class="notice-link">Version 1.2</a> &nbsp;|
+                &nbsp;Image
+                <a href="#" class="notice-link">Licensing</a> &nbsp;| &nbsp;Made
+                By
+                <a
+                  href="https://webflow.com/templates/designers/pablo-ramos"
+                  target="_blank"
+                  class="notice-link"
+                  >Pablo Ramos</a
+                >
+                &nbsp;| &nbsp;Visit My&nbsp;<a
+                  href="http://pablo-ramos.webflow.io/"
+                  target="_blank"
+                  class="notice-link"
+                  >Templates</a
+                >&nbsp; | &nbsp;Powered By
+                <a href="http://webflow.com" target="_blank" class="notice-link"
+                  >Webflow</a
+                >
+              </div>
+            </div>
+            <a href="#Top" class="go-up absolute"
+              ><i class="fa-solid fa-angle-up"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
