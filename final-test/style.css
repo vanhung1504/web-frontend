@@ -608,6 +608,38 @@ html {
   max-width: 544px;
 }
 
+.modal-images {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.modal-images-img {
+  max-width: 96vw;
+  max-height: 96vh;
+}
+
+.modal-images-close {
+  position: absolute;
+  font-size: 2rem;
+  color: #fff;
+  top: 0;
+  right: 0;
+  width: 4em;
+  height: 4em;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.modal-images-close:hover {
+  opacity: 0.8;
+}
+
 /* End Images */
 
 /* Start Before Products */

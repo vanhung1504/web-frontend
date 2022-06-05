@@ -45,7 +45,7 @@
     <header class="header">
       <div class="header-box d-flex j-between a-center">
         <div class="logo">
-          <a href="#" class="logo-link">
+          <a href="./index.html" class="logo-link">
             <img
               src="https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8aad816e1ead4175ca869_Logo.png"
               alt="Logo"
@@ -176,16 +176,22 @@
             <span class="slider-info-status"> NEW </span>
             <h2 class="slider-info-title">Spring Cushion Collection 2019</h2>
             <div class="slider-info-link-box">
-              <a href="#Products" class="slider-info-link">BUY NOW</a>
+              <a href="#Before-products" class="slider-info-link">BUY NOW</a>
             </div>
           </div>
 
           <div class="slider-controls d-flex">
-            <button class="btn-control btn-control-prev">
+            <button
+              class="btn-control btn-control-prev"
+              onclick="controlSlider(this)"
+            >
               <i class="fa-solid fa-angle-left"></i>
               <!-- <i class="bi bi-caret-left"></i> -->
             </button>
-            <button class="btn-control btn-control-next">
+            <button
+              class="btn-control btn-control-next"
+              onclick="controlSlider(this)"
+            >
               <i class="fa-solid fa-angle-right"></i>
               <!-- <i class="bi bi-caret-right"></i> -->
             </button>
@@ -293,7 +299,7 @@
               <span class="slider-info-status">ABOUT ME</span>
               <h2 class="slider-info-title">I'm a trendy Cushion Designer</h2>
               <div class="slider-info-link-box">
-                <a href="#Products" class="slider-info-link">LEARN MORE</a>
+                <a href="#About" class="slider-info-link">LEARN MORE</a>
               </div>
             </div>
           </div>
@@ -321,7 +327,7 @@
               </div>
 
               <div class="col-6 d-flex j-center a-center">
-                <a class="img-link">
+                <a class="img-link" onclick="toggleModalImages(this)">
                   <img
                     src="https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbafef82dc4bd8245d41_nathan-fertig-249917-unsplash-p-1080.jpeg"
                     alt="Image"
@@ -335,7 +341,7 @@
           <div class="d-flex mt-40">
             <div class="row">
               <div class="col-6 d-flex j-center a-center">
-                <a class="img-link">
+                <a class="img-link" onclick="toggleModalImages(this)">
                   <img
                     src="https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbaf49a14257198e81cb_6-p-800.jpeg"
                     alt="Image"
@@ -385,7 +391,7 @@
               </div>
 
               <div class="col-6 d-flex j-center a-center">
-                <a class="img-link">
+                <a class="img-link" onclick="toggleModalImages(this)">
                   <img
                     src="https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbafcf26d38b797ab7a8_julian-hochgesang-795082-unsplash-p-1080.jpeg"
                     alt="Image"
@@ -394,6 +400,16 @@
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="d-none modal-images d-flex j-center a-center">
+          <img
+            src="https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbafef82dc4bd8245d41_nathan-fertig-249917-unsplash.jpg"
+            alt="Modal Image"
+            class="modal-images-img"
+          />
+          <div class="modal-images-close" onclick="toggleModalImages()">
+            <i class="fa-solid fa-xmark"></i>
           </div>
         </div>
       </section>
@@ -749,7 +765,7 @@
         <div class="bottom-footer-box">
           <div class="row j-between a-center">
             <div class="logo">
-              <a href="#" class="logo-link">
+              <a href="./index.html" class="logo-link">
                 <img
                   src="https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8ee3cd39e269b7bb8c128_Logo-w.png"
                   alt="Logo"
@@ -761,19 +777,19 @@
             <nav class="nav d-flex">
               <ul class="nav-list d-flex j-between a-center">
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Home</a>
+                  <a href="./index.html" class="nav-link">Home</a>
                 </li>
 
                 <li class="nav-item">
-                  <a href="#About" class="nav-link">About me</a>
+                  <a href="./#About" class="nav-link">About me</a>
                 </li>
 
                 <li class="nav-item">
-                  <a href="#Products" class="nav-link">Products</a>
+                  <a href="./products.html" class="nav-link">Products</a>
                 </li>
 
                 <li class="nav-item">
-                  <a href="#Contact" class="nav-link">Contact me</a>
+                  <a href="./#Contact" class="nav-link">Contact me</a>
                 </li>
               </ul>
             </nav>
@@ -822,5 +838,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="index.js"></script>
   </body>
 </html>
