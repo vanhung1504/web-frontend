@@ -383,6 +383,66 @@ let solveEquation = function (a, b, c) {
   return message;
 };
 
+let fibonacci = function (n) {
+  n = Number(n);
+  let fibo1 = 0;
+  let fibo2 = 1;
+  let myArray = [0, 1];
+  if (n < 3 && n != 2) {
+    message = `Không tồn tại dãy Fibonacci có ${n} phần tử.`;
+  } else if (n < 3 && n == 2) {
+    message = `Dãy Fibonacci có ${n} phần tử là [${myArray}]`;
+  } else {
+    let fibo3;
+    for (let i = 1; i <= n - 2; ++i) {
+      fibo3 = fibo1 + fibo2;
+      myArray.push(fibo3);
+      fibo1 = fibo2;
+      fibo2 = fibo3;
+    }
+    message = `Dãy Fibonacci có ${n} phần tử là [${myArray}]`;
+  }
+  console.log(message);
+  return message;
+};
+
+let isPalindrome = function (n) {
+  n = Number(n);
+  const N_INPUT = n;
+  let nRevert = 0;
+  let isResult;
+  // Dao nguoc so.
+  while (n > 0) {
+    nRevert = nRevert * 10 + (n % 10);
+    n = Math.floor(n / 10); // Lam tron xuong
+  }
+
+  if (N_INPUT == nRevert) {
+    message = `Số ${N_INPUT} là số Palindrome`;
+    isResult = true;
+  } else {
+    message = `Số ${N_INPUT} là không phải là số Palindrome`;
+    isResult = false;
+  }
+  console.log(message);
+  return [message, isResult];
+};
+
+let sumOfPalindrome = function (n) {
+  n = Number(n);
+  let sum = 0;
+  let myArray = [];
+  for (let i = 1; i <= n; ++i) {
+    if (isPalindrome(i)[1] == true) {
+      sum += i;
+      myArray.push(i);
+    }
+  }
+  message = `Các số Palindrome trong đoạn từ [1-${n}] là [${myArray}] và có tổng là ${sum}`;
+  console.log(message);
+  return message;
+};
+
 // Funtion DOM
 
 function displayFunctDesc(e) {
@@ -489,6 +549,21 @@ function runFunction() {
       document.getElementById(
         "result-output"
       ).innerText = `Output: ${solveEquation(...argArray)}`;
+      break;
+    case "fibonacci":
+      document.getElementById("result-output").innerText = `Output: ${fibonacci(
+        ...argArray
+      )}`;
+      break;
+    case "isPalindrome":
+      document.getElementById("result-output").innerText = `Output: ${
+        isPalindrome(...argArray)[0]
+      }`;
+      break;
+    case "sumOfPalindrome":
+      document.getElementById(
+        "result-output"
+      ).innerText = `Output: ${sumOfPalindrome(...argArray)}`;
       break;
     default:
       break;

@@ -6,6 +6,11 @@
   line-height: 30px;
 }
 
+p {
+  word-break: break-all;
+  white-space: normal;
+}
+
 .row {
   display: flex;
   flex-direction: row;
