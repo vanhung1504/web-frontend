@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript cơ bản</title>
+
+    <link
+      rel="icon"
+      href="https://thienanblog.com/wp-content/uploads/2015/04/javascript_logo.png"
+      sizes="192x192"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <main class="main">
+        <h1>BÀI TẬP JAVASCRIPT</h1>
+        <div class="main-box">
+          <div class="row">
+            <div class="col col-6">
+              <div class="left-box d-flex f-column">
+                <label for="functName" class="functLabel"
+                  >Lựa chọn một function trong danh sách:
+                </label>
+                <select
+                  name="functName"
+                  class="functName mt-20"
+                  id="functName"
+                  onchange="displayFunctDesc(this)"
+                >
+                  <option value="1">findBMI</option>
+                  <option value="2">findMaxOfThree</option>
+                  <option value="3">calcWaterBill</option>
+                  <option value="4">calcTaxiFee</option>
+                  <option value="5">checkNumberIsPrime</option>
+                  <option value="6">findFirstLastNumber</option>
+                  <option value="7">isOddNumber</option>
+                  <option value="8">divisibleByThreeAndFive</option>
+                  <option value="9">season</option>
+                  <option value="10">trafficLight</option>
+                  <option value="11">calcCommissions</option>
+                  <option value="12">isLeafYear</option>
+                  <option value="13">daysOfMonth</option>
+                  <option value="14">calcGrade</option>
+                  <option value="15">solveEquation</option>
+                </select>
+                <input
+                  type="text"
+                  class="functInput mt-20"
+                  id="functInput"
+                  placeholder="Nhập tham số cần truyền vào ở đây. Nếu nhiều tham số thì cách nhau bởi dấu phẩy."
+                />
+                <input
+                  type="submit"
+                  value="Run"
+                  class="functSubmit mt-20"
+                  id="functSubmit"
+                  onclick="runFunction()"
+                />
+                <div class="funct-result">
+                  <p class="result-input mt-20" id="result-input">Input:</p>
+                  <p class="result-output mt-10" id="result-output">Output:</p>
+                </div>
+              </div>
+            </div>
+            <div class="col col-6">
+              <div class="right-box">
+                <div class="right-item">
+                  <h2 class="item-name">findBMI</h2>
+                  <div class="item-desc mt-10">
+                    Hàm <b>findBMI(w, h)</b> nhận 2 giá trị đầu vào là cân nặng
+                    w (kg) và chiều cao h (m). Kiểm tra và trả ra kết quả phân
+                    loại mức độ gầy béo theo tiêu chuẩn của thầy giáo Ba.
+                  </div>
+                </div>
+
+                <div class="right-item d-none">
+                  <h2 class="item-name">findMaxOfThree</h2>
+                  <div class="item-desc mt-10">
+                    Hàm <b>findMaxOfThree(a, b, c)</b> nhận 3 giá trị đầu vào là
+                    3 số a, b, c. Hàm kiểm tra và trả về số lớn nhất trong 3 số.
+                  </div>
+                </div>
+
+                <div class="right-item d-none">
+                  <h2 class="item-name">calcWaterBill</h2>
+                  <div class="item-desc mt-10">
+                    Hàm <b>calcWaterBill(v)</b> nhận giá trị đầu vào là số m3
+                    nước. Hàm kiểm tra và trả về số tiền (VNĐ) phải trả theo quy
+                    ước sau:
+                    <ul>
+                      <li>Mức 0 (Từ trên 0 đến 5 khối): Mặc định 45000 VNĐ</li>
+                      <li>Mức 1 (Từ trên 5 đến 10 khối): 9000/m3</li>
+                      <li>Mức 2 (Từ trên 10 đến 20 khối): 11000/m3</li>
+                      <li>Mức 3 (Từ trên 20 đến 30 khối): 13000/m3</li>
+                      <li>Mức 4 (Từ trên 30 khối): 15000/m3</li>
+                    </ul>
+                    Tổng tiền = Mức 1 + Mức 2 + Mức 3 + Mức 4
+                  </div>
+                </div>
+
+                <div class="right-item d-none">
+                  <h2 class="item-name">calcTaxiFee</h2>
+                  <div class="item-desc mt-10">
+                    Hàm <b>calcTaxiFee(s)</b> nhận giá trị đầu vào s là số km
+                    quãng đường đã di chuyển. Hàm kiểm tra và trả về số tiền
+                    (VNĐ) phải trả theo quy ước sau:
+                    <ul>
+                      <li>Phí mở cửa: 10000</li>
+                      <li>Từ 0 đến 30 km đầu tiên: 11000/km</li>
+                      <li>Từ sau 30km: 95000/km</li>
+                    </ul>
+                    Tổng tiền = Phí mở cửa + Phí di chuyển
+                  </div>
+                </div>
+
+                <div class="right-item d-none">
+                  <h2 class="item-name">checkNumberIsPrime</h2>
+                  <div class="item-desc mt-10">
+                    Hàm <b>checkNumberIsPrime(n)</b> nhận giá trị đầu vào là một
+                    số nguyên dương n và trả ra số n có phải là số nguyên tố
+                    không.
+                  </div>
+                </div>
+
+                <div class="right-item d-none">
+                  <h2 class="item-name">findFirstLastNumber</h2>
+                  <div class="item-desc mt-10">
+                    Hàm <b>findFirstLastNumber(n)</b> nhận giá trị đầu vào là
+                    một số n (số nguyên hoặc số thực) và trả ra chữ số đầu tiên
+                    và chữ số cuối cùng của số n.
+                  </div>
+                </div>
+
+                <div class="right-item d-none">
+                  <h2 class="item-name">isOddNumber</h2>
+                  <div class="item-desc mt-10">
+                    Hàm <b>isOddNumber(n)</b> nhận một giá trị đầu vào n là một
+                    số nguyên bất kỳ, kiểm tra và trả về kết quả số đó là số lẻ
+                    chẵn hay số lẻ.
+                  </div>
+                </div>
+
+                <div class="right-item d-none">
+                  <h2 class="item-name">divisibleByThreeAndFive</h2>
+                  <div class="item-desc mt-10">
+                    Hàm <b>divisibleByThreeAndFive(n)</b> nhận một giá trị đầu
+                    vào n là một số nguyên bất kỳ, kiểm tra và trả về kết quả
+                    cho biết số đó có chia hết cho cả 3 và 5 hay không.
+                  </div>
+                </div>
+
+                <div class="right-item d-none">
+                  <h2 class="item-name">season</h2>
+                  <div class="item-desc mt-10">
+                    Hàm <b>season(month)</b> nhận một giá trị đầu vào month là
+                    một tháng trong năm (number), kiểm tra và in ra mùa tương
+                    ứng với tháng đó:
+                    <ul>
+                      <li>Winter: 12, 1, 2</li>
+                      <li>Spring: 3, 4, 5</li>
+                      <li>Summer: 6, 7, 8</li>
+                      <li>Fall: 9, 10, 11</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="right-item d-none">
+                  <h2 class="item-name">trafficLight</h2>
+                  <div class="item-desc mt-10">
+                    Hàm <b>trafficLight(light)</b> nhận một giá trị đầu vào
+                    `light` là tín hiệu đèn giao thông (`Red`, `Yellow`,
+                    `Green`), in ra thông báo tương ứng với tín hiệu đèn:
+                    <ul>
+                      <li>`Green`: Được phép di chuyển</li>
+                      <li>`Yellow`: Giảm tốc độ và dừng lại</li>
+                      <li>`Red`: Dừng lại</li>
+                    </ul>
+                    Ví dụ: trafficLight("Red")
+                  </div>
+                </div>
+
+                <div class="right-item d-none">
+                  <h2 class="item-name">calcCommissions</h2>
+                  <div class="item-desc mt-10">
+                    Hàm <b>calcCommissions(totalSales)</b> nhận một giá trị đầu
+                    vào `totalSales` là tổng doanh số bán hàng của một đại lý,
+                    kiểm tra và trả về kết quả là tiền hoa hồng mà đại lý nhận
+                    được quy định như sau:
+                    <ul>
+                      <li>
+                        Nếu $totalSales &lt;= 100 triệu$ thì hoa hồng nhận được
+                        là 5%
+                      </li>
+                      <li>
+                        Nếu 100 triệu$ &lt; totalSales &lt;= 300 triệu$ thì hoa
+                        hồng nhận được là 10%
+                      </li>
+                      <li>
+                        Nếu $totalSales &gt; 300 triệu$ thì hoa hồng nhận được
+                        là 20%
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="right-item d-none">
+                  <h2 class="item-name">isLeafYear</h2>
+                  <div class="item-desc mt-10">
+                    Hàm <b>isLeafYear(year)</b> nhận một giá trị đầu vào `year`
+                    là một năm bất kỳ, kiểm tra và trả về kết quả năm đó có phải
+                    là năm nhuận hay không (tính theo lịch [Gregory]).
+                    <br />
+                    Theo lịch Gregory thì một năm được xem là năm nhuận nếu thỏa
+                    mãn một trong số các điều kiện sau:
+                    <ul>
+                      <li>
+                        Những năm nào chia hết cho 4 được và không chia hết cho
+                        100
+                      </li>
+                      <li>
+                        Những năm nào chia hết cho 4 được và không chia hết cho
+                        100 nhưng lại chia hết cho 400
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="right-item d-none">
+                  <h2 class="item-name">daysOfMonth</h2>
+                  <div class="item-desc mt-10">
+                    Hàm <b>daysOfMonth(month, year)</b> nhận hai giá trị đầu vào
+                    là `month` là một tháng bất kì và `year` là một năm bất kỳ,
+                    kiểm tra và trả về kết quả số ngày của tháng trong năm đó:
+                    <ul>
+                      <li>Các tháng 1, 3, 5, 7, 8, 10, 12 có 31 ngày</li>
+                      <li>Các tháng 4, 6, 9, 11 có 30 ngày</li>
+                      <li>
+                        Tháng 2 có 29 ngày nếu là năm nhuận, nếu không là 28
+                        ngày (theo lịch Gregory)
+                      </li>
+                    </ul>
+                    <em
+                      >Lưu ý: Nếu không truyền tháng, năm thì sẽ lấy theo tháng,
+                      năm hiện tại.</em
+                    >
+                  </div>
+                </div>
+
+                <div class="right-item d-none">
+                  <h2 class="item-name">calcGrade</h2>
+                  <div class="item-desc mt-10">
+                    Hàm <b>calcGrade(point)</b> nhận một giá trị đầu vào `point`
+                    là điểm trung bình của sinh viên, kiểm tra và trả về kết quả
+                    xếp loại tốt nghiệp của sinh viên theo số điểm trung bình
+                    (point). Quy định như sau:
+                    <ul>
+                      <li>point &lt; 4.0: Xếp loại F</li>
+                      <li>4.0 &lt;= point &lt; 5.5: Xếp loại D</li>
+                      <li>5.5 &lt;= point &lt; 7.0: Xếp loại C</li>
+                      <li>7.0 &lt;= point &lt; 8.5: Xếp loại B</li>
+                      <li>point &gt;= 8.5: Xếp loại A</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="right-item d-none">
+                  <h2 class="item-name">solveEquation</h2>
+                  <div class="item-desc mt-10">
+                    Hàm <b>solveEquation(a, b, c)</b> nhận ba giá trị đầu vào
+                    `a`, `b`, `c` tương ứng là 3 tham số của phương trình bậc
+                    hai ax^2 + bx + c = 0, tìm và trả về nghiệm của phương
+                    trình:
+                    <ul>
+                      <li>Nếu a = b = c = 0: Phương trình có vô số nghiệm</li>
+                      <li>Nếu a = b = 0 và c != 0: Phương trình vô nghiệm</li>
+                      <li>
+                        Nếu a = 0 và b != 0: Phương trình có một nghiệm -c/b
+                      </li>
+                      <li>
+                        Nếu a != 0 thì tính <em>delta = b^2 - 4ac</em>:
+                        <ul>
+                          <li>delta &lt; 0: Phương trình vô nghiệm</li>
+                          <li>
+                            delta = 0: Phương trình có nghiệm kép x1 = x2 =
+                            -b/2a
+                          </li>
+                          <li>
+                            delta > 0: Phương trình có 2 nghiệm phân biệt x =
+                            (-b ±
+                            <span style="white-space: nowrap">
+                              &radic;<span style="text-decoration: overline"
+                                >&nbsp;delta&nbsp;</span
+                              > </span
+                            >)/2a
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

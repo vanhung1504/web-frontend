@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  line-height: 30px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.col {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.col-1 {
+  flex-basis: calc(1 * 100% / 12);
+}
+
+.col-2 {
+  flex-basis: calc(2 * 100% / 12);
+}
+
+.col-3 {
+  flex-basis: calc(3 * 100% / 12);
+}
+
+.col-4 {
+  flex-basis: calc(4 * 100% / 12);
+}
+
+.col-5 {
+  flex-basis: calc(5 * 100% / 12);
+}
+
+.col-6 {
+  flex-basis: calc(6 * 100% / 12);
+}
+
+.col-7 {
+  flex-basis: calc(7 * 100% / 12);
+}
+
+.col-8 {
+  flex-basis: calc(8 * 100% / 12);
+}
+
+.col-9 {
+  flex-basis: calc(9 * 100% / 12);
+}
+
+.col-10 {
+  flex-basis: calc(10 * 100% / 12);
+}
+
+.col-11 {
+  flex-basis: calc(11 * 100% / 12);
+}
+
+.col-12 {
+  flex-basis: 100%;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.f-column {
+  flex-direction: column;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.j-end {
+  justify-content: flex-end;
+}
+
+.j-between {
+  justify-content: space-between;
+}
+
+.a-start {
+  align-items: flex-start;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.a-end {
+  align-items: flex-end;
+}
+
+.a-baseline {
+  align-items: baseline;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.f-grow-1 {
+  flex-grow: 1;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.d-none {
+  display: none;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 90%;
+  height: 90%;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px 0;
+  color: #0000cd;
+}
+
+.left-box,
+.right-box {
+  border: 1px solid #4682b4;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.functLabel {
+  font-size: 20px;
+}
+
+.functName,
+.functInput,
+.functSubmit {
+  outline: none;
+  border: 1px solid #4682b4;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 18px;
+  height: 50px;
+}
+
+::placeholder {
+  color: #0000cd;
+  font-size: 12.5px;
+  line-height: 100%;
+}
+
+.functSubmit {
+  background-color: #4169e1;
+  color: #fff;
+}
+
+.functSubmit:hover {
+  opacity: 0.8;
+}
+
+.item-name {
+  text-align: center;
+}
+
+.item-desc ul {
+  list-style-position: inside;
+  padding-left: 8px;
+}
