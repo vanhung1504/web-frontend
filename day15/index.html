@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript cơ bản</title>
+
+    <link
+      rel="icon"
+      href="https://thienanblog.com/wp-content/uploads/2015/04/javascript_logo.png"
+      sizes="192x192"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p>
+        Khai báo một object <span>dog</span> mô tả về một con chó với các thông
+        tin sau:
+      </p>
+      <ul>
+        <li><span>name</span>: Tên</li>
+        <li><span>age</span>: Tuổi</li>
+        <li><span>bread</span>: Giống chó</li>
+        <li><span>gender</span>: Giới tính</li>
+        <li><span>color</span>: Màu lông</li>
+        <li><span>legs</span>: Số chân</li>
+        <li><span>favorite food</span>: Thức ăn yêu thích</li>
+      </ul>
+      <p>Và các phương thức</p>
+      <ul>
+        <li>
+          <span>eat()</span>: In ra <span>console</span> thông báo theo mẫu
+          <span>{name} is eating {favorite food}, yum yum...</span>
+        </li>
+        <li>
+          <span>run()</span>: In ra <span>console</span> thông báo theo mẫu
+          <span>{name} is running on {legs} legs...</span>
+        </li>
+        <li>
+          <span>bark()</span>: In ra <span>console</span> thông báo theo mẫu
+          <span>Woof woof woof ...</span>
+        </li>
+      </ul>
+      <p>
+        Thực hiện các yêu cầu sau đây, với mỗi yêu cầu về thêm/sửa/xóa thông tin
+        đều in ra <span>console</span> để xem kết quả:
+      </p>
+      <ul>
+        <li>In <span>dog</span> ra <span>console</span></li>
+
+        <li>Viết câu lệnh để in <span>name</span> ra <span>console</span></li>
+
+        <li>
+          Viết câu lệnh để in <span>favorite food</span> ra <span>console</span>
+        </li>
+
+        <li>
+          Viết câu lệnh để thay đổi <span>color</span> thành <span>Brown</span>
+        </li>
+
+        <li>Viết câu lệnh để tăng <span>age</span> thêm <span>2</span> tuổi</li>
+
+        <li>Viết câu lệnh để gọi phương thức <span>eat()</span></li>
+
+        <li>Viết câu lệnh để gọi phương thức <span>running()</span></li>
+
+        <li>
+          Sử dụng vòng lặp để in ra tất cả <em>tên thuộc tính (key)</em> ra
+          <span>console</span>
+        </li>
+
+        <li>
+          Sử dụng vòng lặp để in ra tất cả <em>giá trị (value)</em> ra
+          <span>console</span>
+        </li>
+
+        <li>
+          Viết câu lệnh để thêm một thuộc tính
+          <span>isCrazy</span> vào <span>dog</span> với giá trị boolean tùy ý
+        </li>
+
+        <li>
+          Viết câu lệnh để thêm một phương thức
+          <span>crazy()</span> vào <span>dog</span>, kiểm tra nếu
+          <span>isCrazy</span> là <span>false</span> thì in ra theo mẫu
+          <span>{name} is not crazy</span>, nếu <span>isCrazy</span> là
+          <span>true</span> thì sử dụng vòng lặp để gọi 2 phương thức
+          <span>run()</span> và <span>bark()</span> 5 lần (con chó bị điên), kết
+          quả sẽ in ra <span>console</span> dạng
+          <span
+            >{name} is running on {legs} legs ... Woof woof woof ... {name} is
+            running ... Woof woof woof</span
+          >
+        </li>
+
+        <li>
+          Viết câu lệnh đảo ngược giá trị của
+          <span>isCrazy</span>
+        </li>
+
+        <li>
+          Viết câu lệnh gọi phương thức
+          <span>crazy()</span>
+        </li>
+
+        <li>
+          Viết câu lệnh xóa
+          <span>isCrazy</span> khỏi <span>dog</span>
+        </li>
+
+        <li>
+          Viết câu lệnh gọi phương thức
+          <span>crazy()</span>, chú ý kết quả in ra và comment lý do vì sao lại
+          in ra như vậy
+        </li>
+
+        <li>
+          Sử dụng vòng lặp để in ra tất cả thuộc tính và giá trị tương ứng
+          (không phải phương thức) trong
+          <span>dog</span> ra <span>console</span> (sử dụng
+          <span>typeof</span> để kiểm tra kiểu) theo mẫu
+          <span>{key} có giá trị là {value}</span>
+        </li>
+
+        <li>
+          Viết câu lệnh khai báo một biến mới
+          <span>clone</span> và gán giá trị của <span>dog</span> cho
+          <span>clone</span>
+        </li>
+
+        <li>
+          Viết câu lệnh in
+          <span>clone</span> và <span>dog</span> ra <span>console</span>, chú ý
+          kết quả
+        </li>
+
+        <li>
+          Viết câu lệnh chỉnh sửa
+          <span>name</span> trong <span>clone</span> thành một tên khác bất kỳ
+        </li>
+
+        <li>
+          Viết câu lệnh in
+          <span>clone</span> và <span>dog</span> ra <span>console</span>, chú ý
+          kết quả
+        </li>
+
+        <li>
+          Viết câu lệnh khai báo một object mới
+          <span>copy</span> rỗng <span>{}</span>
+        </li>
+
+        <li>
+          Sử dụng vòng lặp để sao chép từng thông tin (cả thuộc tính và phương
+          thức) trong
+          <span>dog</span> sang <span>copy</span>
+        </li>
+
+        <li>
+          Viết câu lệnh in
+          <span>clone</span> và <span>dog</span> ra <span>console</span>, chú ý
+          kết quả
+        </li>
+
+        <li>
+          Viết câu lệnh chỉnh sửa
+          <span>name</span> trong <span>copy</span> thành một tên khác bất kỳ
+        </li>
+
+        <li>
+          Viết câu lệnh in
+          <span>clone</span> và <span>dog</span> ra <span>console</span>, chú ý
+          kết quả
+        </li>
+      </ul>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
