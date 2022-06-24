@@ -20,14 +20,15 @@ function title(str) {
   str = str.trim().toLowerCase();
   let strLength = str.length;
   for (let i = 0; i < strLength; i++) {
-    if ((i === 0 && i !== " ") || (i > 0 && str[i - 1] === " ")) {
-      str = str.replace(str[i], str[i].toUpperCase());
+    if (i === 0 || (i > 0 && str[i] !== " " && str[i - 1] === " ")) {
+      str =
+        str.substr(0, i) + str.substr(i, 1).toUpperCase() + str.slice(i + 1);
     }
   }
   return str;
 }
 
-console.log(title("   ba nGuyỄn "));
+console.log(title(" bb  baB bGuyỄn "));
 
 console.log("\n");
 console.log("Bài tập 3: protectEmail(email)", "\n");
