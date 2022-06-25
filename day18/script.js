@@ -5,7 +5,7 @@ console.log("Bài tập 1: capitalize(str)", "\n");
 // capitalize("javascript is fun"); // Javascript is fun
 function capitalize(str) {
   str = str.trim();
-  return str[0].toUpperCase() + str.slice(1);
+  return str[0].toUpperCase() + str.slice(1).toLowerCase();
 }
 
 console.log(capitalize("javascript is fun"));
@@ -205,3 +205,126 @@ console.log(
     { name: "Nguyễn Ba", point: 10 },
   ])
 );
+
+// Viết hàm curDate() in ra ngày hiện tại theo định dạng ngày:tháng:năm, ví dụ 10/01/2020
+// (lưu ý ngày tháng in ra đủ 2 chữ số)
+function curDate() {
+  let d = new Date();
+  let currDate = (d.getDate() < 10 ? "0" : "") + d.getDate();
+  let currMonth = (d.getMonth() + 1 < 10 ? "0" : "") + (d.getMonth() + 1);
+  let currYear = d.getFullYear();
+  return currDate + ":" + currMonth + ":" + currYear;
+}
+
+console.log(curDate());
+
+// Viết hàm curTime() in ra thời gian hiện tại theo định dạng giờ:phút:giây, ví dụ 10:05:31 (lưu
+// ý in ra đủ 2 chữ số)
+function curTime() {
+  let d = new Date();
+  let h = (d.getHours() < 10 ? "0" : "") + d.getHours();
+  let m = (d.getMinutes() < 10 ? "0" : "") + d.getMinutes();
+  let s = (d.getSeconds() < 10 ? "0" : "") + d.getSeconds();
+  return h + ":" + m + ":" + s;
+}
+
+console.log(curTime());
+
+// Viết hàm weekday() trả về thứ trong tuần tương ứng với ngày hiện tại, thứ dạng viết tắt tương
+// ứng T2, T3, T4, ...
+function weekday() {
+  let day;
+  switch (new Date().getDay()) {
+    case 0:
+      day = "CN";
+      break;
+    case 1:
+      day = "T2";
+      break;
+    case 2:
+      day = "T3";
+      break;
+    case 3:
+      day = "T4";
+      break;
+    case 4:
+      day = "T5";
+      break;
+    case 5:
+      day = "T6";
+      break;
+    case 6:
+      day = "T7";
+  }
+  return day;
+}
+
+console.log(weekday());
+
+// Viết hàm getDateAgo(days) nhận vào 1 giá trị days là một số nguyên dương, trả về ngày cụ
+// thể trước ngày hiện tại days ngày
+function getDateAgo(days) {
+  let d = new Date();
+  d = new Date(d.setTime(d.getTime() - days * 24 * 60 * 60 * 1000));
+  let currDate = (d.getDate() < 10 ? "0" : "") + d.getDate();
+  let currMonth = (d.getMonth() + 1 < 10 ? "0" : "") + (d.getMonth() + 1);
+  let currYear = d.getFullYear();
+  return currDate + "/" + currMonth + "/" + currYear;
+}
+console.log(getDateAgo(1));
+
+// Viết hàm getLastDayOfMonth(year, month) nhận 2 giá trị year là một năm và month là một
+// tháng bất kỳ, trả về số ngày của tháng đó
+function getLastDayOfMonth(year, month) {
+  let d = new Date(year, month, 0);
+  return d.getDate();
+}
+console.log(getLastDayOfMonth(2000, 2));
+
+// Viết hàm getDaysToNextBirthday(year, month, date) nhận vào 3 giá trị year, month,
+// date tương ứng là ngày sinh của một người, trả về số ngày còn lại cho đến sinh nhật tiếp theo
+function getDaysToNextBirthday(year, month, date) {
+  let currDate = new Date();
+  let inputDate = new Date(currDate.getFullYear(), month - 1, date + 1);
+  let nextBirthday;
+  if (inputDate - currDate > 0) {
+    nextBirthday = new Date(currDate.getFullYear(), month - 1, date + 1);
+  } else {
+    nextBirthday = new Date(currDate.getFullYear() + 1, month - 1, date + 1);
+  }
+  return Math.floor((nextBirthday - currDate) / (1000 * 3600 * 24));
+}
+console.log(getDaysToNextBirthday(1995, 04, 15));
+
+// Viết hàm humanize(date) nhận vào 1 object date, so sánh với thời gian hiện tại trả về một
+// chuỗi biểu thị thời gian đã trôi qua theo quy tắc sau:
+// Nếu thời gian đã trôi qua ít hơn 5 giây thì trả về Vừa xong
+// Nếu thời gian đã trôi qua ít hơn 1 phút thì trả về X giây trước
+// Nếu thời gian đã trôi qua ít hơn 1 giờ thì trả về X phút trước
+// Nếu thời gian đã trôi qua ít hơn 1 ngày thì trả về X giờ trước
+// Nếu thời gian đã trôi qua ít hơn 1 tháng thì trả về X ngày trước (chú ý so sánh xem có cùng
+// tháng hay không)
+// Nếu thời gian đã trôi qua ít hơn 1 năm thì trả về X tháng trước
+// Nếu thời gian đã trôi qua nhiều hơn 1 năm thì trả về Ngày xửa ngày xưa, ...
+function humanize(date) {
+  let passedTime = (Date.now() - date.getTime()) / 1000;
+
+  if (passedTime < 5) {
+    return "Vừa xong";
+  } else if (passedTime < 60) {
+    return `${Math.round(passedTime)} giây trước`;
+  } else if (passedTime < 3600) {
+    return `${Math.round(passedTime / 60)} phút trước`;
+  } else if (passedTime < 86400) {
+    return `${Math.round(passedTime / 60 / 60)} giờ trước`;
+  } else if (passedTime < 2592000) {
+    return `${Math.round(passedTime / 60 / 60 / 24)} ngày trước`;
+  } else if (passedTime < 31536000) {
+    return `${Math.round(passedTime / 60 / 60 / 24 / 30)} tháng trước`;
+  } else {
+    return `Ngày xửa ngày xưa ...`;
+  }
+}
+let date = new Date(2021, 11, 10, 19, 52, 00);
+console.log(humanize(date));
+
