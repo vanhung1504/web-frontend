@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Basic</title>
+  </head>
+  <body>
+    <h1 class="heading">Hello DOM</h1>
+    <img class="avatar" src="" alt="" />
+    <link class="profile" rel="stylesheet" href="" />
+    <ul class="favorite">
+      <li>A</li>
+      <li>Play game</li>
+      <li>Listen music</li>
+      <li>D</li>
+    </ul>
+    <div class="clock">Bây giờ là</div>
+    <p class="bio">
+      Thầy giáo ba đẹp trai Thầy giáo Ba đẹp trai Thầy giáo ba đẹp trai Thầy
+      giáo Ba đẹp trai Thầy giáo ba đẹp trai Thầy giáo Ba đẹp trai Thầy giáo Ba
+      đẹp trai Thầy giáo ba đẹp trai Thầy giáo ba đẹp trai Thầy giáo ba đẹp trai
+      Thầy giáo ba đẹp trai Thầy giáo ba đẹp trai Thầy giáo Ba đẹp trai Thầy
+      giáo Ba đẹp trai Thầy giáo ba đẹp trai
+    </p>
+    <p class="num-of-words"></p>
+    <table class="list-students">
+      <tbody>
+        <tr>
+          <td>Giang Hồng Sơn</td>
+        </tr>
+        <tr>
+          <td>Bùi Lan Nhi</td>
+        </tr>
+        <tr>
+          <td>Hoàng Thị Ngọc Linh</td>
+        </tr>
+      </tbody>
+    </table>
+    <script>
+      const heading = "Thầy giáo Ba xinh gái";
+      const avatar =
+        "https://anhnendep.net/wp-content/uploads/2016/03/hinh-anh-girl-xinh-gai-dep-de-thuong-nhat-viet-nam-info.jpg";
+      const profile =
+        "https://loanthehongnhan.vn/tai-hinh-anh-con-gai-dep/imager_34554.jpg";
+
+      // Bai lam
+      const eleH1 = document.querySelector(".heading");
+      document.title = eleH1.textContent;
+
+      eleH1.textContent = heading;
+
+      const eleImg = document.querySelector(".avatar");
+      eleImg.setAttribute("src", avatar);
+
+      const eleLink = document.querySelector(".profile");
+      eleLink.setAttribute("href", profile);
+
+      const eleFirstChildUlTag = document.querySelector(
+        ".favorite > li:first-child"
+      );
+      eleFirstChildUlTag.textContent = "Code application";
+
+      const eleLastChildUlTag = document.querySelector(
+        ".favorite > li:last-child"
+      );
+      eleLastChildUlTag.textContent = "Sleep";
+
+      const eleDivClock = document.querySelector(".clock");
+      const d = new Date();
+      eleDivClock.textContent = `Bây giờ là ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}, ngày ${d.getDate()}/${
+        d.getMonth() + 1
+      }/${d.getFullYear()}`;
+
+      const eleBioContent = document.querySelector(".bio").textContent;
+      const elePNumOfWord = (document.querySelector(
+        ".num-of-words"
+      ).textContent = `Ở đoạn văn trên có ${
+        eleBioContent.match(/ba/gi).length
+      } từ 'Ba' (không phân biệt chữ hoa, chữ thường).`);
+
+      const eleBodyOfTable = document.querySelector(".list-students > tbody");
+      const row = eleBodyOfTable.insertRow();
+
+      row.insertCell(0).textContent = "Thầy giáo Ba siêu cấp xinh gái";
+    </script>
+  </body>
+</html>
