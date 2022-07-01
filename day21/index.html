@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://devmaster.edu.vn/uploads/images/2020/12/2112/__thumbs/DOM%20API.png/DOM%20API__550x600.png"
+      sizes="192x192"
+    />
+    <title>DOM Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="random-color">
+        <div class="property">
+          background-image: linear-gradient(to right, #7019d7, #cbd6e7)
+        </div>
+        <div class="action">
+          <div class="">Click button below to change the background color</div>
+          <button class="btn-change">Change</button>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="tip-box">
+          <h2 class="tip-title">Tip Calculator</h2>
+          <hr />
+          <div class="input-container">
+            <label for="bill-amount" class="input-label">Bill amount</label>
+            <div class="input-box">
+              <div><i class="fa-solid fa-money-bill"></i></div>
+              <input type="text" class="input-value" id="bill-amount" />
+            </div>
+
+            <p class="d-none message">You must enter a valid number!</p>
+          </div>
+
+          <div class="input-container">
+            <label for="guests" class="input-label">Number of guests</label>
+            <div class="input-box">
+              <div>
+                <i class="fa-solid fa-people-group"></i>
+              </div>
+              <input type="text" class="input-value" id="guests" />
+            </div>
+            <p class="d-none message">You must enter a valid number!</p>
+          </div>
+
+          <div class="input-container">
+            <label for="services-quality" class="input-label"
+              >Services Quanlity</label
+            >
+
+            <select
+              name="services-quality"
+              id="services-quality"
+              class="input-value"
+            >
+              <option value="0">choose...</option>
+              <option value="0.3">30% - Outstanding</option>
+              <option value="0.2">20% - Good</option>
+              <option value="0.15">15% - It's OK</option>
+              <option value="0.1">10% - Bad</option>
+              <option value="0.05">5% - Terrible</option>
+            </select>
+            <p class="d-none message">You must choose a service quanlity!</p>
+          </div>
+
+          <p class="tip-result">Tip <b class="tip-value">$0</b> each person</p>
+
+          <button class="btn-calculator">Calculate</button>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="container">
+        <div class="todos-box">
+          <h2 class="todo-title">Simple Todo App</h2>
+          <div class="todo-input-box">
+            <input type="text" class="todo-input" placeholder="Add new todo" />
+            <button class="btn btn-add">Add</button>
+          </div>
+
+          <div class="todo-list">
+            <!-- <div class="todo-item" data-index="0">
+              <div class="todo-content">
+                <input
+                  class="input-todo-text"
+                  type="text"
+                  spellcheck="false"
+                  disabled=""
+                  value="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, maiores quo. Maiores nemo, vel et a unde deserunt vero animi hic beatae sint quaerat neque? Reprehenderit mollitia fugit quibusdam repudiandae?"
+                />
+              </div>
+
+              <div class="todo-action edit">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </div>
+              <div class="todo-action delete">
+                <i class="fa-solid fa-trash-can"></i>
+              </div>
+              <div class="move-up"><i class="fa-solid fa-angle-up"></i></div>
+              <div class="move-down">
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+            </div> -->
+          </div>
+
+          <div class="todo-footer">
+            <p class="todo-summary">All done!</p>
+            <button class="btn btn-clear-all d-none">Clear All</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

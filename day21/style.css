@@ -1,0 +1,323 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.d-none {
+  display: none;
+}
+
+#app {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+/* Random color */
+.random-color {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #7019d7, #cbd6e7);
+}
+
+.property {
+  width: 480px;
+  text-align: center;
+  background-image: linear-gradient(to right, #131d06, #322425);
+  padding: 10px 10px;
+  color: #fff;
+  border-radius: 3px;
+  border-left: 2px solid #fff;
+  margin-bottom: 15px;
+  font-family: "Courier New" Courier monospace;
+}
+
+.action {
+  color: #fff;
+  font-weight: 300;
+  text-align: center;
+}
+
+.btn-change {
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 6px 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: #00f9ff;
+  color: #000;
+}
+
+.btn-change:hover {
+  opacity: 0.8;
+}
+
+/* End random color */
+
+/* Tip calulator */
+.tip-box {
+  margin: 50px auto;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  color: #0045a4;
+}
+
+.tip-title {
+  text-align: center;
+  font-size: 30px;
+  padding: 20px 0;
+}
+
+.input-container {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.input-label {
+  display: block;
+}
+
+.input-box {
+  margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  height: 40px;
+  font-size: 20px;
+}
+
+.input-box div {
+  background-color: #ccc;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.input-value {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  padding: 4px 8px;
+  font-size: 18px;
+}
+
+#services-quality {
+  margin-top: 4px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 40px;
+}
+
+.tip-result {
+  margin: 30px 0 10px 0;
+  text-align: center;
+  color: #161f35;
+}
+
+.btn-calculator {
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  padding: 8px 12px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background-color: #0076ff;
+  color: #fff;
+  font-size: 18px;
+}
+
+.btn-calculator:hover {
+  opacity: 0.8;
+}
+
+.message {
+  margin-top: 4px;
+  color: red;
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* End tip calculator */
+
+/* Todo App */
+.todos-box {
+  margin: 50px auto;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  color: #1e3455;
+  border-radius: 4px;
+  border: 1px solid #009fff;
+}
+
+.todo-title {
+  font-size: 40px;
+  text-align: center;
+}
+
+.todo-input-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.todo-input {
+  flex-grow: 1;
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 8px 12px;
+  font-size: 20px;
+  font-weight: 500;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.btn {
+  border-radius: 3px;
+  border: 1px solid #0095d6;
+  height: 50px;
+  width: 130px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-add {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #0844be;
+  font-size: 18px;
+  margin-left: 4px;
+}
+
+.todo-list {
+  max-height: 290px;
+  overflow-y: scroll;
+}
+
+.todo-item {
+  position: relative;
+  background-color: #00c7ff;
+  border-radius: 4px;
+  border: 1px solid #f6f6f9;
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 8px;
+  padding: 0 130px 0 10px;
+}
+
+.todo-item:hover {
+  opacity: 0.8;
+  color: #000003;
+}
+
+.move-up,
+.move-down {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  color: #0032a9;
+  background-color: #ff4b76;
+  cursor: pointer;
+  padding: 2px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.move-up {
+  top: 2px;
+}
+
+.move-down {
+  bottom: 2px;
+}
+
+.input-todo-text {
+  display: block;
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+
+  font-weight: 600;
+  font-size: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.todo-action {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  background-color: #ff4b76;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  color: #efff62;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.todo-action.edit {
+  right: 90px;
+}
+
+.todo-action.delete {
+  right: 40px;
+}
+
+.todo-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-summary {
+  flex-flow: 1;
+  font-size: 20px;
+}
+
+.btn-clear-all {
+  background-color: #ff4b76;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  width: 130px;
+}
