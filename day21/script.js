@@ -7,9 +7,7 @@ function createElement(tagName, attributes, ...child) {
 }
 
 // Random color
-const btnChange = document.querySelector(".btn-change");
-
-btnChange.addEventListener("click", function () {
+function changeBgImage() {
   const ramdomDiv = document.querySelector(".random-color");
   const property = document.querySelector(".property");
   let value = `linear-gradient(to right, #${Math.floor(
@@ -18,7 +16,12 @@ btnChange.addEventListener("click", function () {
 
   ramdomDiv.style.backgroundImage = value;
   property.textContent = `background-image: ${value}`;
-});
+}
+
+const btnChange = document.querySelector(".btn-change");
+btnChange.addEventListener("click", changeBgImage);
+
+changeBgImage();
 
 // Tip calculator
 const billAmount = document.getElementById("bill-amount");
@@ -66,14 +69,14 @@ tipPercent.addEventListener("change", function (e) {
 btnCalculate.addEventListener("click", function () {
   let isAllValided = true;
 
-  if (isNaN(Number(billAmount.value)) || Number(billAmount.value) == 0) {
+  if (isNaN(Number(billAmount.value)) || Number(billAmount.value) <= 0) {
     isAllValided = false;
     billAmount.parentElement.nextElementSibling.classList.remove("d-none");
   }
 
   if (
     !Number.isInteger(Number(numGuest.value)) ||
-    Number(numGuest.value) == 0
+    Number(numGuest.value) <= 0
   ) {
     isAllValided = false;
     numGuest.parentElement.nextElementSibling.classList.remove("d-none");
@@ -89,6 +92,8 @@ btnCalculate.addEventListener("click", function () {
       (Number(billAmount.value) * Number(tipPercent.value)) /
       Number(numGuest.value)
     }`;
+  } else {
+    tipValue.textContent = "$0";
   }
 });
 
