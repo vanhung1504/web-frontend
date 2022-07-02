@@ -10,9 +10,22 @@ function createElement(tagName, attributes, ...child) {
 function changeBgImage() {
   const ramdomDiv = document.querySelector(".random-color");
   const property = document.querySelector(".property");
-  let value = `linear-gradient(to right, #${Math.floor(
+  const direction = [
+    "to right",
+    "to left",
+    "to top",
+    "to bottom",
+    "to top right",
+    "to top left",
+    "to bottom right",
+    "to bottom left",
+  ];
+
+  let value = `linear-gradient(${
+    direction[Math.floor(Math.random() * direction.length)]
+  }, #${Math.floor(Math.random() * 16777215).toString(16)}, #${Math.floor(
     Math.random() * 16777215
-  ).toString(16)}, #${Math.floor(Math.random() * 16777215).toString(16)})`;
+  ).toString(16)})`;
 
   ramdomDiv.style.backgroundImage = value;
   property.textContent = `background-image: ${value}`;
@@ -109,7 +122,7 @@ const btnAdd = document.querySelector(".btn-add");
 
 btnAdd.addEventListener("click", function () {
   const inputTodo = document.querySelector(".todo-input");
-  if (inputTodo.value !== "") {
+  if (inputTodo.value.trim() !== "") {
     let todos = JSON.parse(localStorage.getItem("todos"));
     todos.push(inputTodo.value);
     localStorage.setItem("todos", JSON.stringify(todos));
