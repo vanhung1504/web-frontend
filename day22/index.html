@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://www.seekpng.com/png/full/774-7741439_shopping-cart-png-orange.png"
+      sizes="192x192"
+    />
+    <title>Shopping Cart</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="btn-cart" onclick="toggleShowCart(true)">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-quantity d-none"></span>
+        <div class="circle" style="animation-delay: 0s"></div>
+        <div class="circle" style="animation-delay: 1s"></div>
+        <div class="circle" style="animation-delay: 2s"></div>
+        <div class="circle" style="animation-delay: 3s"></div>
+      </div>
+      <header class="title-box d-flex f-column j-center a-center">
+        <h1 class="main-title">SHOPPING CART</h1>
+        <p class="instruction">
+          Click <span>Thêm vào giỏ hàng</span> để thêm sản phẩm vào giỏ hàng của
+          bạn.
+        </p>
+        <p class="instruction">
+          Click vào biểu tượng <i class="fa-solid fa-cart-shopping"></i> bên
+          phải để xem giỏ hàng của bạn.
+        </p>
+      </header>
+
+      <div class="container"></div>
+
+      <div class="modal d-none">
+        <div class="modal-left" onclick="toggleShowCart(false)"></div>
+        <div class="cart-container d-flex f-column j-between">
+          <i
+            class="fa-solid fa-xmark close-cart"
+            onclick="toggleShowCart(false)"
+          ></i>
+          <h2 class="cart-title">GIỎ HÀNG CỦA BẠN</h2>
+          <hr />
+          <div class="cart-list">
+            <!-- <div class="cart-item">
+              <div class="cart-img">
+                <img
+                  src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+                  alt="#"
+                />
+              </div>
+
+              <div class="cart-meta">
+                <h3 class="cart-item-name">
+                  Tên cart Tên cart Tên cart Tên cart Tên cart Tên cart Tên cart
+                  Tên cart Tên cart Tên cart
+                </h3>
+                <p class="cart-item-price">$700</p>
+                <button class="cart-item-delete">Xóa</button>
+              </div>
+
+              <div class="cart-actions">
+                <div class="cart-increase">
+                  <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="item-quantity">1</div>
+                <div class="cart-decrease">
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+              </div>
+            </div> -->
+          </div>
+          <hr />
+          <div class="total-box d-flex j-between a-center">
+            <div class="">Tổng cộng:</div>
+            <div class="total-price">$600</div>
+          </div>
+          <button
+            class="clear-cart"
+            onclick="popupEvent(clearAllCart, 'Bạn chắc chắn muốn xóa hết giỏ hàng chứ?', this)"
+          >
+            Xóa tất cả
+          </button>
+        </div>
+
+        <!-- Popup -->
+        <div class="cd-popup" role="alert">
+          <div class="cd-popup-container">
+            <p class="cd-popup-title"></p>
+            <ul class="cd-buttons">
+              <li><a href="#0">Yes</a></li>
+              <li><a href="#0">No</a></li>
+            </ul>
+            <a href="#0" class="cd-popup-close img-replace">Close</a>
+          </div>
+        </div>
+        <!-- End Popup -->
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
