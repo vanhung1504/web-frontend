@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://learn.jquery.com/jquery-wp-content/themes/learn.jquery.com/i/favicon.ico"
+      sizes="192x192"
+    />
+    <title>jQuery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <h2 class="title">Slideshow / Carousel</h2>
+        <div id="carousel">
+          <img
+            class="carousel-img"
+            src="https://www.w3schools.com/howto/img_nature_wide.jpg"
+            alt=""
+          />
+          <h2 class="caption">Caption Text</h2>
+          <div class="nav-carousel">
+            <div class="carousel-link"></div>
+            <div class="carousel-link"></div>
+            <div class="carousel-link"></div>
+            <div class="carousel-link"></div>
+          </div>
+          <div class="prev-next slprev">❮</div>
+
+          <div class="prev-next slnext">❯</div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="container">
+        <h2 class="title">Images galley</h2>
+        <p class="introduction">Click image below to change carousel above</p>
+
+        <div id="images-galley"></div>
+      </div>
+    </div>
+
+          <hr />
+
+      <div class="container">
+        <h2 class="title">Sidebar Menu</h2>
+        
+
+        <div class="box-resize">
+          <div class="nav">
+            <a href="#0" class="nav-link active">HOME</a>
+            <a href="#0" class="nav-link">NEWS</a>
+            <a href="#0" class="nav-link">PRODUCTS</a>
+            <a href="#0" class="nav-link">CONTACT</a>
+            <a href="#0" class="nav-link">ABOUT</a>
+          </div>
+          <p class="introduction">Chọn biểu tượng resize ở góc dưới phải để thay đổi kích thước và xem kết quả</p>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
