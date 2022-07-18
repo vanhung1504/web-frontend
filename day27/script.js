@@ -3,7 +3,7 @@
 function onHomepage() {
   if (localStorage.getItem("HEROKUAPP_TOKEN") === null) {
     alert("Bạn chưa đăng nhập. Vui lòng đăng nhập trước!");
-    window.location.href = "./signin.html";
+    document.location.href = "./signin.html";
   } else {
     fetch("https://todo-api-with-auth.herokuapp.com/api/auth/user", {
       method: "GET",
@@ -69,7 +69,7 @@ function signin() {
 
             alert("Đăng nhập thành công. Đang chuyển đến Trang chủ.");
 
-            window.location.href = "./index.html";
+            document.location.href = "./index.html";
           } else {
             res.json().then((data) => {
               alert(data.error);
@@ -88,13 +88,13 @@ function signin() {
   const $btnHomepage = $("#btn-home-page");
   $btnHomepage.on("click", function (e) {
     e.preventDefault();
-    window.location.href = "./index.html";
+    document.location.href = "./index.html";
   });
 
   const $btnSignup = $("#btn-signup");
   $btnSignup.on("click", function (e) {
     e.preventDefault();
-    window.location.href = "./signup.html";
+    document.location.href = "./signup.html";
   });
 }
 
@@ -144,7 +144,7 @@ function signup() {
               JSON.stringify(res.headers.get("Authorization"))
             );
             alert("Đăng ký thành công. Đang chuyển đến Trang chủ.");
-            window.location.href = "./index.html";
+            document.location.href = "./index.html";
           } else {
             res.json().then((data) => {
               alert(data.error);
@@ -161,26 +161,26 @@ function signup() {
   const $btnHomepage = $("#btn-home-page");
   $btnHomepage.on("click", function (e) {
     e.preventDefault();
-    window.location.href = "./index.html";
+    document.location.href = "./index.html";
   });
 
   const $btnSignin = $("#btn-signin");
   $btnSignin.on("click", function (e) {
     e.preventDefault();
-    window.location.href = "./signin.html";
+    document.location.href = "./signin.html";
   });
 }
 
 // Run code after load page
 $(function () {
-  if (
-    window.location.pathname === "/day27/" ||
-    window.location.pathname === "/day27/index.html"
-  ) {
+  const path = document.location.pathname;
+  const page = path.split("/").pop();
+
+  if (page === "" || page === "index.html") {
     onHomepage();
-  } else if (window.location.pathname === "/day27/signin.html") {
+  } else if (page === "signin.html") {
     signin();
-  } else if (window.location.pathname === "/day27/signup.html") {
+  } else if (page === "signup.html") {
     signup();
   }
 });
