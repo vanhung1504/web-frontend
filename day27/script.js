@@ -17,7 +17,10 @@ function onHomepage() {
           res.json().then((data) => {
             const $imgAvatar = $(".avatar");
             const $fullname = $(".fullname");
-            $($imgAvatar).attr("src", data.data.avatar);
+            $($imgAvatar).attr(
+              "src",
+              "https://todo-api-with-auth.herokuapp.com" + data.data.avatar
+            );
             $($imgAvatar).attr(
               "alt",
               data.data.lastname + " " + data.data.firstname
@@ -34,6 +37,25 @@ function onHomepage() {
         alert(error);
       });
   }
+
+  // When redirect page
+  const $btnSignin = $("#btn-signin");
+  $btnSignin.on("click", function (e) {
+    e.preventDefault();
+    document.location.href = "./signin.html";
+  });
+
+  const $btnSignup = $("#btn-signup");
+  $btnSignup.on("click", function (e) {
+    e.preventDefault();
+    document.location.href = "./signup.html";
+  });
+
+  // Upload avatar
+  const $inputTag = $("#inputTag");
+  $inputTag.on("change", function (e) {
+    uploadAvatar(this);
+  });
 }
 
 function signin() {
@@ -169,6 +191,45 @@ function signup() {
     e.preventDefault();
     document.location.href = "./signin.html";
   });
+}
+
+function uploadAvatar(inputElement) {
+  const file = inputElement.files[0];
+  const reader = new FileReader();
+  reader.onload = function () {
+    /******************* for Binary ***********************/
+    const data = reader.result.split(",")[1];
+    const binaryBlob = atob(data);
+
+    const formData = new FormData();
+    formData.append("avatar", binaryBlob);
+
+    fetch("https://todo-api-with-auth.herokuapp.com/api/user/avatar", {
+      method: "PUT",
+      headers: {
+        Authorization: JSON.parse(localStorage.getItem("HEROKUAPP_TOKEN")),
+        Accept: "application/json",
+        "Content-Type": "multipart/form-data",
+      },
+      body: formData,
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          alert("Thay đổi avatar thành công.");
+          window.location.reload();
+        } else {
+          // res.json().then((data) => {
+          //   alert(data.error);
+          // });
+          const err = new Error("HTTP status code " + res.status);
+          throw err;
+        }
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  };
+  reader.readAsDataURL(file);
 }
 
 // Run code after load page
