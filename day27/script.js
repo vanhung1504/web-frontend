@@ -39,9 +39,10 @@ function onHomepage() {
   }
 
   // When redirect page
-  const $btnSignin = $("#btn-signin");
+  const $btnSignin = $("#btn-signout");
   $btnSignin.on("click", function (e) {
     e.preventDefault();
+    window.localStorage.removeItem("HEROKUAPP_TOKEN");
     document.location.href = "./signin.html";
   });
 
@@ -195,41 +196,29 @@ function signup() {
 
 function uploadAvatar(inputElement) {
   const file = inputElement.files[0];
-  const reader = new FileReader();
-  reader.onload = function () {
-    /******************* for Binary ***********************/
-    const data = reader.result.split(",")[1];
-    const binaryBlob = atob(data);
 
-    const formData = new FormData();
-    formData.append("avatar", binaryBlob);
+  const formData = new FormData();
+  formData.append("avatar", file);
 
-    fetch("https://todo-api-with-auth.herokuapp.com/api/user/avatar", {
-      method: "PUT",
-      headers: {
-        Authorization: JSON.parse(localStorage.getItem("HEROKUAPP_TOKEN")),
-        Accept: "application/json",
-        "Content-Type": "multipart/form-data",
-      },
-      body: formData,
+  fetch("https://todo-api-with-auth.herokuapp.com/api/user/avatar", {
+    method: "PUT",
+    headers: {
+      Authorization: JSON.parse(localStorage.getItem("HEROKUAPP_TOKEN")),
+    },
+    body: formData,
+  })
+    .then((res) => {
+      if (res.status === 201) {
+        alert("Thay đổi avatar thành công.");
+        window.location.reload();
+      } else {
+        const err = new Error("HTTP status code " + res.status);
+        throw err;
+      }
     })
-      .then((res) => {
-        if (res.status === 200) {
-          alert("Thay đổi avatar thành công.");
-          window.location.reload();
-        } else {
-          // res.json().then((data) => {
-          //   alert(data.error);
-          // });
-          const err = new Error("HTTP status code " + res.status);
-          throw err;
-        }
-      })
-      .catch((error) => {
-        alert(error);
-      });
-  };
-  reader.readAsDataURL(file);
+    .catch((error) => {
+      alert(error);
+    });
 }
 
 // Run code after load page
