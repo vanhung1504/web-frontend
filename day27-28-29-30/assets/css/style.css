@@ -1,0 +1,364 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Roboto", sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Main CSS */
+.top-bar {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.top-bar .container {
+  max-width: 980px;
+}
+
+.wrap-topbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+}
+
+.wrap-topbar li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+.wrap-topbar li a {
+  font-size: 12px;
+  color: #f5f5f7;
+  text-decoration: none;
+}
+
+.wrap-topbar li:first-child a img {
+  position: relative;
+  top: 3px;
+}
+
+.header-main {
+  height: 72px;
+  background-color: #f5f5f7;
+}
+
+.wrap-header-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+}
+
+/* Banner main */
+.banner-main {
+  height: 580px;
+  width: 100%;
+  background-image: url(../images/banner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.banner-main .wrap-txt-main {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* iphone13-product */
+.iphone13-product {
+  width: 100%;
+  height: 636px;
+  background-image: url(../images/iphone13.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 16px;
+}
+
+.product .wrap-txt-main {
+  text-align: center;
+  padding-top: 30px;
+}
+
+/* Super product */
+.super-product {
+  width: 100%;
+  height: 676px;
+  background-image: url(../images/super-product.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 16px;
+}
+
+.super-product .title-main span {
+  color: red;
+  font-style: bold;
+}
+
+/* impro-product */
+.wrap-iphone13-pro {
+  height: 664px;
+  background-image: url(../images/iphone13Pro.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 16px;
+}
+
+.impro-product .col-right {
+  background-color: green;
+  height: 200px;
+}
+
+/* wi-product */
+.wi-product .col-left {
+  height: 500px;
+  background-color: yellow;
+}
+
+.wi-product .col-richt {
+  height: 500px;
+  background-color: red;
+}
+
+.top-bar-Tablet {
+  display: none;
+}
+
+/* Style menu mibile */
+.topnav {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 44px;
+}
+
+.topnav #myLinks {
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background-color: #000;
+  top: 44px;
+  z-index: 222;
+}
+
+.topnav a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  display: block;
+}
+
+.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.content-menu ul li a {
+  
+}
+
+/* Responsive CSS */
+/* Responsive screen desktop */
+@media screen and (max-width: 1279px) {
+}
+
+/* Responsive screen desktop */
+@media screen and (max-width: 900px) {
+  .top-bar-Tablet {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    background-color: #424245;
+  }
+
+  .wrap-education {
+    display: flex;
+  }
+
+  .wrap-education li {
+    margin-right: 12px;
+  }
+
+  .top-bar-Tablet ul {
+    list-style-type: none;
+  }
+
+  .top-bar-Tablet ul li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #fff;
+  }
+
+  .wrap-topbar {
+    justify-content: unset;
+  }
+
+  .wrap-topbar li {
+    margin-left: 20px;
+  }
+}
+
+/*  */
+@media screen and (max-width: 833px) {
+  .wrap-topbar {
+    display: none;
+  }
+
+  .content-menu {
+    height: 44px;
+    width: 100%;
+  }
+
+  .logo-mobile {
+    background-color: blue;
+    height: 44px;
+    width: 100%;
+  }
+
+  .cart-mobile {
+    background-color: yellow;
+    height: 44px;
+    width: 100%;
+  }
+
+  .wrap-menu-mobile {
+    display: flex;
+  }
+}
