@@ -1,0 +1,46 @@
+@use "../custom" as *;
+// @use "../components/mixins" as *;
+
+#banner {
+  background-image: url(../images/banner/banner.png);
+  background-size: 100% 100%;
+  height: auto;
+  position: relative;
+  padding: 160px 0 !important;
+  overflow: hidden;
+
+  .banner-title {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 58px;
+    font-weight: 700;
+  }
+
+  .banner-desc {
+    font-size: 16px;
+  }
+
+  .doctor-img-box {
+    text-align: center;
+    overflow: hidden;
+
+    .doctor-img {
+      width: 65%;
+    }
+  }
+
+  svg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    .banner-title {
+      font-size: 40px;
+    }
+    .doctor-img-box {
+      margin-top: 40px;
+    }
+  }
+}

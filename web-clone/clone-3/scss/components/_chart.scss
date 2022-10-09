@@ -1,0 +1,15 @@
+.chart-display {
+  .canvas-box {
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+  }
+
+  canvas {
+    background-color: #fff;
+    width: 100%;
+  }
+}

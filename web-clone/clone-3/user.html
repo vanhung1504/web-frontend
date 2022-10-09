@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Appointment Booking Software</title>
+    <link
+      rel="icon"
+      href="./assets/images/solutions/points.png"
+      type="image/gif"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="./assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="./assets/css/flatpickr.min.css" />
+    <link rel="stylesheet" href="./assets/css/mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="./assets/css/slick/slick.css" />
+    <link rel="stylesheet" href="./assets/css/slick/slick-theme.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav
+        class="no-top-header navbar fixed-top navbar-expand-lg navbar-light bg-transparent"
+        id="navbar"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./">
+            <img src="./assets/images/logo.png" alt="Logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Features
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Telemedicine</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Online Appointment System</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Hospital & Clinic Management</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">E-Pharmacy</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Laboratory Management</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./#plans">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./#get-contact">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./#faq">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./blogs.html">Blog</a>
+              </li>
+              <li class="nav-item nav-btn d-none">
+                <a class="nav-link book-a-demo" href="./signin.html">Sign In</a>
+              </li>
+              <li class="nav-item nav-btn d-none ms-2">
+                <a class="nav-link book-a-demo" href="./signup.html">Sign Up</a>
+              </li>
+              <li
+                class="nav-item dropdown nav-user d-none ms-2 d-flex align-items-center"
+              >
+                <div class="user-avatar" role="button">
+                  <img
+                    src="./assets/images/banner/doctor.png"
+                    alt="Avatar"
+                    class="img-fluid"
+                  />
+                </div>
+                <ul class="dropdown-menu user-dropdown">
+                  <li>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                      <i class="fa-solid fa-user me-3"></i>
+                      <span class="fullname"></span>
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li class="btn-signout">
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                      <i class="fa-solid fa-right-from-bracket me-3"></i>
+                      <span>Sign out</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <div id="user-bg">
+      <div class="container">
+        <div class="user-box">
+          <aside class="left-box">
+            <div class="user-info-box">
+              <div class="avatar-box d-flex flex-column align-items-center">
+                <div class="avatar-img">
+                  <img
+                    src="./assets/images/banner/doctor.png"
+                    alt="User avatar"
+                    class="user-avatar img-fluid"
+                  />
+                </div>
+                <h1 class="user-fullname mt-2">Nguyễn Văn Hùng</h1>
+                <p class="user-age">Male - 28 years</p>
+                <div class="upload-avatar">
+                  <i class="fa-solid fa-camera"></i>
+                </div>
+              </div>
+
+              <div class="weight-heigt-box">
+                <div class="box-item d-flex flex-column align-items-center">
+                  <div class="box-bg">
+                    <i class="fa-solid fa-weight-scale"></i>
+                  </div>
+                  <p class="box-title">Weight</p>
+                  <p class="box-value">55 kg</p>
+                </div>
+
+                <div class="box-item d-flex flex-column align-items-center">
+                  <div class="box-bg">
+                    <i class="fa-solid fa-up-down"></i>
+                  </div>
+                  <p class="box-title">Height</p>
+                  <p class="box-value">165 cm</p>
+                </div>
+
+                <div class="box-item d-flex flex-column align-items-center">
+                  <div class="box-bg">
+                    <i class="fa-solid fa-user-tag"></i>
+                  </div>
+                  <p class="box-title">Blood type</p>
+                  <p class="box-value">O+</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="user-schedule-box mt-3">
+              <div class="calendar-box">
+                <div class="cal__main">
+                  <!-- <span class="background"></span>
+                  <span class="background1"></span>
+                  <span class="background2"></span> -->
+                  <!-- <h1>glassalendar</h1>
+                  <p>by Utba Zafar</p> -->
+                  <div class="cal__container">
+                    <div class="calendar__top">
+                      <span class="arrow" id="back__arrow"><</span>
+                      <!-- <div class="calendar__day calendar__time"> -->
+                      <div class="calendar__day__time">
+                        <span class="cal__month" id="cal__month"></span>
+                        <span class="cal__date" id="cal__date"></span>
+                        <span class="cal__time" id="cal__time"></span>
+                      </div>
+                      <!-- <div class="calendar__time">
+                        <span class="cal__time" id="cal__time"></span>
+                      </div> -->
+                      <span class="arrow" id="next__arrow">></span>
+                    </div>
+                    <div class="calendar__bottom">
+                      <div class="cal__weekdays" id="cal__weekdays">
+                        <span>Sun</span>
+                        <span>Mon</span>
+                        <span>Tue</span>
+                        <span>Wed</span>
+                        <span>Thu</span>
+                        <span>Fri</span>
+                        <span>Sat</span>
+                      </div>
+                      <div class="cal__days" id="cal__days"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-box nearest">
+                <div class="card-img-box">
+                  <img
+                    src="./assets/images/user/dentistry.png"
+                    alt="Img"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title">Dentist</h2>
+                  <h3 class="card-doctor">Dr. Dianen Philips</h3>
+                </div>
+                <p class="card-time">10 AM</p>
+              </div>
+
+              <div class="card-box">
+                <div class="card-img-box">
+                  <img
+                    src="./assets/images/user/eye-drop.png"
+                    alt="Img"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title">Oculist</h2>
+                  <h3 class="card-doctor">Dr. Terry Johnson</h3>
+                </div>
+                <p class="card-time">3 PM</p>
+              </div>
+
+              <div class="card-box">
+                <div class="card-img-box">
+                  <img
+                    src="./assets/images/user/cardio.png"
+                    alt="Img"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title">Cardiologist</h2>
+                  <h3 class="card-doctor">Dr. David Nilson</h3>
+                </div>
+                <p class="card-time">7 PM</p>
+              </div>
+            </div>
+
+            <div id="btn-close-left-box">
+              Close
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </aside>
+
+          <main class="right-box">
+            <div class="user-meta-box">
+              <div class="noti-search-user">
+                <div class="noti-search">
+                  <div class="noti">
+                    <i class="fa-solid fa-bell relative"></i>
+                    <i class="fa-solid fa-circle absolute"></i>
+                  </div>
+
+                  <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search" />
+                  </div>
+                </div>
+
+                <div id="btn-open-left-box">
+                  <i class="fa-solid fa-user-pen"></i>
+                </div>
+              </div>
+
+              <div class="hello-box">
+                <div class="hello-content">
+                  <h2 class="hello-title">
+                    Hello, <span class="hello-user-name">Hùng Nguyễn Văn</span>
+                  </h2>
+                  <p class="hello-text">
+                    Have a nice day and don't forget to take care of your
+                    health!
+                  </p>
+                  <a href="#" class="read-more"
+                    >Read more
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                </div>
+
+                <div class="doctor-box">
+                  <img
+                    src="./assets/images/banner/doctor.png"
+                    alt="Doctor"
+                    class="img-fluid doctor-img"
+                  />
+                </div>
+              </div>
+
+              <div class="user-overview-box mt-5">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="item-box">
+                        <div class="icon-value">
+                          <div class="icon-box bg-yellow">
+                            <img
+                              src="./assets/images/user/cardiogram.png"
+                              alt="Icon"
+                              class="img-fluid"
+                            />
+                          </div>
+                          <div class="value-box text-red">78 bmp</div>
+                        </div>
+                        <h2 class="item-title">Heart rate</h2>
+                        <div class="desc-box">
+                          Lower than average
+                          <i
+                            class="fa-solid fa-arrow-trend-down color-blue"
+                          ></i>
+                        </div>
+                        <div class="last-update">Last update: 15/09/2022</div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="item-box">
+                        <div class="icon-value">
+                          <div class="icon-box bg-yellow">
+                            <img
+                              src="./assets/images/user/blood-pressure.png"
+                              alt="Icon"
+                              class="img-fluid"
+                            />
+                          </div>
+                          <div class="value-box text-red">140/100</div>
+                        </div>
+                        <h2 class="item-title">Blood pressure</h2>
+                        <div class="desc-box">
+                          Higher than average
+                          <i class="fa-solid fa-arrow-trend-up color-red"></i>
+                        </div>
+                        <div class="last-update">Last update: 15/09/2022</div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="item-box">
+                        <div class="icon-value">
+                          <div class="icon-box bg-grey">
+                            <img
+                              src="./assets/images/user/glucose-meter.png"
+                              alt="Icon"
+                              class="img-fluid"
+                            />
+                          </div>
+                          <div class="value-box text-blue">4.5 mmol/L</div>
+                        </div>
+                        <h2 class="item-title">Glucose</h2>
+                        <div class="desc-box">Normal</div>
+                        <div class="last-update">Last update: 15/09/2022</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chart-box">
+                <div class="chart-select-box mb-4">
+                  <div class="chart-title">LAB RESULTS</div>
+                  <select
+                    id="chart-value-select"
+                    class="form-select form-select-md"
+                    aria-label=".form-select-lg example"
+                  >
+                    <option value="1" selected>Glucose</option>
+                    <option value="2">Cholesterol</option>
+                    <option value="3">Acid uric</option>
+                    <option value="4">Hemoglobin</option>
+                  </select>
+                </div>
+
+                <div class="chart-display">
+                  <div class="canvas-box" id="canvasParent">
+                    <canvas id="myChart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="sections">
+      <!-- <div class="container-fluid top-footer py-5">
+        <div class="row animation-InUp">
+          <div class="col-12 text-center">
+            <img src="./assets/images/footer/thumb.png" alt="Image" />
+            <h2 class="pt-3 font-weight-bold text-white">
+              Feeling in love? Purchase Doccure!
+            </h2>
+            <p class="text-white mb-5">
+              Impressive Design, Powerful Features and Easy Customization
+            </p>
+            <a href="#" class="doccure-explore text-white text-decoration-none">
+              Request a Demo
+            </a>
+          </div>
+        </div>
+      </div> -->
+      <div class="container-fluid bottom-footer pt-3">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h6 class="text-white font-weight-bold">Follow us</h6>
+            <ul class="list-inline-item list-unstyled">
+              <li class="list-inline-item">
+                <a href="#" target="_blank" class="text-white">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" class="text-white">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" class="text-white">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" class="text-white">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://www.pinterest.com/doccure_software/"
+                  target="_blank"
+                  class="text-white"
+                >
+                  <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- CHATBOX -->
+    <div id="chatbox">
+      <div class="cb-icon">
+        <i class="fa-brands fa-rocketchat"></i>
+      </div>
+
+      <div class="avenue-messenger">
+        <div class="menu">
+          <div class="btn-close"></div>
+          <!-- <div class="items">
+            <span>
+              <a href="#" title="Minimize">&mdash;</a><br />
+              <a href="#" title="End Chat">&#10005;</a>
+            </span>
+          </div> -->
+          <!-- <div class="button">...</div> -->
+        </div>
+
+        <div class="agent-face">
+          <div class="half">
+            <img
+              class="agent circle"
+              src="./assets/images/banner/doctor.png"
+              alt="Jesse Tino"
+            />
+          </div>
+        </div>
+
+        <div class="chat">
+          <div class="chat-title">
+            <h2>Mr. Hùng</h2>
+            <h3>KTV Xét nghiệm</h3>
+            <!-- <figure class="avatar">
+              <img src="http://askavenue.com/img/17.jpg" />
+            </figure> -->
+          </div>
+          <div class="messages">
+            <div class="messages-content"></div>
+          </div>
+          <div class="message-box">
+            <textarea
+              type="text"
+              class="message-input"
+              placeholder="Type message..."
+            ></textarea>
+            <button type="submit" class="message-submit">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="./assets/js/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/jquery/jquery-migrate-3.4.0.min.js"></script>
+    <script src="./assets/js/jquery/mCustomScrollbar.min.js"></script>
+    <script src="./assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/chatbox/chatbox.js"></script>
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <script src="./assets/js/axios/axios.min.js"></script>
+    <script src="./assets/js/moment/moment.min.js"></script>
+    <script src="./assets/js/chart/chart.min.js"></script>
+    <script type="module" src="./assets/js/index.js"></script>
+  </body>
+</html>

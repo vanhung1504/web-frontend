@@ -1,0 +1,124 @@
+@use "../custom" as *;
+
+.wrapper {
+  width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  background-image: url(../../assets/images/login/back-ground.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  font-family: "Rajdhani", sans-serif;
+
+  .box-content {
+    background-color: #fff;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+      rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 1000px;
+    height: 100%;
+    min-height: 500px;
+    position: relative;
+
+    .home-page {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 1.4rem;
+      color: #ff5b62;
+    }
+
+    .form {
+      padding: 40px;
+      width: 50%;
+
+      .logo {
+        width: 100%;
+        height: 50px;
+
+        img {
+          display: block;
+          height: 50px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .title {
+        font-weight: 700;
+      }
+
+      .input-group {
+        .input-group-text {
+          width: 40px;
+
+          i {
+            color: #ff5b62;
+          }
+        }
+
+        .form-control {
+          font-weight: 500;
+        }
+      }
+
+      .btn-submit {
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 8px 20px !important;
+
+        i {
+          animation: rotate 1.5s linear infinite;
+        }
+
+        @keyframes rotate {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+
+    .login-slider {
+      width: 50%;
+      height: 500px;
+
+      .login-slider-content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+#signin-page {
+  @include media-breakpoint-down(lg) {
+    .box-content {
+      // min-width: 300px;
+      max-width: 500px;
+
+      .form {
+        width: 100%;
+      }
+
+      .login-slider {
+        display: none;
+      }
+    }
+  }
+}
+
+#signup-page {
+  .box-content {
+    max-width: 500px;
+
+    .form {
+      width: 100%;
+    }
+  }
+}

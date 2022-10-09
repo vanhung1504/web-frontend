@@ -1,0 +1,18 @@
+#get-contact {
+  background-color: #f8fafc;
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-control {
+    height: calc(1.5em + 0.75rem + 2px);
+    color: #495057;
+    border-radius: 0.25rem;
+    font-family: "Rajdhani", sans-serif;
+  }
+
+  textarea.form-control {
+    height: auto;
+  }
+}

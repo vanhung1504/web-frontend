@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Appointment Booking Software</title>
+    <link
+      rel="icon"
+      href="./assets/images/solutions/points.png"
+      type="image/gif"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="./assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="./assets/css/flatpickr.min.css" />
+    <link rel="stylesheet" href="./assets/css/mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <!-- <div class="top-header position-fixed w-100">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 offset-md-6 d-flex justify-content-end">
+            <ul class="list-group list-group-horizontal-md">
+              <li class="list-group-item bg-transparent border-0">
+                <i class="fa-solid fa-phone"></i>
+                <span>+84 977296645</span>
+              </li>
+              <li class="list-group-item bg-transparent border-0">
+                <i class="fa-solid fa-envelope"></i>
+                <span>vanhung.yhn@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <header>
+      <nav
+        class="no-top-header navbar fixed-top navbar-expand-lg navbar-light bg-transparent"
+        id="navbar"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./">
+            <img src="./assets/images/logo.png" alt="Logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Features
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Telemedicine</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Online Appointment System</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Hospital & Clinic Management</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">E-Pharmacy</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Laboratory Management</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./#plans">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./#get-contact">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./#faq">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Blog</a>
+              </li>
+              <li class="nav-item nav-btn d-none">
+                <a class="nav-link book-a-demo" href="./signin.html">Sign In</a>
+              </li>
+              <li class="nav-item nav-btn d-none ms-2">
+                <a class="nav-link book-a-demo" href="./signup.html">Sign Up</a>
+              </li>
+              <li
+                class="nav-item dropdown nav-user d-none ms-2 d-flex align-items-center"
+              >
+                <div class="user-avatar" role="button">
+                  <img
+                    src="./assets/images/banner/doctor.png"
+                    alt="Avatar"
+                    class="img-fluid"
+                  />
+                </div>
+                <ul class="dropdown-menu user-dropdown">
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      href="./user.html"
+                    >
+                      <i class="fa-solid fa-user me-3"></i>
+                      <span class="fullname"></span>
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li class="btn-signout">
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                      <i class="fa-solid fa-right-from-bracket me-3"></i>
+                      <span>Sign out</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- BLOGS -->
+    <section id="our-blogs">
+      <div class="top-title d-flex align-items-center justify-content-center">
+        Our Blogs
+      </div>
+
+      <div class="container main-blog">
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <a href="./blog-item.html" class="main-blog-left">
+              <img
+                src="./assets/images/blogs/co-so-vat-chat-tam-anh.jpg"
+                alt="TamAnh Hospital"
+                class="img-fluid"
+              />
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <div
+              class="main-blog-right d-flex flex-column justify-content-center p-3"
+            >
+              <a href="./blog-item.html" class="title">
+                New WHO policy requires sharing of all research data
+              </a>
+
+              <p class="description mt-2">
+                The Research for Health department has helped spearhead the
+                launch of a new policy from the Science Division which covers
+                all research undertaken by or with support from WHO. The goal is
+                to make sure that all research data is shared equitably,
+                ethically and efficiently. Through this policy, WHO indicates
+                its commitment to transparency in order to reach the goal of one
+                billion more people enjoying better health and well-being.
+              </p>
+
+              <div class="time-author d-flex align-items-center">
+                <p class="time">
+                  <i class="fa fa-calendar"></i>
+                  15/04/2022
+                </p>
+                <p class="author">
+                  <i class="fa-solid fa-user"></i>
+                  Dr. Smith
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-5 sub-blog">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <a
+              href="./blog-item.html"
+              class="sub-blog-link d-block mb-4 text-decoration-none"
+            >
+              <img
+                src="./assets/images/blogs/1.jpg"
+                alt="thumbnail"
+                class="thumbnail img-fluid"
+              />
+
+              <div class="meta">
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm WHO calls for urgent action by
+                  countries for achieving Medication Without Harm
+                </h3>
+
+                <div class="time-author d-flex align-items-center">
+                  <p class="time">
+                    <i class="fa fa-calendar"></i>
+                    15/04/2022
+                  </p>
+                  <p class="author">
+                    <i class="fa-solid fa-user"></i>
+                    Dr. Smith
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <a
+              href="./blog-item.html"
+              class="sub-blog-link d-block mb-4 text-decoration-none"
+            >
+              <img
+                src="./assets/images/blogs/1.jpg"
+                alt="thumbnail"
+                class="thumbnail img-fluid"
+              />
+
+              <div class="meta">
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm WHO calls for urgent action by
+                  countries for achieving Medication Without Harm
+                </h3>
+
+                <div class="time-author d-flex align-items-center">
+                  <p class="time">
+                    <i class="fa fa-calendar"></i>
+                    15/04/2022
+                  </p>
+                  <p class="author">
+                    <i class="fa-solid fa-user"></i>
+                    Dr. Smith
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <a
+              href="./blog-item.html"
+              class="sub-blog-link d-block mb-4 text-decoration-none"
+            >
+              <img
+                src="./assets/images/blogs/1.jpg"
+                alt="thumbnail"
+                class="thumbnail img-fluid"
+              />
+
+              <div class="meta">
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm WHO calls for urgent action by
+                  countries for achieving Medication Without Harm
+                </h3>
+
+                <div class="time-author d-flex align-items-center">
+                  <p class="time">
+                    <i class="fa fa-calendar"></i>
+                    15/04/2022
+                  </p>
+                  <p class="author">
+                    <i class="fa-solid fa-user"></i>
+                    Dr. Smith
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <a
+              href="./blog-item.html"
+              class="sub-blog-link d-block mb-4 text-decoration-none"
+            >
+              <img
+                src="./assets/images/blogs/1.jpg"
+                alt="thumbnail"
+                class="thumbnail img-fluid"
+              />
+
+              <div class="meta">
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm WHO calls for urgent action by
+                  countries for achieving Medication Without Harm
+                </h3>
+
+                <div class="time-author d-flex align-items-center">
+                  <p class="time">
+                    <i class="fa fa-calendar"></i>
+                    15/04/2022
+                  </p>
+                  <p class="author">
+                    <i class="fa-solid fa-user"></i>
+                    Dr. Smith
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <a
+              href="./blog-item.html"
+              class="sub-blog-link d-block mb-4 text-decoration-none"
+            >
+              <img
+                src="./assets/images/blogs/1.jpg"
+                alt="thumbnail"
+                class="thumbnail img-fluid"
+              />
+
+              <div class="meta">
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm WHO calls for urgent action by
+                  countries for achieving Medication Without Harm
+                </h3>
+
+                <div class="time-author d-flex align-items-center">
+                  <p class="time">
+                    <i class="fa fa-calendar"></i>
+                    15/04/2022
+                  </p>
+                  <p class="author">
+                    <i class="fa-solid fa-user"></i>
+                    Dr. Smith
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <a
+              href="./blog-item.html"
+              class="sub-blog-link d-block mb-4 text-decoration-none"
+            >
+              <img
+                src="./assets/images/blogs/1.jpg"
+                alt="thumbnail"
+                class="thumbnail img-fluid"
+              />
+
+              <div class="meta">
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm WHO calls for urgent action by
+                  countries for achieving Medication Without Harm
+                </h3>
+
+                <div class="time-author d-flex align-items-center">
+                  <p class="time">
+                    <i class="fa fa-calendar"></i>
+                    15/04/2022
+                  </p>
+                  <p class="author">
+                    <i class="fa-solid fa-user"></i>
+                    Dr. Smith
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <a
+              href="./blog-item.html"
+              class="sub-blog-link d-block mb-4 text-decoration-none"
+            >
+              <img
+                src="./assets/images/blogs/1.jpg"
+                alt="thumbnail"
+                class="thumbnail img-fluid"
+              />
+
+              <div class="meta">
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm WHO calls for urgent action by
+                  countries for achieving Medication Without Harm
+                </h3>
+
+                <div class="time-author d-flex align-items-center">
+                  <p class="time">
+                    <i class="fa fa-calendar"></i>
+                    15/04/2022
+                  </p>
+                  <p class="author">
+                    <i class="fa-solid fa-user"></i>
+                    Dr. Smith
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <a
+              href="./blog-item.html"
+              class="sub-blog-link d-block mb-4 text-decoration-none"
+            >
+              <img
+                src="./assets/images/blogs/1.jpg"
+                alt="thumbnail"
+                class="thumbnail img-fluid"
+              />
+
+              <div class="meta">
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm WHO calls for urgent action by
+                  countries for achieving Medication Without Harm
+                </h3>
+
+                <div class="time-author d-flex align-items-center">
+                  <p class="time">
+                    <i class="fa fa-calendar"></i>
+                    15/04/2022
+                  </p>
+                  <p class="author">
+                    <i class="fa-solid fa-user"></i>
+                    Dr. Smith
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <a
+              href="./blog-item.html"
+              class="sub-blog-link d-block mb-4 text-decoration-none"
+            >
+              <img
+                src="./assets/images/blogs/1.jpg"
+                alt="thumbnail"
+                class="thumbnail img-fluid"
+              />
+
+              <div class="meta">
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm WHO calls for urgent action by
+                  countries for achieving Medication Without Harm
+                </h3>
+
+                <div class="time-author d-flex align-items-center">
+                  <p class="time">
+                    <i class="fa fa-calendar"></i>
+                    15/04/2022
+                  </p>
+                  <p class="author">
+                    <i class="fa-solid fa-user"></i>
+                    Dr. Smith
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <a
+              href="./blog-item.html"
+              class="sub-blog-link d-block mb-4 text-decoration-none"
+            >
+              <img
+                src="./assets/images/blogs/1.jpg"
+                alt="thumbnail"
+                class="thumbnail img-fluid"
+              />
+
+              <div class="meta">
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm WHO calls for urgent action by
+                  countries for achieving Medication Without Harm
+                </h3>
+
+                <div class="time-author d-flex align-items-center">
+                  <p class="time">
+                    <i class="fa fa-calendar"></i>
+                    15/04/2022
+                  </p>
+                  <p class="author">
+                    <i class="fa-solid fa-user"></i>
+                    Dr. Smith
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <a
+              href="./blog-item.html"
+              class="sub-blog-link d-block mb-4 text-decoration-none"
+            >
+              <img
+                src="./assets/images/blogs/1.jpg"
+                alt="thumbnail"
+                class="thumbnail img-fluid"
+              />
+
+              <div class="meta">
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm WHO calls for urgent action by
+                  countries for achieving Medication Without Harm
+                </h3>
+
+                <div class="time-author d-flex align-items-center">
+                  <p class="time">
+                    <i class="fa fa-calendar"></i>
+                    15/04/2022
+                  </p>
+                  <p class="author">
+                    <i class="fa-solid fa-user"></i>
+                    Dr. Smith
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <a
+              href="./blog-item.html"
+              class="sub-blog-link d-block mb-4 text-decoration-none"
+            >
+              <img
+                src="./assets/images/blogs/1.jpg"
+                alt="thumbnail"
+                class="thumbnail img-fluid"
+              />
+
+              <div class="meta">
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm WHO calls for urgent action by
+                  countries for achieving Medication Without Harm
+                </h3>
+
+                <div class="time-author d-flex align-items-center">
+                  <p class="time">
+                    <i class="fa fa-calendar"></i>
+                    15/04/2022
+                  </p>
+                  <p class="author">
+                    <i class="fa-solid fa-user"></i>
+                    Dr. Smith
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="container d-flex justify-content-center align-items-center mb-3"
+      >
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="sections">
+      <div class="container-fluid top-footer py-5">
+        <div class="row animation-InUp">
+          <div class="col-12 text-center">
+            <img src="./assets/images/footer/thumb.png" alt="Image" />
+            <h2 class="pt-3 font-weight-bold text-white">
+              Feeling in love? Purchase Doccure!
+            </h2>
+            <p class="text-white mb-5">
+              Impressive Design, Powerful Features and Easy Customization
+            </p>
+            <a href="#" class="doccure-explore text-white text-decoration-none">
+              Request a Demo
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid bottom-footer pt-3">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h6 class="text-white font-weight-bold">Follow us</h6>
+            <ul class="list-inline-item list-unstyled">
+              <li class="list-inline-item">
+                <a href="#" target="_blank" class="text-white">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" class="text-white">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" class="text-white">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" class="text-white">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://www.pinterest.com/doccure_software/"
+                  target="_blank"
+                  class="text-white"
+                >
+                  <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- CHATBOX -->
+    <div id="chatbox">
+      <div class="cb-icon">
+        <i class="fa-brands fa-rocketchat"></i>
+      </div>
+
+      <div class="avenue-messenger">
+        <div class="menu">
+          <div class="btn-close"></div>
+          <!-- <div class="items">
+            <span>
+              <a href="#" title="Minimize">&mdash;</a><br />
+              <a href="#" title="End Chat">&#10005;</a>
+            </span>
+          </div> -->
+          <!-- <div class="button">...</div> -->
+        </div>
+
+        <div class="agent-face">
+          <div class="half">
+            <img
+              class="agent circle"
+              src="./assets/images/banner/doctor.png"
+              alt="Jesse Tino"
+            />
+          </div>
+        </div>
+
+        <div class="chat">
+          <div class="chat-title">
+            <h2>Mr. Hùng</h2>
+            <h3>KTV Xét nghiệm</h3>
+            <!-- <figure class="avatar">
+              <img src="http://askavenue.com/img/17.jpg" />
+            </figure> -->
+          </div>
+          <div class="messages">
+            <div class="messages-content"></div>
+          </div>
+          <div class="message-box">
+            <textarea
+              type="text"
+              class="message-input"
+              placeholder="Type message..."
+            ></textarea>
+            <button type="submit" class="message-submit">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="./assets/js/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/jquery/jquery-migrate-3.4.0.min.js"></script>
+    <script src="./assets/js/jquery/mCustomScrollbar.min.js"></script>
+    <script src="./assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/flatpickr/flatpickr.min.js"></script>
+    <script src="./assets/js/chatbox/chatbox.js"></script>
+    <script src="./assets/js/axios/axios.min.js"></script>
+    <script type="module" src="./assets/js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+@use "../custom" as *;
+#feaures {
+  .card {
+    height: 350px !important;
+    min-height: 350px !important;
+    overflow: hidden;
+
+    .image {
+      width: 150px;
+      height: auto;
+      transition-duration: 1s;
+      transition-property: transform;
+    }
+
+    h4 {
+      font-weight: 700;
+    }
+
+    p {
+      color: #777;
+      font-size: 16px;
+      overflow: hidden !important;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .image {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

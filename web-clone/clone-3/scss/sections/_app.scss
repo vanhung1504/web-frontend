@@ -1,0 +1,19 @@
+#app {
+  background-image: url(../images/app/app-bg.png);
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+
+  .app-img-box {
+    width: 150px;
+  }
+
+  .mob-app {
+    position: relative;
+    bottom: -17px;
+  }
+
+  .animation-right {
+    overflow: hidden;
+  }
+}

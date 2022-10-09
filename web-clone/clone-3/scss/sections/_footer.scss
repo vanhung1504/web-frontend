@@ -1,0 +1,18 @@
+#footer {
+  .top-footer {
+    background-image: url(../images/footer/footer-bg.png);
+    background-size: cover;
+  }
+
+  .bottom-footer {
+    background-color: #1b5a90;
+
+    a {
+      font-size: 20px;
+
+      &:hover {
+        color: #ff5b62 !important;
+      }
+    }
+  }
+}

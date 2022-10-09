@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Appointment Booking Software</title>
+    <link
+      rel="icon"
+      href="./assets/images/solutions/points.png"
+      type="image/gif"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="./assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="./assets/css/flatpickr.min.css" />
+    <link rel="stylesheet" href="./assets/css/mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="./assets/css/slick/slick.css" />
+    <link rel="stylesheet" href="./assets/css/slick/slick-theme.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <!-- <div class="top-header position-fixed w-100">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 offset-md-6 d-flex justify-content-end">
+            <ul class="list-group list-group-horizontal-md">
+              <li class="list-group-item bg-transparent border-0">
+                <i class="fa-solid fa-phone"></i>
+                <span>+84 977296645</span>
+              </li>
+              <li class="list-group-item bg-transparent border-0">
+                <i class="fa-solid fa-envelope"></i>
+                <span>vanhung.yhn@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <header>
+      <nav
+        class="no-top-header displayBackground navbar fixed-top navbar-expand-lg navbar-light bg-transparent"
+        id="navbar"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./">
+            <img src="./assets/images/logo.png" alt="Logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Features
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Telemedicine</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Online Appointment System</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Hospital & Clinic Management</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">E-Pharmacy</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Laboratory Management</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./#plans">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./#get-contact">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./#faq">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Blog</a>
+              </li>
+              <li class="nav-item nav-btn d-none">
+                <a class="nav-link book-a-demo" href="./signin.html">Sign In</a>
+              </li>
+              <li class="nav-item nav-btn d-none ms-2">
+                <a class="nav-link book-a-demo" href="./signup.html">Sign Up</a>
+              </li>
+              <li
+                class="nav-item dropdown nav-user d-none ms-2 d-flex align-items-center"
+              >
+                <div class="user-avatar" role="button">
+                  <img
+                    src="./assets/images/banner/doctor.png"
+                    alt="Avatar"
+                    class="img-fluid"
+                  />
+                </div>
+                <ul class="dropdown-menu user-dropdown">
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      href="./user.html"
+                    >
+                      <i class="fa-solid fa-user me-3"></i>
+                      <span class="fullname"></span>
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li class="btn-signout">
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                      <i class="fa-solid fa-right-from-bracket me-3"></i>
+                      <span>Sign out</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- BLOG ITEM -->
+    <main id="blog-item">
+      <!-- Breadcrumb -->
+      <div class="container-fluid d-flex align-items-center bread-crumb">
+        <div class="container">
+          <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="./">Home</a></li>
+              <li class="breadcrumb-item"><a href="blogs.html">Blog</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                New WHO policy requires sharing of all research data
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Main content -->
+      <section class="main-content mt-3">
+        <h1 class="title">
+          New WHO policy requires sharing of all research data
+        </h1>
+
+        <div class="time-author d-flex align-items-center">
+          <p class="time">
+            <i class="fa fa-calendar"></i>
+            15/04/2022
+          </p>
+          <p class="author">
+            <i class="fa-solid fa-user"></i>
+            Dr. Smith
+          </p>
+        </div>
+
+        <p class="paragraph mt-3">
+          Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+          consectetur, adipisci velit...
+        </p>
+
+        <div class="img-box px-2">
+          <img
+            src="./assets/images/blogs/co-so-vat-chat-tam-anh.jpg"
+            alt="Images"
+            class=""
+          />
+        </div>
+
+        <p class="paragraph mt-3">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
+
+        <div class="img-box px-2">
+          <img
+            src="./assets/images/blogs/tai-kham-bac-si.jpg"
+            alt="Images"
+            class=""
+          />
+        </div>
+
+        <p class="paragraph mt-3">
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It
+          has roots in a piece of classical Latin literature from 45 BC, making
+          it over 2000 years old. Richard McClintock, a Latin professor at
+          Hampden-Sydney College in Virginia, looked up one of the more obscure
+          Latin words, consectetur, from a Lorem Ipsum passage, and going
+          through the cites of the word in classical literature, discovered the
+          undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
+          1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+          Evil) by Cicero, written in 45 BC. This book is a treatise on the
+          theory of ethics, very popular during the Renaissance. The first line
+          of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+          section 1.10.32.
+        </p>
+
+        <p class="paragraph mt-3">
+          The standard chunk of Lorem Ipsum used since the 1500s is reproduced
+          below for those interested. Sections 1.10.32 and 1.10.33 from "de
+          Finibus Bonorum et Malorum" by Cicero are also reproduced in their
+          exact original form, accompanied by English versions from the 1914
+          translation by H. Rackham.
+        </p>
+
+        <div class="img-box px-2">
+          <img
+            src="./assets/images/blogs/kham-bac-si.jpg"
+            alt="Images"
+            class=""
+          />
+
+          <p class="img-desc mt-2">There is no one who loves pain itself</p>
+        </div>
+
+        <p class="paragraph mt-3">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a more-or-less normal distribution of
+          letters, as opposed to using 'Content here, content here', making it
+          look like readable English. Many desktop publishing packages and web
+          page editors now use Lorem Ipsum as their default model text, and a
+          search for 'lorem ipsum' will uncover many web sites still in their
+          infancy. Various versions have evolved over the years, sometimes by
+          accident, sometimes on purpose (injected humour and the like).
+        </p>
+
+        <p class="paragraph mt-3">
+          If you use this site regularly and would like to help keep the site on
+          the Internet, please consider donating a small sum to help pay for the
+          hosting and bandwidth bill. There is no minimum donation, any sum is
+          appreciated - click here to donate using PayPal. Thank you for your
+          support.
+        </p>
+
+        <div
+          class="other-info d-flex align-items-center justify-content-between"
+        >
+          <p class="time">
+            <i class="fa fa-calendar"></i>
+            Last update: 15/04/2022 12:34
+          </p>
+
+          <div class="share d-flex align-items-center">
+            Share on:
+            <a href="#" class="share-link">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" class="share-link">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" class="share-link">
+              <i class="fa-brands fa-pinterest"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="subscribe my-5 d-flex align-items-center">
+        <div class="container-fluid">
+          <div
+            class="container d-flex align-items-center justify-content-center"
+          >
+            <!-- <span class="title">Register to receive our news.</span> -->
+            <input
+              type="email"
+              name="your-email"
+              id="your-email"
+              class="form-control"
+              placeholder="Enter your email to receive our news"
+            />
+            <button
+              class="doccure-explore text-white d-inline-block font-weight-bold text-decoration-none"
+            >
+              Register
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="related-blogs mb-5">
+        <div class="container">
+          <h2 class="title">RELATED BLOGS</h2>
+        </div>
+
+        <div class="container mt-4">
+          <div id="related-blogs-slick">
+            <div class="related-blog-item">
+              <a href="#" class="related-blog-item-link">
+                <img
+                  src="./assets/images/blogs/slick.jpg"
+                  alt="slick"
+                  class="img-fluid"
+                />
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm
+                </h3>
+              </a>
+            </div>
+            <div class="related-blog-item">
+              <a href="#" class="related-blog-item-link">
+                <img
+                  src="./assets/images/blogs/slick.jpg"
+                  alt="slick"
+                  class="img-fluid"
+                />
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm
+                </h3>
+              </a>
+            </div>
+            <div class="related-blog-item">
+              <a href="#" class="related-blog-item-link">
+                <img
+                  src="./assets/images/blogs/slick.jpg"
+                  alt="slick"
+                  class="img-fluid"
+                />
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm
+                </h3>
+              </a>
+            </div>
+            <div class="related-blog-item">
+              <a href="#" class="related-blog-item-link">
+                <img
+                  src="./assets/images/blogs/slick.jpg"
+                  alt="slick"
+                  class="img-fluid"
+                />
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm
+                </h3>
+              </a>
+            </div>
+            <div class="related-blog-item">
+              <a href="#" class="related-blog-item-link">
+                <img
+                  src="./assets/images/blogs/slick.jpg"
+                  alt="slick"
+                  class="img-fluid"
+                />
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm
+                </h3>
+              </a>
+            </div>
+            <div class="related-blog-item">
+              <a href="#" class="related-blog-item-link">
+                <img
+                  src="./assets/images/blogs/slick.jpg"
+                  alt="slick"
+                  class="img-fluid"
+                />
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm
+                </h3>
+              </a>
+            </div>
+            <div class="related-blog-item">
+              <a href="#" class="related-blog-item-link">
+                <img
+                  src="./assets/images/blogs/slick.jpg"
+                  alt="slick"
+                  class="img-fluid"
+                />
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm
+                </h3>
+              </a>
+            </div>
+            <div class="related-blog-item">
+              <a href="#" class="related-blog-item-link">
+                <img
+                  src="./assets/images/blogs/slick.jpg"
+                  alt="slick"
+                  class="img-fluid"
+                />
+                <h3 class="title">
+                  WHO calls for urgent action by countries for achieving
+                  Medication Without Harm
+                </h3>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="sections">
+      <div class="container-fluid top-footer py-5">
+        <div class="row animation-InUp">
+          <div class="col-12 text-center">
+            <img src="./assets/images/footer/thumb.png" alt="Image" />
+            <h2 class="pt-3 font-weight-bold text-white">
+              Feeling in love? Purchase Doccure!
+            </h2>
+            <p class="text-white mb-5">
+              Impressive Design, Powerful Features and Easy Customization
+            </p>
+            <a href="#" class="doccure-explore text-white text-decoration-none">
+              Request a Demo
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid bottom-footer pt-3">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h6 class="text-white font-weight-bold">Follow us</h6>
+            <ul class="list-inline-item list-unstyled">
+              <li class="list-inline-item">
+                <a href="#" target="_blank" class="text-white">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" class="text-white">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" class="text-white">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" class="text-white">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://www.pinterest.com/doccure_software/"
+                  target="_blank"
+                  class="text-white"
+                >
+                  <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- CHATBOX -->
+    <div id="chatbox">
+      <div class="cb-icon">
+        <i class="fa-brands fa-rocketchat"></i>
+      </div>
+
+      <div class="avenue-messenger">
+        <div class="menu">
+          <div class="btn-close"></div>
+          <!-- <div class="items">
+            <span>
+              <a href="#" title="Minimize">&mdash;</a><br />
+              <a href="#" title="End Chat">&#10005;</a>
+            </span>
+          </div> -->
+          <!-- <div class="button">...</div> -->
+        </div>
+
+        <div class="agent-face">
+          <div class="half">
+            <img
+              class="agent circle"
+              src="./assets/images/banner/doctor.png"
+              alt="Jesse Tino"
+            />
+          </div>
+        </div>
+
+        <div class="chat">
+          <div class="chat-title">
+            <h2>Mr. Hùng</h2>
+            <h3>KTV Xét nghiệm</h3>
+            <!-- <figure class="avatar">
+              <img src="http://askavenue.com/img/17.jpg" />
+            </figure> -->
+          </div>
+          <div class="messages">
+            <div class="messages-content"></div>
+          </div>
+          <div class="message-box">
+            <textarea
+              type="text"
+              class="message-input"
+              placeholder="Type message..."
+            ></textarea>
+            <button type="submit" class="message-submit">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="./assets/js/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/jquery/jquery-migrate-3.4.0.min.js"></script>
+    <script src="./assets/js/jquery/mCustomScrollbar.min.js"></script>
+    <script src="./assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/flatpickr/flatpickr.min.js"></script>
+    <script src="./assets/js/chatbox/chatbox.js"></script>
+    <script src="./assets/js/slick/slick.min.js"></script>
+    <script src="./assets/js/axios/axios.min.js"></script>
+    <script type="module" src="./assets/js/index.js"></script>
+  </body>
+</html>

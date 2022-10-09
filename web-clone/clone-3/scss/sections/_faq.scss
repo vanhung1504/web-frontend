@@ -1,0 +1,21 @@
+@use "../custom" as *;
+#faq {
+  background-color: #f8fafc;
+
+  .col-12 {
+    padding: 0 25%;
+  }
+
+  .accordion-button {
+    font-weight: 500 !important;
+  }
+  .accordion-body {
+    color: #777;
+  }
+
+  @include media-breakpoint-down(md) {
+    .col-12 {
+      padding: 0;
+    }
+  }
+}

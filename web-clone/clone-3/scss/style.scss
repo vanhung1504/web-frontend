@@ -1,0 +1,24 @@
+// import components
+@use "./components/tags";
+@use "./components/buttons";
+@use "./components/sections";
+@use "./components/animations";
+@use "./components/modal";
+@use "./components/calendar";
+@use "./components/chart";
+
+// import sections
+@use "./sections/header";
+@use "./sections/banner";
+@use "./sections/solutions";
+@use "./sections/special-highlights";
+@use "./sections/plans";
+@use "./sections/app";
+@use "./sections/faq";
+@use "./sections/features";
+@use "./sections/get-contact";
+@use "./sections/footer";
+@use "./sections/chatbox";
+@use "./sections/blogs";
+@use "./sections/user-register";
+@use "./sections/user";

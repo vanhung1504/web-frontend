@@ -1,0 +1,54 @@
+@use "../custom" as *;
+
+#solutions {
+  padding: 3rem 0;
+
+  .card {
+    transition: 0.25s all;
+
+    &:hover {
+      background: #ff5b62;
+      cursor: pointer;
+
+      .red-telemedicine {
+        display: none;
+      }
+
+      .white-telemedicine {
+        display: block;
+      }
+
+      .solution-item {
+        color: #fff;
+      }
+    }
+  }
+
+  .red-telemedicine {
+    width: 96px;
+    margin: 0 auto;
+  }
+
+  .white-telemedicine {
+    width: 96px;
+    margin: 0 auto;
+    display: none;
+    transition: 0.25s all;
+  }
+
+  .solution-item {
+    font-size: 14px;
+  }
+
+  .management {
+    color: #222;
+    font-weight: 600;
+
+    li {
+      line-height: 40px;
+      background: url(../images/solutions/points.png) no-repeat;
+      background-position: left 0 top 12px;
+      padding-left: 30px;
+    }
+  }
+}

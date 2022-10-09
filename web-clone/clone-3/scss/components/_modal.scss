@@ -1,0 +1,31 @@
+.modal {
+  // display: block !important;
+  // opacity: 1 !important;
+  // // margin-top: 20px !important;
+  // .modal-content {
+  //   margin-top: 100px !important;
+  // }
+
+  .modal-header {
+    background-color: #001d36;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+
+    .error,
+    .info {
+      font-size: 1.6rem;
+      margin-right: 12px;
+      display: none;
+    }
+
+    .error {
+      color: #ff0f08;
+    }
+
+    .title {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+  }
+}

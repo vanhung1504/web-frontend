@@ -1,0 +1,232 @@
+@use "../custom" as *;
+
+#our-blogs {
+  .top-title {
+    width: 100%;
+    height: 400px;
+    background-image: url(../images/blogs/OurBlogs.png);
+    background-size: 100% 100%;
+    background-position: center center;
+
+    color: #fff;
+    font-size: 3rem;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.25;
+    text-shadow: 0 3px 6px rgb(0 0 0 / 10%);
+  }
+
+  .main-blog {
+    .main-blog-right {
+      height: 100%;
+      color: #686868;
+      line-height: 1;
+
+      .title {
+        font-family: "Rajdhani", sans-serif;
+        color: #1a202c;
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .description {
+        text-align: justify;
+        line-height: 1.5;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      .main-blog-right {
+        padding-top: 20px;
+      }
+    }
+  }
+
+  .sub-blog {
+    .meta {
+      color: #686868;
+      padding: 16px 0;
+
+      .title {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #1a202c;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .navigation {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#blog-item {
+  .bread-crumb {
+    margin-top: 110px;
+    height: 40px;
+    background: #f0f2f1;
+
+    .breadcrumb {
+      margin: 0;
+    }
+  }
+
+  .main-content {
+    padding: 0 20px;
+    width: 100%;
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+
+    .title {
+      font-family: "Rajdhani", sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: #102ea6;
+    }
+
+    .img-box {
+      text-align: center;
+      img {
+        width: 100%;
+      }
+
+      .img-desc {
+        font-style: italic;
+      }
+    }
+
+    .other-info {
+      padding: 10px 15px;
+      background: #f0f2f1;
+      color: #686868;
+      font-size: 0.8rem;
+
+      .share {
+        i {
+          margin-left: 12px;
+          font-size: 1.6rem;
+        }
+
+        .fa-facebook {
+          color: #4267b2;
+        }
+
+        .fa-twitter {
+          color: #1da1f2;
+        }
+
+        .fa-pinterest {
+          color: #e60023;
+        }
+      }
+    }
+  }
+
+  .related-blogs {
+    .title {
+      font-family: "Rajdhani", sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #1691e2;
+      text-align: center;
+      margin-top: 40px;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: "";
+        left: 50%;
+        bottom: -8px;
+        border-bottom: 5px solid #5d5d5d;
+        width: 70px;
+        height: 1px;
+        transform: translateX(-50%);
+      }
+    }
+
+    #related-blogs-slick {
+      .related-blog-item {
+        padding: 0 12px;
+
+        .related-blog-item-link {
+          display: block;
+          text-decoration: none;
+        }
+
+        .title {
+          margin: unset;
+          padding: 8px;
+          font-size: 1rem;
+          font-weight: 700;
+          color: #333;
+        }
+      }
+
+      .slick-arrow {
+        border-radius: 50%;
+        background: #869791;
+        filter: Alpha(Opacity=50);
+        opacity: 0.5;
+        width: 40px;
+        height: 40px;
+        color: #fff;
+        z-index: 9999;
+      }
+    }
+  }
+
+  .subscribe {
+    background-color: #1691e2;
+    height: 60px;
+
+    .form-control {
+      max-width: 500px;
+    }
+
+    .doccure-explore {
+      padding: 6px 12px !important;
+      margin-left: 20px;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .bread-crumb {
+      padding: 0;
+
+      .container {
+        width: 100%;
+        max-width: 860px;
+        padding: 0 20px;
+      }
+
+      .breadcrumb-item {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+#our-blogs,
+#blog-item {
+  .time,
+  .author {
+    margin-right: 32px;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+
+    i {
+      margin-right: 4px;
+    }
+  }
+}

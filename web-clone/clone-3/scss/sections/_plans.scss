@@ -1,0 +1,28 @@
+#plans {
+  .setup {
+    padding-top: 80px;
+  }
+
+  ul {
+    li {
+      color: #222;
+      font-weight: 500;
+      padding-bottom: 20px;
+      font-size: 15px;
+    }
+  }
+
+  .card {
+    ul {
+      li {
+        color: #777;
+      }
+    }
+  }
+
+  .label {
+    position: absolute;
+    top: 0;
+    right: 10%;
+  }
+}

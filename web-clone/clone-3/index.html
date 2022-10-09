@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Appointment Booking Software</title>
+    <link
+      rel="icon"
+      href="./assets/images/solutions/points.png"
+      type="image/gif"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="./assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="./assets/css/flatpickr.min.css" />
+    <link rel="stylesheet" href="./assets/css/mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div class="top-header position-fixed w-100">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 offset-md-6 d-flex justify-content-end">
+            <ul class="list-group list-group-horizontal-md">
+              <li class="list-group-item bg-transparent border-0">
+                <i class="fa-solid fa-phone"></i>
+                <span>+84 977296645</span>
+              </li>
+              <li class="list-group-item bg-transparent border-0">
+                <i class="fa-solid fa-envelope"></i>
+                <span>vanhung.yhn@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <nav
+        class="navbar fixed-top navbar-expand-lg navbar-light bg-transparent"
+        id="navbar"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./">
+            <img src="./assets/images/logo.png" alt="Logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Features
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Telemedicine</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Online Appointment System</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Hospital & Clinic Management</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">E-Pharmacy</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Laboratory Management</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#plans">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#get-contact">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#faq">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blogs.html">Blog</a>
+              </li>
+              <li class="nav-item nav-btn d-none">
+                <a class="nav-link book-a-demo" href="./signin.html">Sign In</a>
+              </li>
+              <li class="nav-item nav-btn d-none ms-2">
+                <a class="nav-link book-a-demo" href="./signup.html">Sign Up</a>
+              </li>
+              <li
+                class="nav-item dropdown nav-user d-none ms-2 d-flex align-items-center"
+              >
+                <div class="user-avatar" role="button">
+                  <img
+                    src="./assets/images/banner/doctor.png"
+                    alt="Avatar"
+                    class="img-fluid"
+                  />
+                </div>
+                <ul class="dropdown-menu user-dropdown">
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      href="./user.html"
+                    >
+                      <i class="fa-solid fa-user me-3"></i>
+                      <span class="fullname"></span>
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li class="btn-signout">
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                      <i class="fa-solid fa-right-from-bracket me-3"></i>
+                      <span>Sign out</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- BANNER -->
+    <section id="banner">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-7 banner-left animation-left">
+            <h1 class="banner-title text-white">
+              Telemedicine & Online
+              <br />
+              Appointment Booking Software
+            </h1>
+            <h4 class="banner-desc pt-3 text-white">
+              Doccure helps the Hospitals and Independent Doctors to consult
+              with the Patients, manage Patient health records. Doctors and
+              Patients can connect virtually and consult through secured video
+              and audio calls.
+            </h4>
+            <a
+              href="#solutions"
+              class="doccure-explore text-white d-inline-block mt-4 font-weight-bold text-decoration-none"
+              >EXPLORE FEATURES</a
+            >
+          </div>
+
+          <div class="col-md-5 doctor-img-box animation-right">
+            <img
+              src="./assets/images/banner/doctor.png"
+              alt="Doctor"
+              class="doctor-img img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTIONS -->
+    <section id="solutions" class="sections">
+      <div class="container">
+        <div class="row animation-InUp">
+          <div class="col">
+            <h2 class="sections-main-heading text-center">Solutions</h2>
+          </div>
+        </div>
+        <div class="row pt-2 animation-InUp">
+          <div class="col-md-4 col-lg-2 py-3">
+            <a href="#" class="text-decoration-none text-muted">
+              <div class="card shadow p-3 h-100 text-center">
+                <img
+                  src="./assets/images/solutions/telemedicine.png"
+                  alt="Telemedicine"
+                  class="red-telemedicine"
+                />
+                <img
+                  src="./assets/images/solutions/telemedicine-white.png"
+                  alt="Telemedicine"
+                  class="white-telemedicine"
+                />
+                <h4 class="pt-3 solution-item">Telemedicine</h4>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-4 col-lg-2 py-3">
+            <a href="#" class="text-decoration-none text-muted">
+              <div class="card shadow p-3 h-100 text-center">
+                <img
+                  src="./assets/images/solutions/online-appt-system.png"
+                  alt="Telemedicine"
+                  class="red-telemedicine"
+                />
+                <img
+                  src="./assets/images/solutions/online-appt-system-white.png"
+                  alt="Telemedicine"
+                  class="white-telemedicine"
+                />
+                <h4 class="pt-3 solution-item">
+                  Online Appointment Management
+                </h4>
+              </div></a
+            >
+          </div>
+
+          <div class="col-md-4 col-lg-2 py-3">
+            <a href="#" class="text-decoration-none text-muted">
+              <div class="card shadow p-3 h-100 text-center">
+                <img
+                  src="./assets/images/solutions/hospital-clinic-management.png"
+                  alt="Telemedicine"
+                  class="red-telemedicine"
+                />
+                <img
+                  src="./assets/images/solutions/hospital-clinic-management-white.png"
+                  alt="Telemedicine"
+                  class="white-telemedicine"
+                />
+                <h4 class="pt-3 solution-item">
+                  Hospital and Clinic Management
+                </h4>
+              </div></a
+            >
+          </div>
+
+          <div class="col-md-4 col-lg-2 py-3">
+            <a href="#" class="text-decoration-none text-muted">
+              <div class="card shadow p-3 h-100 text-center">
+                <img
+                  src="./assets/images/solutions/e-pharmacy.png"
+                  alt="Telemedicine"
+                  class="red-telemedicine"
+                />
+                <img
+                  src="./assets/images/solutions/e-pharmacy-white.png"
+                  alt="Telemedicine"
+                  class="white-telemedicine"
+                />
+                <h4 class="pt-3 solution-item">e-Pharmacy</h4>
+              </div></a
+            >
+          </div>
+
+          <div class="col-md-4 col-lg-2 py-3">
+            <a href="#" class="text-decoration-none text-muted">
+              <div class="card shadow p-3 h-100 text-center">
+                <img
+                  src="./assets/images/solutions/laboratory-management.png"
+                  alt="Telemedicine"
+                  class="red-telemedicine"
+                />
+                <img
+                  src="./assets/images/solutions/laboratory-management-white.png"
+                  alt="Telemedicine"
+                  class="white-telemedicine"
+                />
+                <h4 class="pt-3 solution-item">Laboratory Management</h4>
+              </div></a
+            >
+          </div>
+
+          <div class="col-md-4 col-lg-2 py-3">
+            <a href="#" class="text-decoration-none text-muted">
+              <div class="card shadow p-3 h-100 text-center">
+                <img
+                  src="./assets/images/solutions/e-commerce.png"
+                  alt="Telemedicine"
+                  class="red-telemedicine"
+                />
+                <img
+                  src="./assets/images/solutions/e-commerce-white.png"
+                  alt="Telemedicine"
+                  class="white-telemedicine"
+                />
+                <h4 class="pt-3 solution-item">e-Commerce</h4>
+              </div></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row pt-4 animation-InUp">
+          <div class="col-md-6 mb-2">
+            <h4 class="sections-sub-heading">Telemedicine</h4>
+            <p class="pt-2 sections-sub-desc">
+              In today’s fast growing digital world, there are multiple number
+              of digital ways (like video chats, emails, SMS, phone calls and
+              various applications) through which the patients are connected to
+              the medical professionals. Telemedicine is a method of connecting
+              the patients and doctors through technology without meeting in
+              person where the doctor provides the best health care service to
+              the patient. It is also known as digital medicine. Patients can
+              connect doctors via desktop, smart phone or laptop with reliable
+              internet connection.
+            </p>
+            <ul class="pl-0 pt-4 management list-unstyled">
+              <li>Improves Time Management</li>
+              <li>Improves Patient Engagement</li>
+              <li>Reduce Costs</li>
+              <li>Avoids long waiting queue</li>
+              <li>Increased Patient and Provider satisfaction</li>
+            </ul>
+            <a
+              href="#"
+              class="doccure-explore text-white d-inline-block mt-3 font-weight-bold text-decoration-none"
+              >LEARN MORE</a
+            >
+          </div>
+          <div class="col-md-6">
+            <img
+              src="./assets/images/solutions/Image.png"
+              alt="Telemedicine"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIAL HIGHLIGHTS -->
+    <section id="special-highlights" class="sections py-5">
+      <div class="container">
+        <div class="row animation-InUp">
+          <div class="col">
+            <h2 class="sections-main-heading text-center">
+              Special Highlights
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row pt-4 animation-InUp">
+          <div class="col-md-6">
+            <img
+              src="./assets/images/special_highlights/computer.png"
+              alt="Telemedicine"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-md-6 mb-2">
+            <h4 class="sections-sub-heading">Doccure B2B Website</h4>
+            <h5 class="sections-sub-sub-heading py-3">
+              Doccure B2B website focus to be laid in presenting the product
+            </h5>
+            <p class="sections-sub-desc">
+              Doccure B2B website focus to be laid in presenting the product,
+              its offerings to the Business Clients.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container pt-2">
+        <div class="row pt-4 animation-InUp">
+          <div class="col-md-6 order-md-2">
+            <img
+              src="./assets/images/special_highlights/computer.png"
+              alt="Telemedicine"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-md-6 order-md-1 mb-2">
+            <h4 class="sections-sub-heading">Independent Clinics</h4>
+            <h5 class="sections-sub-sub-heading py-3">
+              Doccure B2B website focus to be laid in presenting the product
+            </h5>
+            <p class="sections-sub-desc">
+              Doccure B2B website focus to be laid in presenting the product,
+              its offerings to the Business Clients.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container pt-2">
+        <div class="row pt-4 animation-InUp">
+          <div class="col-md-6">
+            <img
+              src="./assets/images/special_highlights/computer.png"
+              alt="Telemedicine"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-md-6 mb-2">
+            <h4 class="sections-sub-heading">Laboratories</h4>
+            <h5 class="sections-sub-sub-heading py-3">
+              Doccure B2B website focus to be laid in presenting the product
+            </h5>
+            <p class="sections-sub-desc">
+              Doccure B2B website focus to be laid in presenting the product,
+              its offerings to the Business Clients.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHOOSE BEST PLANS FOR YOU -->
+    <section id="plans" class="sections py-5">
+      <div class="container">
+        <div class="row animation-InUp">
+          <div class="col">
+            <h2 class="sections-main-heading text-center">
+              Choose Best Plans For You
+            </h2>
+          </div>
+        </div>
+
+        <div class="row pt-5 animation-InUp">
+          <div class="col-md-3">
+            <div class="p-3 h-100">
+              <div class="plans-head py-5 resp-0"></div>
+              <ul class="list-unstyled h-100 setup">
+                <li>Setup Cost</li>
+                <li>Logins</li>
+                <li>Patient Login</li>
+                <li>Patient Health Records</li>
+                <li>Number of Appointments</li>
+                <li>White Labelled Website</li>
+                <li>Pharmacy</li>
+                <li>Ecommerce</li>
+                <li>Laboratory</li>
+                <li>White Labelled Patient Mobile App (IOS / Android)</li>
+                <li>White Labelled Doctor App (IOS / Android)</li>
+                <li>Source Code</li>
+                <li>Support Plan</li>
+                <li>Feature Customization</li>
+                <li>SEO / Promotions</li>
+                <li>Virtual Admin Staff ***</li>
+                <li>Hosting</li>
+                <li>Languages</li>
+                <li>Payment Gateway</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card shadow p-3 h-100">
+              <img
+                src="./assets/images/plans/label.png"
+                class="label"
+                alt="label"
+              />
+              <div class="plans-head py-4 text-center">
+                <img src="./assets/images/plans/basic.png" alt="Basic" />
+                <h4 class="pt-2">Basic</h4>
+              </div>
+              <ul class="list-unstyled h-100">
+                <li>On Reqeust</li>
+                <li>Unlimited</li>
+                <li>Unlimited</li>
+                <li>Unlimited</li>
+                <li>Unlimited</li>
+                <li>Included</li>
+                <li>Included</li>
+                <li>Included</li>
+                <li>Included</li>
+                <li>
+                  Included<br />
+                  (IOS / Android)
+                </li>
+                <li>Included <br />(IOS / Android)</li>
+                <li>Not Included</li>
+                <li>Regular Business Hours</li>
+                <li>Yes **</li>
+                <li>Yes **</li>
+                <li>1200$ / Mo</li>
+                <li>Cloud</li>
+                <li>English</li>
+                <li>Stripe / PayPal</li>
+              </ul>
+              <a
+                href="#"
+                class="doccure-explore text-center text-white d-inline-block mt-3 font-weight-bold text-decoration-none"
+                >BOOK A DEMO</a
+              >
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card shadow p-3 h-100">
+              <img
+                src="./assets/images/plans/label.png"
+                class="label"
+                alt="label"
+              />
+              <div class="plans-head py-4 text-center">
+                <img src="./assets/images/plans/mid-range.png" alt="Basic" />
+                <h4 class="pt-2">Midrange</h4>
+              </div>
+              <ul class="list-unstyled h-100">
+                <li>On Reqeust</li>
+                <li>Unlimited</li>
+                <li>Unlimited</li>
+                <li>Unlimited</li>
+                <li>Unlimited</li>
+                <li>Included</li>
+                <li>Not Included</li>
+                <li>Not Included</li>
+                <li>Not Included</li>
+                <li>
+                  Included<br />
+                  (IOS / Android)
+                </li>
+                <li>
+                  Included<br />
+                  (IOS / Android)
+                </li>
+                <li>Not Included</li>
+                <li>Regular Business Hours</li>
+                <li>Yes **</li>
+                <li>Yes **</li>
+                <li>1200$ / Mo</li>
+                <li>Cloud / On Premise</li>
+                <li>Customizable (Multi Language)</li>
+                <li>Customizable</li>
+              </ul>
+              <a
+                href="#"
+                class="doccure-explore text-center text-white d-inline-block mt-3 font-weight-bold text-decoration-none"
+                >BOOK A DEMO</a
+              >
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card shadow p-3 h-100">
+              <img
+                src="./assets/images/plans/label.png"
+                class="label"
+                alt="label"
+              />
+              <div class="plans-head py-4 text-center">
+                <img
+                  src="./assets/images/plans/enter-prise.png"
+                  alt="Telemedicine"
+                />
+                <h4 class="pt-2">Enterprise</h4>
+              </div>
+              <ul class="list-unstyled h-100">
+                <li>On Reqeust</li>
+                <li>Unlimited</li>
+                <li>Unlimited</li>
+                <li>Unlimited</li>
+                <li>Unlimited</li>
+                <li>Included</li>
+                <li>Included</li>
+                <li>Included</li>
+                <li>Included</li>
+                <li>
+                  Included<br />
+                  (IOS / Android)
+                </li>
+                <li>
+                  Included<br />
+                  (IOS / Android)
+                </li>
+                <li>Not Included</li>
+                <li>Regular Business Hours</li>
+                <li>Yes **</li>
+                <li>Yes **</li>
+                <li>1200$ / Mo</li>
+                <li>Cloud</li>
+                <li>English</li>
+                <li>Stripe / PayPal</li>
+              </ul>
+              <a
+                href="#"
+                class="doccure-explore text-center text-white d-inline-block mt-3 font-weight-bold text-decoration-none"
+                >BOOK A DEMO</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row pt-5 animation-InUp">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <p>** - Charged Additional</p>
+              </div>
+              <div class="col-md-6">
+                <p>
+                  *** - Staff can work remote 8 Hrs per day and for 5 days a
+                  week
+                </p>
+              </div>
+              <div class="col-md-3">
+                <p>3rd Party expenses additional??</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APP -->
+    <section id="app" class="sections pt-5">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-6 animation-left d-flex flex-column justify-content-center"
+          >
+            <h2 class="sections-main-heading text-white">
+              Get Doccure App Now!
+            </h2>
+
+            <div class="app-img-box">
+              <img
+                src="./assets/images/app/GGPlay_AppStore.png"
+                class="img-fluid"
+                alt="label"
+              />
+            </div>
+          </div>
+          <div class="col-md-6 animation-right">
+            <img
+              src="./assets/images/app/app-now.png"
+              class="img-fluid mob-app"
+              alt="label"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="sections py-5">
+      <div class="container">
+        <div class="row animation-InUp">
+          <div class="col">
+            <h2 class="sections-main-heading text-center">FAQ</h2>
+          </div>
+        </div>
+        <div class="row animation-InUp pt-4">
+          <div class="col-12">
+            <div class="accordion" id="accordionFaq">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-1">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-1"
+                    aria-expanded="false"
+                    aria-controls="collapse-1"
+                  >
+                    Do Doccure provide security for patient’s data and privacy?
+                  </button>
+                </h2>
+                <div
+                  id="collapse-1"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading-1"
+                  data-bs-parent="#accordionFaq"
+                >
+                  <div class="accordion-body">
+                    Yes, Doccure provide high security for patient’s data and
+                    privacy. It has eight levels of data security therefore no
+                    one can perform unauthorized activity.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-2">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-2"
+                    aria-expanded="false"
+                    aria-controls="collapse-2"
+                  >
+                    Is it possible to customize Doccure in concern to our needs?
+                  </button>
+                </h2>
+                <div
+                  id="collapse-2"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading-2"
+                  data-bs-parent="#accordionFaq"
+                >
+                  <div class="accordion-body">
+                    Yes, with the help of product engineering team we offer
+                    customization service.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-3">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-3"
+                    aria-expanded="false"
+                    aria-controls="collapse-3"
+                  >
+                    Do you charge for upgrading the subscribed product?
+                  </button>
+                </h2>
+                <div
+                  id="collapse-3"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading-3"
+                  data-bs-parent="#accordionFaq"
+                >
+                  <div class="accordion-body">
+                    No, it is completely free for upgrading the subscribed
+                    product.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-4">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-4"
+                    aria-expanded="false"
+                    aria-controls="collapse-4"
+                  >
+                    Is it possible to manage the chain of distributed inventory
+                    without any issues?
+                  </button>
+                </h2>
+                <div
+                  id="collapse-4"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading-4"
+                  data-bs-parent="#accordionFaq"
+                >
+                  <div class="accordion-body">
+                    Yes, Doccure is a multi-chain distributed inventory. So it
+                    is easily manageable.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-5">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-5"
+                    aria-expanded="false"
+                    aria-controls="collapse-5"
+                  >
+                    Does Doccure offers immediate access to the activities like
+                    appointments, patients’ records and business reports?
+                  </button>
+                </h2>
+                <div
+                  id="collapse-5"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading-5"
+                  data-bs-parent="#accordionFaq"
+                >
+                  <div class="accordion-body">
+                    With the help of Doccure mobile application you can easily
+                    view the complete details of the activities like
+                    appointments, patient’s records and business report.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-6">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-6"
+                    aria-expanded="false"
+                    aria-controls="collapse-6"
+                  >
+                    What if the staff members are not efficient with using the
+                    computers?
+                  </button>
+                </h2>
+                <div
+                  id="collapse-6"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading-6"
+                  data-bs-parent="#accordionFaq"
+                >
+                  <div class="accordion-body">
+                    Usage becomes seamless with the user-friendly UX and UI
+                    designs. We are ready to help you with our training and
+                    support team.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-7">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-7"
+                    aria-expanded="false"
+                    aria-controls="collapse-7"
+                  >
+                    How about the availability of customer support from Doccure?
+                  </button>
+                </h2>
+                <div
+                  id="collapse-7"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading-7"
+                  data-bs-parent="#accordionFaq"
+                >
+                  <div class="accordion-body">
+                    We ensure customer support in almost all the available
+                    platforms and excel in providing the same. We love to hear
+                    suggestions from you via customer support that will help us
+                    grow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-8">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-8"
+                    aria-expanded="false"
+                    aria-controls="collapse-8"
+                  >
+                    Can Doccure be customized according to the needs?
+                  </button>
+                </h2>
+                <div
+                  id="collapse-8"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading-8"
+                  data-bs-parent="#accordionFaq"
+                >
+                  <div class="accordion-body">
+                    We ensure customizing the features of your hospital which is
+                    offered at a reasonable price.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-9">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-9"
+                    aria-expanded="false"
+                    aria-controls="collapse-9"
+                  >
+                    Is trial version of Doccure available?
+                  </button>
+                </h2>
+                <div
+                  id="collapse-9"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading-9"
+                  data-bs-parent="#accordionFaq"
+                >
+                  <div class="accordion-body">
+                    No. You can use the Demo version of Doccure.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-10">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-10"
+                    aria-expanded="false"
+                    aria-controls="collapse-10"
+                  >
+                    Is it charged for the upgrades that are on the way?
+                  </button>
+                </h2>
+                <div
+                  id="collapse-10"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading-10"
+                  data-bs-parent="#accordionFaq"
+                >
+                  <div class="accordion-body">
+                    No. the upgrades are provided at free of cost for the
+                    subscribed products.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPCOMING FEATURES -->
+    <section id="feaures" class="sections py-5">
+      <div class="container-fluid">
+        <div class="row animation-InUp pb-5">
+          <div class="col">
+            <h2 class="sections-main-heading text-center">Upcoming Features</h2>
+            <h3 class="sections-main-desc text-center">
+              We are going to include these awsome features shortly.
+            </h3>
+          </div>
+        </div>
+        <div class="row animation-InUp pt-4">
+          <div class="h-100 col-md-3">
+            <div class="card shadow p-3 text-center h-100">
+              <img
+                src="./assets/images/features/IOT.png"
+                class="image mx-auto"
+                alt="Image"
+              />
+              <h4 class="font-weight-bold py-3">IOT</h4>
+              <p>
+                IOT integrations - Data capture from IOT powered clinical / lab
+                devices through API's and offer meaningful insights to Doctors
+                and patients
+              </p>
+            </div>
+          </div>
+          <div class="h-100 col-md-3">
+            <div class="card shadow p-3 h-100 text-center">
+              <img
+                src="./assets/images/features/Labs.png"
+                class="image mx-auto"
+                alt="Image"
+              />
+              <h4 class="font-weight-bold py-3">Labs</h4>
+              <p>
+                Integration with Labs / Institutes to send and procure test
+                results.(e.g.:Scan Centres / X Rays)
+              </p>
+            </div>
+          </div>
+          <div class="h-100 col-md-3">
+            <div class="card shadow p-3 h-100 text-center">
+              <img
+                src="./assets/images/features/Insurance.png"
+                class="image mx-auto"
+                alt="Image"
+              />
+              <h4 class="font-weight-bold py-3">Insurance</h4>
+              <p>
+                Integration with Insurance providers to share Patient Data and
+                Health reports.
+              </p>
+            </div>
+          </div>
+          <div class="h-100 col-md-3">
+            <div class="card shadow p-3 h-100 text-center">
+              <img
+                src="./assets/images/features/gmaps.jpg"
+                class="image mx-auto"
+                alt="Image"
+              />
+              <h5 class="font-weight-bold py-3">Google Maps</h5>
+              <p>
+                Google Maps API implementation for helping Patients to navigate
+                to Doctors's Address
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GET IN TOUCH -->
+    <section id="get-contact" class="sections py-5">
+      <div class="container">
+        <div class="row animation-InUp">
+          <div class="col">
+            <h2 class="sections-main-heading text-center">Get In Touch</h2>
+            <h3 class="sections-main-desc text-center">
+              We will contact you shortly.
+            </h3>
+          </div>
+        </div>
+
+        <div class="row py-5">
+          <div class="col-md-6 col-md-offset-3 mx-auto animation-InUp">
+            <form method="POST" action="">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="full_name"
+                      name="full_name"
+                      class="form-control"
+                      placeholder="Full Name"
+                      minlength="2"
+                      maxlength="100"
+                      required="required"
+                      autocomplete="off"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                      placeholder="Email"
+                      maxlength="70"
+                      required="required"
+                      autocomplete="off"
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="company_name"
+                      class="form-control"
+                      placeholder="Company Name"
+                      minlength="2"
+                      maxlength="50"
+                      required="required"
+                      name="company_name"
+                      autocomplete="off"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="phone_number"
+                      name="phone_number"
+                      class="form-control"
+                      placeholder="Phone Number"
+                      minlength="10"
+                      maxlength="20"
+                      required="required"
+                      autocomplete="off"
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="demo_date"
+                      id="filter-date"
+                      placeholder="Date of demo"
+                      autocomplete="off"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <select
+                      id="country_id"
+                      name="country_id"
+                      class="form-control"
+                    >
+                      <option value="" selected disabled hidden>
+                        Choose country
+                      </option>
+                      <option value="1">Afghanistan</option>
+                      <option value="2">Åland Islands</option>
+                      <option value="3">Albania</option>
+                      <option value="4">Algeria</option>
+                      <option value="5">American Samoa</option>
+                      <option value="6">Andorra</option>
+                      <option value="7">Angola</option>
+                      <option value="8">Anguilla</option>
+                      <option value="9">Antarctica</option>
+                      <option value="10">Antigua and Barbuda</option>
+                      <option value="11">Argentina</option>
+                      <option value="12">Armenia</option>
+                      <option value="13">Aruba</option>
+                      <option value="14">Australia</option>
+                      <option value="15">Austria</option>
+                      <option value="16">Azerbaijan</option>
+                      <option value="17">Bahamas</option>
+                      <option value="18">Bahrain</option>
+                      <option value="19">Bangladesh</option>
+                      <option value="20">Barbados</option>
+                      <option value="21">Belarus</option>
+                      <option value="22">Belgium</option>
+                      <option value="23">Belize</option>
+                      <option value="24">Benin</option>
+                      <option value="25">Bermuda</option>
+                      <option value="26">Bhutan</option>
+                      <option value="27">
+                        Bolivia, Plurinational State of
+                      </option>
+                      <option value="28">
+                        Bonaire, Sint Eustatius and Saba
+                      </option>
+                      <option value="29">Bosnia and Herzegovina</option>
+                      <option value="30">Botswana</option>
+                      <option value="31">Bouvet Island</option>
+                      <option value="32">Brazil</option>
+                      <option value="33">British Indian Ocean Territory</option>
+                      <option value="34">Brunei Darussalam</option>
+                      <option value="35">Bulgaria</option>
+                      <option value="36">Burkina Faso</option>
+                      <option value="37">Burundi</option>
+                      <option value="38">Cambodia</option>
+                      <option value="39">Cameroon</option>
+                      <option value="40">Canada</option>
+                      <option value="41">Cape Verde</option>
+                      <option value="42">Cayman Islands</option>
+                      <option value="43">Central African Republic</option>
+                      <option value="44">Chad</option>
+                      <option value="45">Chile</option>
+                      <option value="46">China</option>
+                      <option value="47">Christmas Island</option>
+                      <option value="48">Cocos (Keeling) Islands</option>
+                      <option value="49">Colombia</option>
+                      <option value="50">Comoros</option>
+                      <option value="51">Congo</option>
+                      <option value="52">
+                        Congo, the Democratic Republic of the
+                      </option>
+                      <option value="53">Cook Islands</option>
+                      <option value="54">Costa Rica</option>
+                      <option value="55">Côte d'Ivoire</option>
+                      <option value="56">Croatia</option>
+                      <option value="57">Cuba</option>
+                      <option value="58">Curaçao</option>
+                      <option value="59">Cyprus</option>
+                      <option value="60">Czech Republic</option>
+                      <option value="61">Denmark</option>
+                      <option value="62">Djibouti</option>
+                      <option value="63">Dominica</option>
+                      <option value="64">Dominican Republic</option>
+                      <option value="65">Ecuador</option>
+                      <option value="66">Egypt</option>
+                      <option value="67">El Salvador</option>
+                      <option value="68">Equatorial Guinea</option>
+                      <option value="69">Eritrea</option>
+                      <option value="70">Estonia</option>
+                      <option value="71">Ethiopia</option>
+                      <option value="72">Falkland Islands (Malvinas)</option>
+                      <option value="73">Faroe Islands</option>
+                      <option value="74">Fiji</option>
+                      <option value="75">Finland</option>
+                      <option value="76">France</option>
+                      <option value="77">French Guiana</option>
+                      <option value="78">French Polynesia</option>
+                      <option value="79">French Southern Territories</option>
+                      <option value="80">Gabon</option>
+                      <option value="81">Gambia</option>
+                      <option value="82">Georgia</option>
+                      <option value="83">Germany</option>
+                      <option value="84">Ghana</option>
+                      <option value="85">Gibraltar</option>
+                      <option value="86">Greece</option>
+                      <option value="87">Greenland</option>
+                      <option value="88">Grenada</option>
+                      <option value="89">Guadeloupe</option>
+                      <option value="90">Guam</option>
+                      <option value="91">Guatemala</option>
+                      <option value="92">Guernsey</option>
+                      <option value="93">Guinea</option>
+                      <option value="94">Guinea-Bissau</option>
+                      <option value="95">Guyana</option>
+                      <option value="96">Haiti</option>
+                      <option value="97">
+                        Heard Island and McDonald Mcdonald Islands
+                      </option>
+                      <option value="98">Holy See (Vatican City State)</option>
+                      <option value="99">Honduras</option>
+                      <option value="100">Hong Kong</option>
+                      <option value="101">Hungary</option>
+                      <option value="102">Iceland</option>
+                      <option value="103">India</option>
+                      <option value="104">Indonesia</option>
+                      <option value="105">Iran, Islamic Republic of</option>
+                      <option value="106">Iraq</option>
+                      <option value="107">Ireland</option>
+                      <option value="108">Isle of Man</option>
+                      <option value="109">Israel</option>
+                      <option value="110">Italy</option>
+                      <option value="111">Jamaica</option>
+                      <option value="112">Japan</option>
+                      <option value="113">Jersey</option>
+                      <option value="114">Jordan</option>
+                      <option value="115">Kazakhstan</option>
+                      <option value="116">Kenya</option>
+                      <option value="117">Kiribati</option>
+                      <option value="118">
+                        Korea, Democratic People's Republic of
+                      </option>
+                      <option value="119">Korea, Republic of</option>
+                      <option value="120">Kuwait</option>
+                      <option value="121">Kyrgyzstan</option>
+                      <option value="122">
+                        Lao People's Democratic Republic
+                      </option>
+                      <option value="123">Latvia</option>
+                      <option value="124">Lebanon</option>
+                      <option value="125">Lesotho</option>
+                      <option value="126">Liberia</option>
+                      <option value="127">Libya</option>
+                      <option value="128">Liechtenstein</option>
+                      <option value="129">Lithuania</option>
+                      <option value="130">Luxembourg</option>
+                      <option value="131">Macao</option>
+                      <option value="132">
+                        Macedonia, the Former Yugoslav Republic of
+                      </option>
+                      <option value="133">Madagascar</option>
+                      <option value="134">Malawi</option>
+                      <option value="135">Malaysia</option>
+                      <option value="136">Maldives</option>
+                      <option value="137">Mali</option>
+                      <option value="138">Malta</option>
+                      <option value="139">Marshall Islands</option>
+                      <option value="140">Martinique</option>
+                      <option value="141">Mauritania</option>
+                      <option value="142">Mauritius</option>
+                      <option value="143">Mayotte</option>
+                      <option value="144">Mexico</option>
+                      <option value="145">
+                        Micronesia, Federated States of
+                      </option>
+                      <option value="146">Moldova, Republic of</option>
+                      <option value="147">Monaco</option>
+                      <option value="148">Mongolia</option>
+                      <option value="149">Montenegro</option>
+                      <option value="150">Montserrat</option>
+                      <option value="151">Morocco</option>
+                      <option value="152">Mozambique</option>
+                      <option value="153">Myanmar</option>
+                      <option value="154">Namibia</option>
+                      <option value="155">Nauru</option>
+                      <option value="156">Nepal</option>
+                      <option value="157">Netherlands</option>
+                      <option value="158">New Caledonia</option>
+                      <option value="159">New Zealand</option>
+                      <option value="160">Nicaragua</option>
+                      <option value="161">Niger</option>
+                      <option value="162">Nigeria</option>
+                      <option value="163">Niue</option>
+                      <option value="164">Norfolk Island</option>
+                      <option value="165">Northern Mariana Islands</option>
+                      <option value="166">Norway</option>
+                      <option value="167">Oman</option>
+                      <option value="168">Pakistan</option>
+                      <option value="169">Palau</option>
+                      <option value="170">Palestine, State of</option>
+                      <option value="171">Panama</option>
+                      <option value="172">Papua New Guinea</option>
+                      <option value="173">Paraguay</option>
+                      <option value="174">Peru</option>
+                      <option value="175">Philippines</option>
+                      <option value="176">Pitcairn</option>
+                      <option value="177">Poland</option>
+                      <option value="178">Portugal</option>
+                      <option value="179">Puerto Rico</option>
+                      <option value="180">Qatar</option>
+                      <option value="181">Réunion</option>
+                      <option value="182">Romania</option>
+                      <option value="183">Russian Federation</option>
+                      <option value="184">Rwanda</option>
+                      <option value="185">Saint Barthélemy</option>
+                      <option value="186">
+                        Saint Helena, Ascension and Tristan da Cunha
+                      </option>
+                      <option value="187">Saint Kitts and Nevis</option>
+                      <option value="188">Saint Lucia</option>
+                      <option value="189">Saint Martin (French part)</option>
+                      <option value="190">Saint Pierre and Miquelon</option>
+                      <option value="191">
+                        Saint Vincent and the Grenadines
+                      </option>
+                      <option value="192">Samoa</option>
+                      <option value="193">San Marino</option>
+                      <option value="194">Sao Tome and Principe</option>
+                      <option value="195">Saudi Arabia</option>
+                      <option value="196">Senegal</option>
+                      <option value="197">Serbia</option>
+                      <option value="198">Seychelles</option>
+                      <option value="199">Sierra Leone</option>
+                      <option value="200">Singapore</option>
+                      <option value="201">Sint Maarten (Dutch part)</option>
+                      <option value="202">Slovakia</option>
+                      <option value="203">Slovenia</option>
+                      <option value="204">Solomon Islands</option>
+                      <option value="205">Somalia</option>
+                      <option value="206">South Africa</option>
+                      <option value="207">
+                        South Georgia and the South Sandwich Islands
+                      </option>
+                      <option value="208">South Sudan</option>
+                      <option value="209">Spain</option>
+                      <option value="210">Sri Lanka</option>
+                      <option value="211">Sudan</option>
+                      <option value="212">Suriname</option>
+                      <option value="213">Svalbard and Jan Mayen</option>
+                      <option value="214">Swaziland</option>
+                      <option value="215">Sweden</option>
+                      <option value="216">Switzerland</option>
+                      <option value="217">Syrian Arab Republic</option>
+                      <option value="218">Taiwan</option>
+                      <option value="219">Tajikistan</option>
+                      <option value="220">Tanzania, United Republic of</option>
+                      <option value="221">Thailand</option>
+                      <option value="222">Timor-Leste</option>
+                      <option value="223">Togo</option>
+                      <option value="224">Tokelau</option>
+                      <option value="225">Tonga</option>
+                      <option value="226">Trinidad and Tobago</option>
+                      <option value="227">Tunisia</option>
+                      <option value="228">Turkey</option>
+                      <option value="229">Turkmenistan</option>
+                      <option value="230">Turks and Caicos Islands</option>
+                      <option value="231">Tuvalu</option>
+                      <option value="232">Uganda</option>
+                      <option value="233">Ukraine</option>
+                      <option value="234">United Arab Emirates</option>
+                      <option value="235">United Kingdom</option>
+                      <option value="236">United States</option>
+                      <option value="237">
+                        United States Minor Outlying Islands
+                      </option>
+                      <option value="238">Uruguay</option>
+                      <option value="239">Uzbekistan</option>
+                      <option value="240">Vanuatu</option>
+                      <option value="241">
+                        Venezuela, Bolivarian Republic of
+                      </option>
+                      <option value="242">Viet Nam</option>
+                      <option value="243">Virgin Islands, British</option>
+                      <option value="244">Virgin Islands, U.S.</option>
+                      <option value="245">Wallis and Futuna</option>
+                      <option value="246">Western Sahara</option>
+                      <option value="247">Yemen</option>
+                      <option value="248">Zambia</option>
+                      <option value="249">Zimbabwe</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div></div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <textarea
+                      type="text"
+                      class="form-control"
+                      rows="4"
+                      name="comments"
+                      placeholder="Your Comments here"
+                      id="comments"
+                    ></textarea>
+                  </div>
+                  <!-- <input
+                    type="hidden"
+                    name="_token"
+                    value="mb0V5U4qOuRdqYa2OXvGWsdFfqqqgGyYXa0LII0x"
+                  /> -->
+                  <br />
+                  <button
+                    type="submit"
+                    class="btn submit doccure-explore text-white"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="sections">
+      <div class="container-fluid top-footer py-5">
+        <div class="row animation-InUp">
+          <div class="col-12 text-center">
+            <img src="./assets/images/footer/thumb.png" alt="Image" />
+            <h2 class="pt-3 font-weight-bold text-white">
+              Feeling in love? Purchase Doccure!
+            </h2>
+            <p class="text-white mb-5">
+              Impressive Design, Powerful Features and Easy Customization
+            </p>
+            <a href="#" class="doccure-explore text-white text-decoration-none">
+              Request a Demo
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid bottom-footer pt-3">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h6 class="text-white font-weight-bold">Follow us</h6>
+            <ul class="list-inline-item list-unstyled">
+              <li class="list-inline-item">
+                <a href="#" target="_blank" class="text-white">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" class="text-white">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" class="text-white">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" class="text-white">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://www.pinterest.com/doccure_software/"
+                  target="_blank"
+                  class="text-white"
+                >
+                  <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- CHATBOX -->
+    <div id="chatbox">
+      <div class="cb-icon">
+        <i class="fa-brands fa-rocketchat"></i>
+      </div>
+
+      <div class="avenue-messenger">
+        <div class="menu">
+          <div class="btn-close"></div>
+          <!-- <div class="items">
+            <span>
+              <a href="#" title="Minimize">&mdash;</a><br />
+              <a href="#" title="End Chat">&#10005;</a>
+            </span>
+          </div> -->
+          <!-- <div class="button">...</div> -->
+        </div>
+
+        <div class="agent-face">
+          <div class="half">
+            <img
+              class="agent circle"
+              src="./assets/images/banner/doctor.png"
+              alt="Jesse Tino"
+            />
+          </div>
+        </div>
+
+        <div class="chat">
+          <div class="chat-title">
+            <h2>Mr. Hùng</h2>
+            <h3>KTV Xét nghiệm</h3>
+            <!-- <figure class="avatar">
+              <img src="http://askavenue.com/img/17.jpg" />
+            </figure> -->
+          </div>
+          <div class="messages">
+            <div class="messages-content"></div>
+          </div>
+          <div class="message-box">
+            <textarea
+              type="text"
+              class="message-input"
+              placeholder="Type message..."
+            ></textarea>
+            <button type="submit" class="message-submit">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="./assets/js/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/jquery/jquery-migrate-3.4.0.min.js"></script>
+    <script src="./assets/js/jquery/mCustomScrollbar.min.js"></script>
+    <script src="./assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/flatpickr/flatpickr.min.js"></script>
+    <script src="./assets/js/chatbox/chatbox.js"></script>
+    <script src="./assets/js/axios/axios.min.js"></script>
+    <script type="module" src="./assets/js/index.js"></script>
+  </body>
+</html>
