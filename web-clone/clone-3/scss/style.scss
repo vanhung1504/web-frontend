@@ -6,6 +6,7 @@
 @use "./components/modal";
 @use "./components/calendar";
 @use "./components/chart";
+@use "./components/skeleton-loading";
 
 // import sections
 @use "./sections/header";

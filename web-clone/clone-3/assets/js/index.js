@@ -393,6 +393,7 @@ async function showHideUser() {
   const $navBtn = $("#navbar .nav-btn");
   const $navUser = $("#navbar .nav-user");
 
+  // Navbar
   if (isSignin) {
     $navBtn.addClass("d-none");
     $navUser.removeClass("d-none");
@@ -417,6 +418,41 @@ async function showHideUser() {
   } else {
     $navUser.addClass("d-none");
     $navBtn.removeClass("d-none");
+  }
+
+  // When access to user.html
+  if (getCurrentFileHtmlName() === "user.html") {
+    if (isSignin) {
+      const userInfo = JSON.parse(localStorage.getItem("HEROKUAPP_USER_INFO"));
+      $(".avatar-box .avatar-img img").attr(
+        "src",
+        "https://todo-api-with-auth.herokuapp.com" + userInfo.avatar
+      );
+
+      $(".avatar-box .user-fullname").text(
+        `${userInfo.firstname} ${userInfo.lastname}`
+      );
+
+      $(".hello-box .hello-user-name").text(
+        `${userInfo.firstname} ${userInfo.lastname}`
+      );
+
+      $("#skeleton").css("opacity", "0");
+
+      setTimeout(function () {
+        $("#skeleton").css("display", "none");
+      }, 1000);
+    } else {
+      forModal(
+        "#btnToggleModal",
+        "#myModal",
+        ".error",
+        "Error!",
+        "Bạn chưa đăng nhập. Đang chuyển hướng đến trang đăng nhập...",
+        2000,
+        "./signin.html"
+      );
+    }
   }
 }
 
@@ -609,6 +645,11 @@ function displayChart() {
     },
   ];
 
+  function removeCanvasSize(element) {
+    element.removeAttribute("width");
+    element.removeAttribute("height");
+  }
+
   function renderChart(dataObj = {}) {
     var data = {
       datasets: [
@@ -692,8 +733,7 @@ function displayChart() {
 
     var myChartEle = document.getElementById("myChart");
 
-    myChartEle.removeAttribute("width");
-    myChartEle.removeAttribute("height");
+    removeCanvasSize(myChartEle);
 
     var myChart = new Chart(myChartEle.getContext("2d"), {
       options,
@@ -718,14 +758,19 @@ function displayChart() {
   const $selectEle = $("#chart-value-select");
   let $selectValue = Number($selectEle.val());
 
-  // First init
-  handleSelect($selectValue);
-
   // Onchange
   $selectEle.on("change", function (e) {
     $selectValue = Number(e.target.value);
     handleSelect($selectValue);
   });
+
+  // On resize window
+  $(window).on("resize", function () {
+    handleSelect($selectValue);
+  });
+
+  // First init
+  handleSelect($selectValue);
 }
 
 function toggleUserSidebar() {
@@ -759,39 +804,63 @@ function toggleUserSidebar() {
 
 // When page ready
 document.onreadystatechange = function () {
+  function onHomePage() {
+    showHideUser();
+    handleWhenScrollPage();
+    handleBanner();
+    dateTimePicker();
+  }
+
+  function onSignupPage() {
+    tooltips();
+    signup();
+  }
+
+  function onSigninPage() {
+    signin();
+  }
+
+  function onUserPage() {
+    showHideUser();
+    calendar();
+    handleWhenScrollPage();
+    displayChart();
+    toggleUserSidebar();
+  }
+
+  function onBlogsPage() {
+    showHideUser();
+    handleWhenScrollPage();
+  }
+
+  function onBlogItemPage() {
+    showHideUser();
+    slickCarousel();
+  }
+
   // SCRPIT IN EACH PAGE
   const page = getCurrentFileHtmlName();
   switch (page) {
     case "":
     case "index.html":
-      showHideUser();
-      handleWhenScrollPage();
-      handleBanner();
-      dateTimePicker();
-      break;
-    case "blogs.html":
-      showHideUser();
-      handleWhenScrollPage();
-      break;
-    case "blog-item.html":
-      showHideUser();
-      slickCarousel();
+      onHomePage();
       break;
     case "signup.html":
-      tooltips();
-      signup();
+      onSignupPage();
       break;
     case "signin.html":
-      signin();
+      onSigninPage();
       break;
     case "user.html":
-      showHideUser();
-      calendar();
-      handleWhenScrollPage();
-      displayChart();
-      toggleUserSidebar();
+      onUserPage();
+      break;
+    case "blogs.html":
+      onBlogsPage();
+      break;
+    case "blog-item.html":
+      onBlogItemPage();
       break;
     default:
-    // Do nothing
+      break;
   }
 };

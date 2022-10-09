@@ -132,13 +132,9 @@
             <div class="user-info-box">
               <div class="avatar-box d-flex flex-column align-items-center">
                 <div class="avatar-img">
-                  <img
-                    src="./assets/images/banner/doctor.png"
-                    alt="User avatar"
-                    class="user-avatar img-fluid"
-                  />
+                  <img src="" alt="User avatar" class="user-avatar img-fluid" />
                 </div>
-                <h1 class="user-fullname mt-2">Nguyễn Văn Hùng</h1>
+                <h1 class="user-fullname mt-2"></h1>
                 <p class="user-age">Male - 28 years</p>
                 <div class="upload-avatar">
                   <i class="fa-solid fa-camera"></i>
@@ -285,7 +281,7 @@
               <div class="hello-box">
                 <div class="hello-content">
                   <h2 class="hello-title">
-                    Hello, <span class="hello-user-name">Hùng Nguyễn Văn</span>
+                    Hello, <span class="hello-user-name"></span>
                   </h2>
                   <p class="hello-text">
                     Have a nice day and don't forget to take care of your
@@ -397,6 +393,38 @@
               </div>
             </div>
           </main>
+
+          <div id="skeleton">
+            <div class="card">
+              <div class="header">
+                <div class="img"></div>
+                <div class="details">
+                  <span class="name"></span>
+                  <span class="about"></span>
+                </div>
+              </div>
+              <div class="content">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line line-3"></div>
+              </div>
+              <div class="btns">
+                <div class="btn btn-1"></div>
+                <div class="btn btn-1"></div>
+                <div class="btn btn-2"></div>
+                <div class="btn btn-2"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -510,13 +538,51 @@
       </div>
     </div>
 
+    <!-- MODAL -->
+    <button
+      type="button"
+      id="btnToggleModal"
+      class="d-none"
+      data-bs-toggle="modal"
+      data-bs-target="#myModal"
+    ></button>
+
+    <div
+      class="modal fade"
+      id="myModal"
+      tabindex="-1"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <i class="fa-solid fa-circle-exclamation error"></i>
+            <i class="fa-solid fa-circle-info info"></i>
+            <h5 class="title"></h5>
+          </div>
+
+          <div class="modal-body"></div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger btn-confirm"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- SCRIPTS -->
     <script src="./assets/js/jquery/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/jquery/jquery-migrate-3.4.0.min.js"></script>
     <script src="./assets/js/jquery/mCustomScrollbar.min.js"></script>
     <script src="./assets/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/chatbox/chatbox.js"></script>
-    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
     <script src="./assets/js/axios/axios.min.js"></script>
     <script src="./assets/js/moment/moment.min.js"></script>
     <script src="./assets/js/chart/chart.min.js"></script>
